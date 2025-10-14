@@ -1,0 +1,287 @@
+\section{Bài 1}
+Cho $x=e^{i\frac{\pi}{3}}$ và $y=2e^{i\frac{\pi}{6}}$.
+
+\subsection{(a)}
+\textbf{Đề bài:} Vẽ minh họa $x, y$ trên mặt phẳng phức.\\
+\textbf{Bài làm:}
+\begin{tikzpicture}[scale=3][H]
+
+    % Thiết lập hệ tọa độ Descartes
+    % Trục Thực (Re) và trục Ảo (Im)
+    \draw[->, gray] (-0.5, 0) -- (2.5, 0) node[right] {$\mathrm{Re}$};
+    \draw[->, gray] (0, -0.5) -- (0, 1.5) node[above] {$\mathrm{Im}$};
+    
+    % Gốc tọa độ
+    \coordinate (O) at (0, 0);
+
+    % --- Số phức x: x = 0.5 + i*sqrt(3)/2, |x|=1, arg(x)=pi/3 (60 độ) ---
+    % Dùng tọa độ (R*cos(theta), R*sin(theta))
+    \coordinate (X) at ({cos(60)}, {sin(60)});
+    
+    % Vẽ vector x
+    \draw[->, very thick, blue!70] (O) -- (X) node[above right] {$x$};
+    % Vẽ góc x
+    \draw[blue!70] (0.3, 0) arc (0:60:0.3);
+    \node[blue!70, right] at (0.3, 0.1) {$\frac{\pi}{3}$};
+    
+    % --- Số phức y: y = sqrt(3) + i, |y|=2, arg(y)=pi/6 (30 độ) ---
+    % y = (2*cos(30), 2*sin(30))
+    \coordinate (Y) at ({2*cos(30)}, {2*sin(30)});
+    
+    % Vẽ vector y
+    \draw[->, very thick, red!70] (O) -- (Y) node[above] {$y$};
+    % Vẽ góc y
+    \draw[red!70] (0.5, 0) arc (0:30:0.5);
+    \node[red!70, right] at (0.5, 0.05) {$\frac{\pi}{6}$};
+    
+    % Vẽ các vòng tròn độ lớn (tùy chọn)
+    \draw[dashed, thin, gray] (O) circle (1); % |x|=1
+    \draw[dashed, thin, gray] (O) circle (2); % |y|=2
+
+    % Đánh dấu gốc tọa độ
+    \fill (O) circle (1pt);
+
+\end{tikzpicture}
+
+\subsection{(b)}
+\textbf{Đề bài:} Tìm dạng đại số và dạng cực của $x, y$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item \textbf{Dạng cực} (Đã cho):
+    $x = e^{i\frac{\pi}{3}}$
+    $y = 2e^{i\frac{\pi}{6}}$
+    \item \textbf{Dạng đại số}:
+    $x = \cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right) = \dots$
+    $y = 2\left(\cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right)\right) = \dots$
+\end{itemize}
+
+\subsection{(c)}
+\textbf{Đề bài:} Tính $\mathrm{Re}(x)$, $\mathrm{Im}(x)$, $|x|$, $\arg(x)$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $\mathrm{Re}(x) = \dots$
+    \item $\mathrm{Im}(x) = \dots$
+    \item $|x| = \dots$
+    \item $\arg(x) = \dots$
+\end{itemize}
+
+\subsection{(d)}
+\textbf{Đề bài:} Tính $\overline{x},-x,x^{-1}$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $\overline{x} = \dots$
+    \item $-x = \dots$
+    \item $x^{-1} = \dots$
+\end{itemize}
+
+\subsection{(e)}
+\textbf{Đề bài:} Tính $x + y, x - y, xy, yx, \frac{x}{y}, \frac{y}{x}$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $x + y = \dots$
+    \item $x - y = \dots$
+    \item $xy = \dots$
+    \item $\frac{x}{y} = \dots$
+    \item $\frac{y}{x} = \dots$
+\end{itemize}
+
+\subsection{(f)}
+\textbf{Đề bài:} Tính $x^{4}$ và $x^{n}$, $n\in\mathbb{Z}$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $x^{4} = \dots$
+    \item $x^{n} = \dots$
+\end{itemize}
+
+\subsection{(g)}
+\textbf{Đề bài:} Tính $\sqrt[4]{x}$ và $\sqrt[n]{x}$ $n\in\mathbb{N}^{+}$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $\sqrt[4]{x} = \dots$ (Liệt kê các nghiệm)
+    \item $\sqrt[n]{x} = \dots$ (Công thức tổng quát cho $n$ nghiệm)
+\end{itemize}
+
+\section{Bài 2}
+Cho $x, y\in\mathbb{C}$ chứng minh
+
+\subsection{(a)}
+\textbf{Đề bài:} $x\overline{x}=\overline{x}x=|x|^{2}$.\\
+\textbf{Bài làm:}
+
+\subsection{(b)}
+\textbf{Đề bài:} $\overline{x^{-1}}=(\overline{x})^{-1}(x\ne0)$.\\
+\textbf{Bài làm:}
+
+\subsection{(c)}
+\textbf{Đề bài:} $|xy|=|x||y|$.\\
+\textbf{Bài làm:}
+
+\subsection{(d)}
+\textbf{Đề bài:} $|x+y|\le|x|+|y|$.\\
+\textbf{Bài làm:} (Bất đẳng thức tam giác)
+
+\section{Bài 3}
+Cho $|\phi\rangle=\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle$, $|\psi\rangle=\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle$.
+
+\subsection{(a)}
+\textbf{Đề bài:} Tính $\langle\phi|$ và $\langle\psi|$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $\langle\phi| = \dots$
+    \item $\langle\psi| = \dots$
+\end{itemize}
+
+\subsection{(b)}
+\textbf{Đề bài:} Tính $\langle\phi|\psi\rangle$ và $\langle\psi|\phi\rangle$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $\langle\phi|\psi\rangle = \dots$
+    \item $\langle\psi|\phi\rangle = \dots$
+\end{itemize}
+
+\subsection{(c)}
+\textbf{Đề bài:} Tính $|\phi\rangle\langle\phi|$ và $|\psi\rangle\langle\phi|$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $|\phi\rangle\langle\phi| = \dots$
+    \item $|\psi\rangle\langle\phi| = \dots$
+\end{itemize}
+
+\subsection{(d)}
+\textbf{Đề bài:} Tính $|\phi\rangle|\psi\rangle$ và $|\psi\rangle|\phi\rangle$.\\
+\textbf{Bài làm:} (Tensor product)
+\begin{itemize}
+    \item $|\phi\rangle|\psi\rangle = \dots$
+    \item $|\psi\rangle|\phi\rangle = \dots$
+\end{itemize}
+
+\subsection{(e)}
+\textbf{Đề bài:} Tính $||\phi||$ và $||\psi||$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $||\phi|| = \dots$
+    \item $||\psi|| = \dots$
+\end{itemize}
+
+\subsection{(f)}
+\textbf{Đề bài:} Tính góc giữa $|\phi\rangle$ và $|\psi\rangle$.\\
+\textbf{Bài làm:}
+
+\subsection{(g)}
+\textbf{Đề bài:} Tính $\mathrm{proj}_{|\psi\rangle}|\phi\rangle$ và $\mathrm{proj}_{|\phi\rangle}|\psi\rangle$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $\mathrm{proj}_{|\psi\rangle}|\phi\rangle = \dots$
+    \item $\mathrm{proj}_{|\phi\rangle}|\psi\rangle = \dots$
+\end{itemize}
+
+\subsection{(h)}
+\textbf{Đề bài:} Chuẩn hóa $\mathrm{proj}_{|\psi\rangle}|\phi\rangle$ và $\mathrm{proj}_{|\phi\rangle}|\psi\rangle$.\\
+\textbf{Bài làm:}
+\begin{itemize}
+    \item Chuẩn hóa $\mathrm{proj}_{|\psi\rangle}|\phi\rangle = \dots$
+    \item Chuẩn hóa $\mathrm{proj}_{|\phi\rangle}|\psi\rangle = \dots$
+\end{itemize}
+
+\subsection{(i)}
+\textbf{Đề bài:} Tìm tọa độ của $|\phi\rangle$ và $|\psi\rangle$ trong các cơ sở $B_{Z}=\{|0\rangle,|1\rangle\}$, $B_{X}=\{|+\rangle,|-\rangle\}$, $B_{Y}=\{|i\rangle,|-i\rangle\}$.\\
+\textbf{Bài làm:}
+
+\subsection{(j)}
+\textbf{Đề bài:} Cho $|a\rangle=\frac{\sqrt{3}}{2}|0\rangle+\frac{i}{2}|1\rangle$, $|b\rangle=\frac{i}{2}|0\rangle+\frac{\sqrt{3}}{2}|1\rangle$, chứng minh $B=\{a,b\}$ là một cơ sở trực chuẩn của $\mathbb{C}^{2}$ và tìm tọa độ của $|\phi\rangle$, $|\psi\rangle$ theo $B$.
+\textbf{Bài làm:}
+
+\section{Bài 4}
+Cho $U$ là toán tử trên $\mathbb{C}^{2}$ với $U|0\rangle=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\ -i\end{pmatrix}$ và $U|1\rangle=\frac{1}{\sqrt{2}}\begin{pmatrix}-i\\ 1\end{pmatrix}$.
+
+\subsection{(a)}
+\textbf{Đề bài:} Tìm biểu diễn của $U$ trong cơ sở chính tắc $B_{Z}=\{|0\rangle,|1\rangle\}$.
+\textbf{Bài làm:}
+
+\subsection{(b)}
+\textbf{Đề bài:} Cho $|\phi\rangle=\begin{pmatrix}\alpha\\ \beta\end{pmatrix}\in\mathbb{C}^{2},$ tìm $U|\phi\rangle$.
+\textbf{Bài làm:}
+
+\subsection{(c)}
+\textbf{Đề bài:} $U$ có unita không?
+\textbf{Bài làm:}
+
+\subsection{(d)}
+\textbf{Đề bài:} $U$ có Hermite không?
+\textbf{Bài làm:}
+
+\subsection{(e)}
+\textbf{Đề bài:} Tìm $U^{\dagger}$, $U^{-1}$.
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $U^{\dagger} = \dots$
+    \item $U^{-1} = \dots$
+\end{itemize}
+
+\subsection{(f)}
+\textbf{Đề bài:} Tìm $HUH|0\rangle$, $HUH|1\rangle$ và $HUH$ ($H$ là ma trận Hadamard).
+\textbf{Bài làm:}
+
+\subsection{(g)}
+\textbf{Đề bài:} Tìm $UHU|0\rangle$, $UHU|1\rangle$ và $UHU$.
+\textbf{Bài làm:}
+
+\section{Bài 5}
+Chứng minh $XY=iZ$ bằng cách
+
+\subsection{(a)}
+\textbf{Đề bài:} Nhân ma trận.
+\textbf{Bài làm:}
+
+\subsection{(b)}
+\textbf{Đề bài:} Xét tác động của các toán tử trên $|0\rangle$, $|1\rangle$.
+\textbf{Bài làm:}
+
+\section{Bài 6}
+Cho $|\phi\rangle=\frac{1}{2}|00\rangle+\frac{i}{\sqrt{2}}|10\rangle+\frac{\sqrt{3}+i}{4}|11\rangle$.
+
+\subsection{(a)}
+\textbf{Đề bài:} Cho thấy $|\phi\rangle$ là vector đơn vị.
+\textbf{Bài làm:}
+
+\subsection{(b)}
+\textbf{Đề bài:} Tính $\mathrm{proj}_{|+-\rangle}|\phi\rangle$ và chuẩn hóa $\mathrm{proj}_{|+-\rangle}|\phi\rangle$.
+\textbf{Bài làm:}
+\begin{itemize}
+    \item $\mathrm{proj}_{|+-\rangle}|\phi\rangle = \dots$
+    \item Chuẩn hóa $\mathrm{proj}_{|+-\rangle}|\phi\rangle = \dots$
+\end{itemize}
+
+\subsection{(c)}
+\textbf{Đề bài:} Tính tọa độ của $|\phi\rangle$ theo cơ sở Bell.
+\textbf{Bài làm:}
+
+\section{Bài 7}
+Kiểm tra các vector sau có phân tách được (separable)
+
+\subsection{(a)}
+\textbf{Đề bài:} $|\phi_{1}\rangle=\frac{1}{2}(|00\rangle-|01\rangle+|10\rangle-|11\rangle).$
+\textbf{Bài làm:}
+
+\subsection{(b)}
+\textbf{Đề bài:} $|\phi_{2}\rangle=\frac{1}{2\sqrt{2}}(\sqrt{3}|00\rangle-\sqrt{3}|01\rangle+|10\rangle-|11\rangle)$.
+\textbf{Bài làm:}
+
+\subsection{(c)}
+\textbf{Đề bài:} $|\phi_{3}\rangle=\frac{1}{\sqrt{2}}(|10\rangle+i|11\rangle)$.
+\textbf{Bài làm:}
+
+\subsection{(d)}
+\textbf{Đề bài:} $|\phi_{4}\rangle=\frac{1}{\sqrt{3}}|0+\rangle+\sqrt{\frac{2}{3}}|1-\rangle$.
+\textbf{Bài làm:}
+
+\section{Bài 8}
+Cho $|\phi\rangle=\frac{1}{4}|00\rangle+\frac{1}{2}|01\rangle+\frac{1}{\sqrt{2}}|10\rangle+\frac{\sqrt{3}}{4}|11\rangle$.
+
+\subsection{(a)}
+\textbf{Đề bài:} Tính $(H\otimes X)|\phi\rangle$.
+\textbf{Bài làm:}
+
+\subsection{(b)}
+\textbf{Đề bài:} Tính $\mathrm{CNOT}|\phi\rangle$.
+\textbf{Bài làm:}
