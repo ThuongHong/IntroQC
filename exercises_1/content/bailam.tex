@@ -4,101 +4,88 @@ Cho $x=e^{i\frac{\pi}{3}}$ và $y=2e^{i\frac{\pi}{6}}$.
 \subsection{(a)}
 \textbf{Đề bài:} Vẽ minh họa $x, y$ trên mặt phẳng phức.\\
 \textbf{Bài làm:}
-\begin{tikzpicture}[scale=3][H]
+\begin{center}
+\begin{tikzpicture}[scale=2]
 
-    % Thiết lập hệ tọa độ Descartes
-    % Trục Thực (Re) và trục Ảo (Im)
+    % gốc tọa độ và trục
     \draw[->, gray] (-0.5, 0) -- (2.5, 0) node[right] {$\mathrm{Re}$};
     \draw[->, gray] (0, -0.5) -- (0, 1.5) node[above] {$\mathrm{Im}$};
-    
-    % Gốc tọa độ
     \coordinate (O) at (0, 0);
 
-    % --- Số phức x: x = 0.5 + i*sqrt(3)/2, |x|=1, arg(x)=pi/3 (60 độ) ---
-    % Dùng tọa độ (R*cos(theta), R*sin(theta))
+    % số phức x
     \coordinate (X) at ({cos(60)}, {sin(60)});
-    
-    % Vẽ vector x
     \draw[->, very thick, blue!70] (O) -- (X) node[above right] {$x$};
-    % Vẽ góc x
     \draw[blue!70] (0.3, 0) arc (0:60:0.3);
-    \node[blue!70, right] at (0.3, 0.1) {$\frac{\pi}{3}$};
-    
-    % --- Số phức y: y = sqrt(3) + i, |y|=2, arg(y)=pi/6 (30 độ) ---
-    % y = (2*cos(30), 2*sin(30))
-    \coordinate (Y) at ({2*cos(30)}, {2*sin(30)});
-    
-    % Vẽ vector y
-    \draw[->, very thick, red!70] (O) -- (Y) node[above] {$y$};
-    % Vẽ góc y
-    \draw[red!70] (0.5, 0) arc (0:30:0.5);
-    \node[red!70, right] at (0.5, 0.05) {$\frac{\pi}{6}$};
-    
-    % Vẽ các vòng tròn độ lớn (tùy chọn)
-    \draw[dashed, thin, gray] (O) circle (1); % |x|=1
-    \draw[dashed, thin, gray] (O) circle (2); % |y|=2
 
-    % Đánh dấu gốc tọa độ
-    \fill (O) circle (1pt);
+    % số phức y
+    \coordinate (Y) at ({2*cos(30)}, {2*sin(30)});
+    \draw[->, very thick, red!70] (O) -- (Y) node[above] {$y$};
+    \draw[red!70] (0.5, 0) arc (0:30:0.5);
 
 \end{tikzpicture}
+\end{center}
 
 \subsection{(b)}
 \textbf{Đề bài:} Tìm dạng đại số và dạng cực của $x, y$.\\
 \textbf{Bài làm:}
 \begin{itemize}
-    \item \textbf{Dạng cực} (Đã cho):
-    $x = e^{i\frac{\pi}{3}}$
-    $y = 2e^{i\frac{\pi}{6}}$
+    \item \textbf{Dạng cực}:
+        \begin{align*}
+            x &= \cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right)\\
+            y &= 2\left(\cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right)\right)
+        \end{align*}
+
     \item \textbf{Dạng đại số}:
-    $x = \cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right) = \dots$
-    $y = 2\left(\cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right)\right) = \dots$
+        \begin{align*}
+            x &= \frac{1}{2} + i\frac{\sqrt{3}}{2}\\
+            y &= \sqrt{3} + i
+        \end{align*}
 \end{itemize}
 
 \subsection{(c)}
 \textbf{Đề bài:} Tính $\mathrm{Re}(x)$, $\mathrm{Im}(x)$, $|x|$, $\arg(x)$.\\
 \textbf{Bài làm:}
 \begin{itemize}
-    \item $\mathrm{Re}(x) = \dots$
-    \item $\mathrm{Im}(x) = \dots$
-    \item $|x| = \dots$
-    \item $\arg(x) = \dots$
+    \item $\mathrm{Re}(x) = \frac{1}{2}$
+    \item $\mathrm{Im}(x) = \frac{\sqrt{3}}{2}$
+    \item $|x| = 1$
+    \item $\arg(x) = \frac{\pi}{3}$
 \end{itemize}
 
 \subsection{(d)}
 \textbf{Đề bài:} Tính $\overline{x},-x,x^{-1}$.\\
 \textbf{Bài làm:}
 \begin{itemize}
-    \item $\overline{x} = \dots$
-    \item $-x = \dots$
-    \item $x^{-1} = \dots$
+    \item $\overline{x} = \frac{1}{2} - i\frac{\sqrt{3}}{2}$
+    \item $-x = -\frac{1}{2} - i\frac{\sqrt{3}}{2}$
+    \item $x^{-1} = \frac{1}{x} = \frac{1}{2} - i\frac{\sqrt{3}}{2}$
 \end{itemize}
 
 \subsection{(e)}
-\textbf{Đề bài:} Tính $x + y, x - y, xy, yx, \frac{x}{y}, \frac{y}{x}$.\\
+\textbf{Đề bài:} Tính $x + y, x - y, xy, \frac{x}{y}, \frac{y}{x}$.\\
 \textbf{Bài làm:}
 \begin{itemize}
-    \item $x + y = \dots$
-    \item $x - y = \dots$
-    \item $xy = \dots$
-    \item $\frac{x}{y} = \dots$
-    \item $\frac{y}{x} = \dots$
+    \item $x + y = \frac{1}{2} + i\frac{\sqrt{3}}{2} + \sqrt{3} + i = \left(\frac{1}{2} + \sqrt{3}\right) + i\left(\frac{\sqrt{3}}{2} + 1\right)$
+    \item $x - y = \frac{1}{2} + i\frac{\sqrt{3}}{2} - \left(\sqrt{3} + i\right) = \left(\frac{1}{2} - \sqrt{3}\right) + i\left(\frac{\sqrt{3}}{2} - 1\right)$
+    \item $xy = e^{i\frac{\pi}{3}} \cdot 2e^{i\frac{\pi}{6}} = 2e^{i\left(\frac{\pi}{3} + \frac{\pi}{6}\right)} = 2e^{i\frac{\pi}{2}} = 2i$
+    \item $\frac{x}{y} = \frac{e^{i\frac{\pi}{3}}}{2e^{i\frac{\pi}{6}}} = \frac{1}{2}e^{i\left(\frac{\pi}{3} - \frac{\pi}{6}\right)} = \frac{1}{2}e^{i\frac{\pi}{6}} = \frac{\sqrt{3}}{4} + i\frac{1}{4}$
+    \item $\frac{y}{x} = \frac{2e^{i\frac{\pi}{6}}}{e^{i\frac{\pi}{3}}} = 2e^{i\left(\frac{\pi}{6} - \frac{\pi}{3}\right)} = 2e^{-i\frac{\pi}{6}} = \sqrt{3} - i$
 \end{itemize}
 
 \subsection{(f)}
 \textbf{Đề bài:} Tính $x^{4}$ và $x^{n}$, $n\in\mathbb{Z}$.\\
 \textbf{Bài làm:}
 \begin{itemize}
-    \item $x^{4} = \dots$
-    \item $x^{n} = \dots$
+    \item $x^{4} = \left(e^{i\frac{\pi}{3}}\right)^4 = e^{i\frac{4\pi}{3}}$
+    \item $x^{n} = \left(e^{i\frac{\pi}{3}}\right)^{n} = e^{i\frac{n\pi}{3}}$
 \end{itemize}
 
 \subsection{(g)}
 \textbf{Đề bài:} Tính $\sqrt[4]{x}$ và $\sqrt[n]{x}$ $n\in\mathbb{N}^{+}$.\\
 \textbf{Bài làm:}
 \begin{itemize}
-    \item $\sqrt[4]{x} = \dots$ (Liệt kê các nghiệm)
-    \item $\sqrt[n]{x} = \dots$ (Công thức tổng quát cho $n$ nghiệm)
+    \item $\sqrt[4]{x} = \left(e^{i\frac{\pi}{3}}\right)^{\frac{1}{4}} = e^{i\frac{\pi}{12}}$
+    \item $\sqrt[n]{x} = \left(e^{i\frac{\pi}{3}}\right)^{\frac{1}{n}} = e^{i\frac{\pi}{3n}}$
 \end{itemize}
 
 \section{Bài 2}
@@ -107,18 +94,43 @@ Cho $x, y\in\mathbb{C}$ chứng minh
 \subsection{(a)}
 \textbf{Đề bài:} $x\overline{x}=\overline{x}x=|x|^{2}$.\\
 \textbf{Bài làm:}
+\begin{align*}
+    x \overline{x} &= (a + bi)(a - bi) = a^{2} + b^{2} = |x|^{2} \quad (\text{ĐPCM})\\
+\end{align*}
 
 \subsection{(b)}
 \textbf{Đề bài:} $\overline{x^{-1}}=(\overline{x})^{-1}(x\ne0)$.\\
 \textbf{Bài làm:}
+\begin{align*}
+    \overline{x^{-1}} &= \overline{\left(\frac{1}{x}\right)} = \frac{1}{\overline{x}} = (\overline{x})^{-1} \quad (\text{ĐPCM})\\
+\end{align*}
 
 \subsection{(c)}
 \textbf{Đề bài:} $|xy|=|x||y|$.\\
 \textbf{Bài làm:}
+\\Xét $x=a+bi$, $y=c+di$. \\
+Ta có:
+\begin{align}
+    |xy| &= |(a + bi)(c + di)| = |(ac - bd) + (ad + bc)i| = \sqrt{(ac - bd)^{2} + (ad + bc)^{2}}\\
+    &= \sqrt{a^{2}c^{2} - 2abcd + b^{2}d^{2} + a^{2}d^{2} + 2abcd + b^{2}c^{2}} = \sqrt{a^{2}c^{2} + b^{2}d^{2} + a^{2}d^{2} + b^{2}c^{2}}\\
+\end{align}
+Mặt khác:
+\begin{align}
+    |x||y| &= \sqrt{a^{2} + b^{2}}\sqrt{c^{2} + d^{2}} = \sqrt{(a^{2} + b^{2})(c^{2} + d^{2})} = \sqrt{a^{2}c^{2} + a^{2}d^{2} + b^{2}c^{2} + b^{2}d^{2}}\\ 
+\end{align}
+Vậy $|xy| = |x||y|$ (ĐPCM).
 
 \subsection{(d)}
 \textbf{Đề bài:} $|x+y|\le|x|+|y|$.\\
-\textbf{Bài làm:} (Bất đẳng thức tam giác)
+\textbf{Bài làm:}\\
+Xét $x=a+bi$, $y=c+di$. \\
+Ta có:
+\begin{align*}
+    |x+y| &= |(a+c) + (b+d)i| = \sqrt{(a+c)^{2} + (b+d)^{2}} = \sqrt{a^{2} + 2ac + c^{2} + b^{2} + 2bd + d^{2}}\\
+    &= \sqrt{(a^{2} + b^{2}) + (c^{2} + d^{2}) + 2(ac + bd)}\\
+    &\le \sqrt{(a^{2} + b^{2}) + (c^{2} + d^{2}) + 2\sqrt{(a^{2} + b^{2})(c^{2} + d^{2})}} \quad (\text{BĐT Cauchy-Schwarz})\\
+    &= \sqrt{(\sqrt{a^{2} + b^{2}} + \sqrt{c^{2} + d^{2}})^{2}} = \sqrt{(|x| + |y|)^2} =|x| + |y| \quad (\text{ĐPCM})
+\end{align*}
 
 \section{Bài 3}
 Cho $|\phi\rangle=\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle$, $|\psi\rangle=\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle$.
