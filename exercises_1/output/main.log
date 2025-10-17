@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.12)  16 OCT 2025 22:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.12)  17 OCT 2025 17:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -778,7 +778,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...}{\numberline {4.5}(e)}{7}{subsection.4.5}
+l.30 ...{\numberline {4.5}(e)}{12}{subsection.4.5}
                                                   % [1])
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -801,11 +801,24 @@ l.30 ...}{\numberline {4.5}(e)}{7}{subsection.4.5}
 
 [7]
 
-[8])
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 351--354
+
+ []
+
+
 
 [9]
 
-[10] (d:\Study\25_26_Semester_1\IntroQC\exercises_1\output\main.aux)
+[10]
+
+[11]
+
+[12]
+
+[13])
+
+[14] (d:\Study\25_26_Semester_1\IntroQC\exercises_1\output\main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
@@ -814,17 +827,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 3777B12B76B8CBDE786AB8728070F342;3673.
  ) 
 Here is how much of TeX's memory you used:
- 23574 strings out of 468130
- 430875 string characters out of 5430632
- 819176 words of memory out of 5000000
- 51736 multiletter control sequences out of 15000+600000
+ 23582 strings out of 468130
+ 431015 string characters out of 5430632
+ 831176 words of memory out of 5000000
+ 51740 multiletter control sequences out of 15000+600000
  645621 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,12n,93p,431b,656s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,21n,93p,431b,656s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\luuth\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on d:\Study\25_26_Semester_1\IntroQC\exercises_1\output\main.pdf (13 pages, 411169 bytes).
+Output written on d:\Study\25_26_Semester_1\IntroQC\exercises_1\output\main.pdf (17 pages, 432743 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
+ 414 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
  394 words of extra memory for PDF output out of 10000 (max. 10000000)
 

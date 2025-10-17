@@ -139,79 +139,317 @@ Cho $|\phi\rangle=\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle$, $|\psi\rang
 \textbf{Đề bài:} Tính $\langle\phi|$ và $\langle\psi|$.\\
 \textbf{Bài làm:}
 \begin{itemize}
-    \item $\langle\phi| = \dots$
-    \item $\langle\psi| = \dots$
+    \item $\langle\phi| = |\phi\rangle^\dagger = \frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|$
+    \item $\langle\psi| = |\psi\rangle^\dagger = \frac{2}{3}\langle0|+\frac{1+2i}{3}\langle1|$
 \end{itemize}
 
 \subsection{(b)}
 \textbf{Đề bài:} Tính $\langle\phi|\psi\rangle$ và $\langle\psi|\phi\rangle$.\\
 \textbf{Bài làm:}
-\begin{itemize}
-    \item $\langle\phi|\psi\rangle = \dots$
-    \item $\langle\psi|\phi\rangle = \dots$
-\end{itemize}
+Ta có:
+\begin{align*}
+    \langle0|0\rangle &= 1, & \langle0|1\rangle &= 0,\\
+    \langle1|0\rangle &= 0, & \langle1|1\rangle &= 1.
+\end{align*}
+$\implies$
+\begin{align*}
+    \langle\phi|\psi\rangle &= \left(\frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|\right)\left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\\
+    &= \frac{\sqrt{3}}{2}\cdot\frac{2}{3}\langle0|0\rangle + \frac{\sqrt{3}}{2}\cdot\frac{1-2i}{3}\langle0|1\rangle + \frac{1}{2}\cdot\frac{2}{3}\langle1|0\rangle + \frac{1}{2}\cdot\frac{1-2i}{3}\langle1|1\rangle\\
+    &= \frac{\sqrt{3}}{3} + 0 + 0 + \frac{1-2i}{6} = \frac{\sqrt{3}}{3} + \frac{1-2i}{6}\\
+    &= \frac{2\sqrt{3} + 1 - 2i}{6}
+\end{align*}
+\begin{align*}
+    \langle\psi|\phi\rangle &= \left(\frac{2}{3}\langle0|+\frac{1+2i}{3}\langle1|\right)\left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\\
+    &= \frac{2}{3}\cdot\frac{\sqrt{3}}{2}\langle0|0\rangle + \frac{2}{3}\cdot\frac{1}{2}\langle0|1\rangle + \frac{1+2i}{3}\cdot\frac{\sqrt{3}}{2}\langle1|0\rangle + \frac{1+2i}{3}\cdot\frac{1}{2}\langle1|1\rangle\\
+    &= \frac{\sqrt{3}}{3} + 0 + 0 + \frac{1+2i}{6} = \frac{\sqrt{3}}{3} + \frac{1+2i}{6}\\
+    &= \frac{2\sqrt{3} + 1 + 2i}{6}
+\end{align*}
 
 \subsection{(c)}
 \textbf{Đề bài:} Tính $|\phi\rangle\langle\phi|$ và $|\psi\rangle\langle\phi|$.\\
 \textbf{Bài làm:}
-\begin{itemize}
-    \item $|\phi\rangle\langle\phi| = \dots$
-    \item $|\psi\rangle\langle\phi| = \dots$
-\end{itemize}
+\begin{align*}
+    |\phi\rangle\langle\phi| &= \left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\left(\frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|\right)\\
+    &= \frac{3}{4}|0\rangle\langle0| + \frac{\sqrt{3}}{4}|0\rangle\langle1| + \frac{\sqrt{3}}{4}|1\rangle\langle0| + \frac{1}{4}|1\rangle\langle1|\\
+    &= \frac{3}{4} \begin{bmatrix}
+        1 & 0 \\
+        0 & 0
+    \end{bmatrix}
+    + \frac{\sqrt{3}}{4} \begin{bmatrix}
+        0 & 1 \\
+        0 & 0
+    \end{bmatrix}
+    + \frac{\sqrt{3}}{4} \begin{bmatrix}
+        0 & 0 \\
+        1 & 0
+    \end{bmatrix}
+    + \frac{1}{4} \begin{bmatrix}
+        0 & 0 \\
+        0 & 1
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        \frac{3}{4} & \frac{\sqrt{3}}{4} \\
+        \frac{\sqrt{3}}{4} & \frac{1}{4}
+    \end{bmatrix}
+\end{align*}
+\begin{align*}
+    |\psi\rangle\langle\phi| &= \left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\left(\frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|\right)\\
+    &= \frac{\sqrt{3}}{3}|0\rangle\langle0| + \frac{1}{3}|0\rangle\langle1| + \frac{(1-2i)\sqrt{3}}{6}|1\rangle\langle0| + \frac{1-2i}{6}|1\rangle\langle1|\\
+    &= \frac{\sqrt{3}}{3} \begin{bmatrix}
+        1 & 0 \\
+        0 & 0
+    \end{bmatrix}
+    + \frac{1}{3} \begin{bmatrix}
+        0 & 1 \\
+        0 & 0
+    \end{bmatrix}
+    + \frac{(1-2i)\sqrt{3}}{6} \
+    \begin{bmatrix}
+        0 & 0 \\
+        1 & 0
+    \end{bmatrix}
+    + \frac{1-2i}{6} \begin{bmatrix}
+        0 & 0 \\
+        0 & 1
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        \frac{\sqrt{3}}{3} & \frac{1}{3} \\
+        \frac{(1-2i)\sqrt{3}}{6} & \frac{1-2i}{6}
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(d)}
 \textbf{Đề bài:} Tính $|\phi\rangle|\psi\rangle$ và $|\psi\rangle|\phi\rangle$.\\
-\textbf{Bài làm:} (Tensor product)
-\begin{itemize}
-    \item $|\phi\rangle|\psi\rangle = \dots$
-    \item $|\psi\rangle|\phi\rangle = \dots$
-\end{itemize}
+\textbf{Bài làm:}
+\begin{align*}
+    |\phi\rangle|\psi\rangle &= \left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\\
+    &= \frac{\sqrt{3}}{2}\cdot\frac{2}{3}|00\rangle + \frac{\sqrt{3}}{2}\cdot\frac{1-2i}{3}|01\rangle + \frac{1}{2}\cdot\frac{2}{3}|10\rangle + \frac{1}{2}\cdot\frac{1-2i}{3}|11\rangle\\
+    &= \frac{\sqrt{3}}{3}|00\rangle + \frac{\sqrt{3}(1-2i)}{6}|01\rangle + \frac{1}{3}|10\rangle + \frac{1-2i}{6}|11\rangle\\
+    &= \frac{\sqrt{3}}{3} \begin{bmatrix}
+        1 \\
+        0 \\
+        0 \\
+        0
+    \end{bmatrix}
+    + \frac{\sqrt{3}(1-2i)}{6} \begin{bmatrix}
+        0 \\
+        1 \\
+        0 \\
+        0
+    \end{bmatrix}
+    + \frac{1}{3} \begin{bmatrix}
+        0 \\
+        0 \\
+        1 \\
+        0
+    \end{bmatrix}
+    + \frac{1-2i}{6} \begin{bmatrix}
+        0 \\
+        0 \\
+        0 \\
+        1
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        \frac{\sqrt{3}}{3} \\
+        \frac{\sqrt{3}(1-2i)}{6} \\
+        \frac{1}{3} \\
+        \frac{1-2i}{6}
+    \end{bmatrix}
+\end{align*}
+\begin{align*}
+    |\psi\rangle|\phi\rangle &= \left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\\
+    &= \frac{2}{3}\cdot\frac{\sqrt{3}}{2}|00\rangle + \frac{2}{3}\cdot\frac{1}{2}|01\rangle + \frac{1-2i}{3}\cdot\frac{\sqrt{3}}{2}|10\rangle + \frac{1-2i}{3}\cdot\frac{1}{2}|11\rangle\\
+    &= \frac{\sqrt{3}}{3}|00\rangle + \frac{1}{3}|01\rangle + \frac{(1-2i)\sqrt{3}}{6}|10\rangle + \frac{1-2i}{6}|11\rangle\\
+    &= \frac{\sqrt{3}}{3} \begin{bmatrix}
+        1 \\
+        0 \\
+        0 \\
+        0
+    \end{bmatrix}
+    + \frac{1}{3} \begin{bmatrix}
+        0 \\
+        1 \\
+        0 \\
+        0
+    \end{bmatrix}
+    + \frac{(1-2i)\sqrt{3}}{6} \begin{bmatrix}
+        0 \\
+        0 \\
+        1 \\
+        0
+    \end{bmatrix}
+    + \frac{1-2i}{6} \begin{bmatrix}
+        0 \\
+        0 \\
+        0 \\
+        1
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        \frac{\sqrt{3}}{3} \\
+        \frac{1}{3} \\
+        \frac{(1-2i)\sqrt{3}}{6} \\
+        \frac{1-2i}{6}
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(e)}
 \textbf{Đề bài:} Tính $||\phi||$ và $||\psi||$.\\
 \textbf{Bài làm:}
-\begin{itemize}
-    \item $||\phi|| = \dots$
-    \item $||\psi|| = \dots$
-\end{itemize}
+\begin{align*}
+    ||\phi|| &= \sqrt{\left|\frac{\sqrt{3}}{2}\right|^2 + \left|\frac{1}{2}\right|^2} = 1\\
+    ||\psi|| &= \sqrt{\left|\frac{2}{3}\right|^2 + \left|\frac{1-2i}{3}\right|^2} = 1\\
+\end{align*}
 
 \subsection{(f)}
 \textbf{Đề bài:} Tính góc giữa $|\phi\rangle$ và $|\psi\rangle$.\\
-\textbf{Bài làm:}
+\textbf{Bài làm:}\\
+Gọi $\theta$ là góc giữa $\phi\rangle$ và $\psi\rangle$.\\
+Ta có:
+\begin{align*}
+    \cos\theta &= \frac{|\langle\phi, \psi\rangle|}{||\phi||||\psi||}
+    = \frac{|\langle\phi|\psi\rangle|}{||\phi||||\psi||}
+    = \frac{\left|\frac{2\sqrt{3} + 1 - 2i}{6}\right|}{1 \cdot 1}
+    = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right|\\
+\implies \theta &= \arccos\left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| \approx 0.6175934679 \quad (\mathrm{rad})
+\end{align*}
 
 \subsection{(g)}
 \textbf{Đề bài:} Tính $\mathrm{proj}_{|\psi\rangle}|\phi\rangle$ và $\mathrm{proj}_{|\phi\rangle}|\psi\rangle$.\\
 \textbf{Bài làm:}
-\begin{itemize}
-    \item $\mathrm{proj}_{|\psi\rangle}|\phi\rangle = \dots$
-    \item $\mathrm{proj}_{|\phi\rangle}|\psi\rangle = \dots$
-\end{itemize}
+\begin{align*}
+    \mathrm{proj}_{|\psi\rangle}|\phi\rangle &= \frac{\langle\psi|\phi\rangle}{||\psi||^2} \psi = \langle\psi|\phi\rangle\psi = \frac{2\sqrt{3} + 1 + 2i}{6} \begin{bmatrix}
+        \frac{2}{3} \\
+        \frac{1-2i}{3}
+    \end{bmatrix}\\
+    \mathrm{proj}_{|\phi\rangle}|\psi\rangle &= \frac{\langle\phi|\psi\rangle}{||\phi||^2} \phi = \langle\phi|\psi\rangle\phi = \frac{2\sqrt{3} + 1 - 2i}{6} \begin{bmatrix}
+        \frac{\sqrt{3}}{2} \\
+        \frac{1}{2}
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(h)}
 \textbf{Đề bài:} Chuẩn hóa $\mathrm{proj}_{|\psi\rangle}|\phi\rangle$ và $\mathrm{proj}_{|\phi\rangle}|\psi\rangle$.\\
-\textbf{Bài làm:}
-\begin{itemize}
-    \item Chuẩn hóa $\mathrm{proj}_{|\psi\rangle}|\phi\rangle = \dots$
-    \item Chuẩn hóa $\mathrm{proj}_{|\phi\rangle}|\psi\rangle = \dots$
-\end{itemize}
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    ||\mathrm{proj}_{|\psi\rangle}|\phi\rangle|| &= \left|\frac{2\sqrt{3} + 1 + 2i}{6}\right| \cdot ||\psi|| = \left|\frac{2\sqrt{3} + 1 + 2i}{6}\right| \cdot 1 = \left|\frac{2\sqrt{3} + 1 + 2i}{6}\right| := \mathbb{A}\\
+    ||\mathrm{proj}_{|\phi\rangle}|\psi\rangle|| &= \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| \cdot ||\phi|| = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| \cdot 1 = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| := \mathbb{B}
+\end{align*}
+Vậy:
+\begin{align*}
+    \mathrm{norm}(\mathrm{proj}_{|\psi\rangle}|\phi\rangle) &= \frac{1}{||\mathrm{proj}_{|\psi\rangle}|\phi\rangle||} \mathrm{proj}_{|\psi\rangle}|\phi\rangle = \frac{1}{\mathbb{A}} \cdot \frac{2\sqrt{3} + 1 + 2i}{6} \begin{bmatrix}
+        \frac{2}{3} \\
+        \frac{1-2i}{3}
+    \end{bmatrix}\\
+    \mathrm{norm}(\mathrm{proj}_{|\phi\rangle}|\psi\rangle) &= \frac{1}{||\mathrm{proj}_{|\phi\rangle}|\psi\rangle||} \mathrm{proj}_{|\phi\rangle}|\psi\rangle = \frac{1}{\mathbb{B}} \cdot \frac{2\sqrt{3} + 1 - 2i}{6} \begin{bmatrix}
+        \frac{\sqrt{3}}{2} \\
+        \frac{1}{2}
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(i)}
 \textbf{Đề bài:} Tìm tọa độ của $|\phi\rangle$ và $|\psi\rangle$ trong các cơ sở $B_{Z}=\{|0\rangle,|1\rangle\}$, $B_{X}=\{|+\rangle,|-\rangle\}$, $B_{Y}=\{|i\rangle,|-i\rangle\}$.\\
-\textbf{Bài làm:}
+\textbf{Bài làm:}\\
+\textbf{Cơ sở $B_{Z}$:}\\
+\begin{align*}
+    \begin{cases}
+        |\phi\rangle = \frac{\sqrt{3}}{2}|0\rangle + \frac{1}{2}|1\rangle\\
+        |\psi\rangle = \frac{2}{3}|0\rangle + \frac{1-2i}{3}|1\rangle
+    \end{cases}
+    \implies
+    \begin{cases}
+        [|\phi\rangle]_{B_{Z}} = \begin{pmatrix}
+            \frac{\sqrt{3}}{2},
+            \frac{1}{2}
+        \end{pmatrix}\\
+        [|\psi\rangle]_{B_{Z}} = \begin{pmatrix}
+            \frac{2}{3},
+            \frac{1-2i}{3}
+        \end{pmatrix}
+    \end{cases}
+\end{align*}
+
+\textbf{Cơ sở $B_{X}$:} Vì cơ sở $B_{X}$ là cơ sở trực chuẩn, ta có:
+\begin{align*}
+    \begin{cases}
+        [|\phi\rangle]_{B_{X}} = \begin{pmatrix}
+            \langle+|\phi\rangle,
+            \langle-|\phi\rangle
+        \end{pmatrix} = \begin{pmatrix}
+            \frac{\sqrt{3} + 1}{2\sqrt{2}},
+            \frac{\sqrt{3} - 1}{2\sqrt{2}}
+        \end{pmatrix}\\
+        [|\psi\rangle]_{B_{X}} = \begin{pmatrix}
+            \langle+|\psi\rangle,
+            \langle-|\psi\rangle
+        \end{pmatrix} = \begin{pmatrix}
+            \frac{3 - 2i}{3\sqrt{2}},
+            \frac{1 + 2i}{3\sqrt{2}}
+        \end{pmatrix}
+    \end{cases}
+\end{align*}
+
+\textbf{Cơ sở $B_{Y}$:} Vì cơ sở $B_{Y}$ là cơ sở trực chuẩn, ta có:
+\begin{align*}
+    \begin{cases}
+        [|\phi\rangle]_{B_{Y}} = \begin{pmatrix}
+            \langle i|\phi\rangle,
+            \langle -i|\phi\rangle
+        \end{pmatrix} = \begin{pmatrix}
+            \frac{\sqrt{3} - i}{2\sqrt{2}},
+            \frac{\sqrt{3} + i}{2\sqrt{2}}
+        \end{pmatrix}\\
+        [|\psi\rangle]_{B_{Y}} = \begin{pmatrix}
+            \langle i|\psi\rangle,
+            \langle -i|\psi\rangle
+        \end{pmatrix} = \begin{pmatrix}
+            \frac{-i}{3\sqrt{2}},
+            \frac{4 + i}{3\sqrt{2}}
+        \end{pmatrix}
+    \end{cases}
+\end{align*}
 
 \subsection{(j)}
-\textbf{Đề bài:} Cho $|a\rangle=\frac{\sqrt{3}}{2}|0\rangle+\frac{i}{2}|1\rangle$, $|b\rangle=\frac{i}{2}|0\rangle+\frac{\sqrt{3}}{2}|1\rangle$, chứng minh $B=\{a,b\}$ là một cơ sở trực chuẩn của $\mathbb{C}^{2}$ và tìm tọa độ của $|\phi\rangle$, $|\psi\rangle$ theo $B$.
-\textbf{Bài làm:}
+\textbf{Đề bài:} Cho $|a\rangle=\frac{\sqrt{3}}{2}|0\rangle+\frac{i}{2}|1\rangle$, $|b\rangle=\frac{i}{2}|0\rangle+\frac{\sqrt{3}}{2}|1\rangle$, chứng minh $B=\{a,b\}$ là một cơ sở trực chuẩn của $\mathbb{C}^{2}$ và tìm tọa độ của $|\phi\rangle$, $|\psi\rangle$ theo $B$.\\
+\textbf{Bài làm:}\\
+Ta cần chứng minh $\langle a|b\rangle=0$ và $||a||=||b||=1$.\\
+Ta có:
+\begin{align*}
+    \langle a|b\rangle &= \left(\frac{\sqrt{3}}{2}\langle0| - \frac{i}{2}\langle1|\right)\left(\frac{i}{2}|0\rangle + \frac{\sqrt{3}}{2}|1\rangle\right)\\
+    &= \frac{\sqrt{3}i}{4}\langle0|0\rangle + \frac{3}{4}\langle0|1\rangle - \frac{i^{2}}{4}\langle1|0\rangle - \frac{i\sqrt{3}}{4}\langle1|1\rangle\\
+    &= \frac{\sqrt{3}i}{4} + 0 - 0 - \frac{i\sqrt{3}}{4} = 0 \quad (\text{*})\\
+    ||a|| &= \sqrt{\left|\frac{\sqrt{3}}{2}\right|^2 + \left|\frac{i}{2}\right|^2} = 1 = \sqrt{\left|\frac{i}{2}\right|^2 + \left|\frac{\sqrt{3}}{2}\right|^2} = ||b|| \quad (\text{**})
+\end{align*}
+Từ (*) và (**), suy ra $B=\{a,b\}$ là một cơ sở trực chuẩn của $\mathbb{C}^{2}$.\\
+Ta tìm toạ độ của $|\phi\rangle$ và $|\psi\rangle$ theo $B$:
+\begin{align*}
+    \begin{cases}
+        [|\phi\rangle]_{B} = \begin{pmatrix}
+            \langle a|\phi\rangle,
+            \langle b|\phi\rangle
+        \end{pmatrix} = \begin{pmatrix}
+            \frac{3 - i}{4},
+            \frac{\sqrt{3} - i\sqrt{3}}{4}
+        \end{pmatrix}\\
+        [|\psi\rangle]_{B} = \begin{pmatrix}
+            \langle a|\psi\rangle,
+            \langle b|\psi\rangle
+        \end{pmatrix} = \begin{pmatrix}
+            \frac{2\sqrt{3} - 2 - i}{6},
+            \frac{\sqrt{3} - 2i(1 + \sqrt{3})}{6}
+        \end{pmatrix}
+    \end{cases}
+\end{align*}
 
 \section{Bài 4}
-Cho $U$ là toán tử trên $\mathbb{C}^{2}$ với $U|0\rangle=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\ -i\end{pmatrix}$ và $U|1\rangle=\frac{1}{\sqrt{2}}\begin{pmatrix}-i\\ 1\end{pmatrix}$.
+Cho $U$ là toán tử trên $\mathbb{C}^{2}$ với $U|0\rangle=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\ -i\end{bmatrix}$ và $U|1\rangle=\frac{1}{\sqrt{2}}\begin{bmatrix}-i\\ 1\end{bmatrix}$.
 
 \subsection{(a)}
 \textbf{Đề bài:} Tìm biểu diễn của $U$ trong cơ sở chính tắc $B_{Z}=\{|0\rangle,|1\rangle\}$.
 \textbf{Bài làm:}
 
 \subsection{(b)}
-\textbf{Đề bài:} Cho $|\phi\rangle=\begin{pmatrix}\alpha\\ \beta\end{pmatrix}\in\mathbb{C}^{2},$ tìm $U|\phi\rangle$.
+\textbf{Đề bài:} Cho $|\phi\rangle=\begin{bmatrix}\alpha\\ \beta\end{bmatrix}\in\mathbb{C}^{2},$ tìm $U|\phi\rangle$.
 \textbf{Bài làm:}
 
 \subsection{(c)}
