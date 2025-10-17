@@ -445,36 +445,213 @@ Ta tìm toạ độ của $|\phi\rangle$ và $|\psi\rangle$ theo $B$:
 Cho $U$ là toán tử trên $\mathbb{C}^{2}$ với $U|0\rangle=\frac{1}{\sqrt{2}}\begin{bmatrix}1\\ -i\end{bmatrix}$ và $U|1\rangle=\frac{1}{\sqrt{2}}\begin{bmatrix}-i\\ 1\end{bmatrix}$.
 
 \subsection{(a)}
-\textbf{Đề bài:} Tìm biểu diễn của $U$ trong cơ sở chính tắc $B_{Z}=\{|0\rangle,|1\rangle\}$.
-\textbf{Bài làm:}
+\textbf{Đề bài:} Tìm biểu diễn của $U$ trong cơ sở chính tắc $B_{Z}=\{|0\rangle,|1\rangle\}$.\\
+\textbf{Bài làm:}\\
+Ma trận biểu diễn của $U$ trong cơ sở chính tắc $B_{Z}$ là:
+\begin{align*}
+    [U]_{B_{Z}} &= \begin{bmatrix}
+        U|0\rangle & U|1\rangle
+    \end{bmatrix} = \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & -i \\
+        -i & 1
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(b)}
-\textbf{Đề bài:} Cho $|\phi\rangle=\begin{bmatrix}\alpha\\ \beta\end{bmatrix}\in\mathbb{C}^{2},$ tìm $U|\phi\rangle$.
+\textbf{Đề bài:} Cho $|\phi\rangle=\begin{bmatrix}\alpha\\ \beta\end{bmatrix}\in\mathbb{C}^{2},$ tìm $U|\phi\rangle$.\\
 \textbf{Bài làm:}
+\begin{align*}
+    U|\phi\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & -i \\
+        -i & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        \alpha\\\beta
+    \end{bmatrix}
+    = \frac{1}{\sqrt{2}}\begin{bmatrix}
+        \alpha - i\beta \\
+        -i\alpha + \beta
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(c)}
-\textbf{Đề bài:} $U$ có unita không?
-\textbf{Bài làm:}
+\textbf{Đề bài:} $U$ có unita không?\\
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    U^\dagger &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & i\\
+        i & 1
+    \end{bmatrix}\\
+    U^\dagger U &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & i\\
+        i & 1
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & -i\\
+        -i & 1
+    \end{bmatrix}
+    = \frac{1}{2} \begin{bmatrix}
+        2 & 0 \\
+        0 & 2
+    \end{bmatrix} = \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix} = UU^\dagger
+\end{align*}
+Vậy $U$ có unita
 
 \subsection{(d)}
-\textbf{Đề bài:} $U$ có Hermite không?
-\textbf{Bài làm:}
+\textbf{Đề bài:} $U$ có Hermite không?\\
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    U &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & -i\\
+        -i & 1
+    \end{bmatrix}\\
+    U^\dagger &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & i\\
+        i & 1
+    \end{bmatrix} 
+\end{align*}
+Vì $U \ne U^\dagger$, nên $U$ không Hermite.
 
 \subsection{(e)}
-\textbf{Đề bài:} Tìm $U^{\dagger}$, $U^{-1}$.
+\textbf{Đề bài:} Tìm $U^{\dagger}$, $U^{-1}$.\\
 \textbf{Bài làm:}
-\begin{itemize}
-    \item $U^{\dagger} = \dots$
-    \item $U^{-1} = \dots$
-\end{itemize}
+\begin{align*}
+    U^{-1} = U^\dagger = \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & i\\
+        i & 1
+    \end{bmatrix} \quad (\text{vì $U$ unita})
+\end{align*}
 
 \subsection{(f)}
-\textbf{Đề bài:} Tìm $HUH|0\rangle$, $HUH|1\rangle$ và $HUH$ ($H$ là ma trận Hadamard).
-\textbf{Bài làm:}
+\textbf{Đề bài:} Tìm $HUH|0\rangle$, $HUH|1\rangle$ và $HUH$ ($H$ là ma trận Hadamard).\\
+\textbf{Bài làm:}\\
+Ta có ma trận Hadamard $H$ là:
+\begin{align*}
+    H &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & 1\\
+        1 & -1
+    \end{bmatrix}
+\end{align*}
+Vậy:
+\begin{align*}
+    HUH &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & 1\\
+        1 & -1
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & -i\\
+        -i & 1
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & 1\\
+        1 & -1
+    \end{bmatrix}\\
+    &= \frac{1}{2\sqrt{2}}\begin{bmatrix}
+        1 - i & 1 - i\\
+        1 + i & -1 - i
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & 1\\
+        1 & -1
+    \end{bmatrix}\\
+    &= \frac{1}{2\sqrt{2}}\begin{bmatrix}
+        2 - 2i & 0\\
+        0 & 2 + 2i
+    \end{bmatrix} \\
+    &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 - i & 0\\
+        0 & 1 + i
+    \end{bmatrix}\\
+    \implies HUH|0\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 - i & 0\\
+        0 & 1 + i
+    \end{bmatrix}
+    \begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}
+    = \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 - i\\
+        0
+    \end{bmatrix}\\
+    HUH|1\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 - i & 0\\
+        0 & 1 + i
+    \end{bmatrix}
+    \begin{bmatrix}
+        0\\
+        1
+    \end{bmatrix}
+    = \frac{1}{\sqrt{2}}\begin{bmatrix}
+        0\\
+        1 + i
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(g)}
 \textbf{Đề bài:} Tìm $UHU|0\rangle$, $UHU|1\rangle$ và $UHU$.
-\textbf{Bài làm:}
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    UHU &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & -i\\
+        -i & 1
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & 1\\
+        1 & -1
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & -i\\
+        -i & 1
+    \end{bmatrix}\\
+    &= \frac{1}{2\sqrt{2}}\begin{bmatrix}
+        1 - i & 1 + i\\
+        1 - i & - 1 - i
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & -i\\
+        -i & 1
+    \end{bmatrix}\\
+    &= \frac{1}{2\sqrt{2}}\begin{bmatrix}
+        2 - 2i & 0\\
+        0 & -2 - 2i
+    \end{bmatrix} \\
+    &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 - i & 0\\
+        0 & -1 - i
+    \end{bmatrix}\\
+    \implies UHU|0\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 - i & 0\\
+        0 & -1 - i
+    \end{bmatrix}
+    \begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}
+    = \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 - i\\
+        0
+    \end{bmatrix}\\
+    UHU|1\rangle &= \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+        1 - i & 0\\
+        0 & -1 - i
+    \end{bmatrix}
+    \begin{bmatrix}
+        0\\
+        1
+    \end{bmatrix}
+    = \frac{1}{\sqrt{2}}\begin{bmatrix}
+        0\\
+        -1 - i
+    \end{bmatrix}
+\end{align*}
 
 \section{Bài 5}
 Chứng minh $XY=iZ$ bằng cách

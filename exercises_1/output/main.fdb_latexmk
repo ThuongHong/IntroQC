@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1760697459.1468 "d:/Study/25_26_Semester_1/IntroQC/exercises_1/main.tex" "output/main.pdf" "main" 1760697460.39541 0
+["pdflatex"] 1760719261.39922 "d:/Study/25_26_Semester_1/IntroQC/exercises_1/main.tex" "output/main.pdf" "main" 1760719262.67878 0
   "C:/Users/luuth/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1760244430 88371 b965f57369ed322039596060d18f4416 ""
   "C:/Users/luuth/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1760244433 14064 face016f08d417d146a0c3a76b85aee4 ""
   "C:/Users/luuth/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760246158 13286967 640f272f94cb5c2f069cf620a7810623 ""
@@ -7,8 +7,10 @@
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1233951854 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233951854 928 2dc8d444221b7a635bb58038579b861a ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233951854 908 2921f8a10601f252058503cc6570e581 ""
+  "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233951854 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -172,15 +174,15 @@
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vietnam.sty" 1368738347 2477 91784aa2c9213f74609391e3cae65a13 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vncaps.tex" 1368738347 3273 a55ebdb07413d2fea580f210e3c0b252 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "content/bailam.tex" 1760697458 21375 67cc6ae9baeb2ff9bfb454f7e238ba31 ""
+  "content/bailam.tex" 1760719260 25595 d7b905324f1776d69b6768e5f6366af0 ""
   "content/title.tex" 1760465480 889 39dde0c60de55571a46c7504c1122541 ""
   "d:/Study/25_26_Semester_1/IntroQC/exercises_1/main.tex" 1760467181 1512 151a20379f38fa50d58e2be8837da146 ""
   "hcmus-report-template.sty" 1760241166 4528 ebd92f2c17f66633d60b58193d8c2c07 ""
   "img/hcmus-logo.png" 1760241167 258629 122747e63e393f11b7f15571540c7d20 ""
   "main.tex" 1760467181 1512 151a20379f38fa50d58e2be8837da146 ""
-  "output/main.aux" 1760697460 5304 2a8462b3f316a14cc8fc2b10072bb7c5 "pdflatex"
-  "output/main.out" 1760697460 3673 3777b12b76b8cbde786ab8728070f342 "pdflatex"
-  "output/main.toc" 1760697460 3214 0b7ae1865a5ea2f3de50f3bb7f532eb9 "pdflatex"
+  "output/main.aux" 1760719262 5304 261a609d921b880397d2df3bb3f5fb85 "pdflatex"
+  "output/main.out" 1760719262 3673 3777b12b76b8cbde786ab8728070f342 "pdflatex"
+  "output/main.toc" 1760719262 3214 ec9ec0739dea8ba1cb93737c7e9ad5ca "pdflatex"
   (generated)
   "output/main.aux"
   "output/main.log"

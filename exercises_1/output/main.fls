@@ -323,6 +323,9 @@ INPUT content\bailam.tex
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr8.tfm
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr6.tfm
+INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT d:\Study\25_26_Semester_1\IntroQC\exercises_1\output\main.aux
 INPUT d:\Study\25_26_Semester_1\IntroQC\exercises_1\output\main.out
 INPUT d:\Study\25_26_Semester_1\IntroQC\exercises_1\output\main.out
