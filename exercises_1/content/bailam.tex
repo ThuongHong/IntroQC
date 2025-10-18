@@ -805,7 +805,7 @@ Ta có:
                                        \end{bmatrix}
 \end{align*}
 \begin{align*}
-    \mathrm{proj}_{|+-\rangle}|\phi\rangle & = \frac{\langle+-|\phi\rangle}{|||+-\rangle||^2} |+-\rangle = \langle+-|\phi\rangle |+-\rangle                                \\
+    \mathrm{proj}_{|+-\rangle}|\phi\rangle & = \frac{\langle+-|\phi\rangle}{|||+-\rangle||^2} |+-\rangle = \langle+-|\phi\rangle |+-\rangle                        \\
                                            & = \frac{1}{2}\begin{bmatrix}
                                                               1 & -1 & 1 & -1
                                                           \end{bmatrix}
@@ -831,7 +831,7 @@ Ta có:
 \end{align*}
 Chuẩn hoá $\mathrm{proj}_{|+-\rangle}|\phi\rangle$:
 \begin{align*}
-    ||\mathrm{proj}_{|+-\rangle}|\phi\rangle|| & = \left|\frac{2 - \sqrt{3}}{16} + \frac{-1 + 2\sqrt{2}}{16}i\right| \cdot |||+-\rangle|| = \left|\frac{2 - \sqrt{3}}{16} + \frac{-1 + 2\sqrt{2}}{16}i\right| \cdot 1 := \mathbb{A} \\
+    ||\mathrm{proj}_{|+-\rangle}|\phi\rangle||                     & = \left|\frac{2 - \sqrt{3}}{16} + \frac{-1 + 2\sqrt{2}}{16}i\right| \cdot |||+-\rangle|| = \left|\frac{2 - \sqrt{3}}{16} + \frac{-1 + 2\sqrt{2}}{16}i\right| \cdot 1 := \mathbb{A}               \\
     \implies \mathrm{norm}(\mathrm{proj}_{|+-\rangle}|\phi\rangle) & = \frac{1}{||\mathrm{proj}_{|+-\rangle}|\phi\rangle||} \mathrm{proj}_{|+-\rangle}|\phi\rangle = \frac{1}{\mathbb{A}} \left(\frac{2 - \sqrt{3}}{16} + \frac{-1 + 2\sqrt{2}}{16}i\right)|+-\rangle
 \end{align*}
 
@@ -841,11 +841,11 @@ Chuẩn hoá $\mathrm{proj}_{|+-\rangle}|\phi\rangle$:
 Ta có cơ sở Bell:
 \begin{align*}
     B_{\mathrm{Bell}} = \begin{cases}
-        |\Phi^{+}\rangle = \frac{1}{\sqrt{2}}|00\rangle +  \frac{1}{\sqrt{2}}|11\rangle \\
-        |\Phi^{-}\rangle = \frac{1}{\sqrt{2}}|00\rangle -  \frac{1}{\sqrt{2}}|11\rangle \\
-        |\Psi^{+}\rangle = \frac{1}{\sqrt{2}}|01\rangle +  \frac{1}{\sqrt{2}}|10\rangle \\
-        |\Psi^{-}\rangle = \frac{1}{\sqrt{2}}|01\rangle -  \frac{1}{\sqrt{2}}|10\rangle
-    \end{cases}
+                            |\Phi^{+}\rangle = \frac{1}{\sqrt{2}}|00\rangle +  \frac{1}{\sqrt{2}}|11\rangle \\
+                            |\Phi^{-}\rangle = \frac{1}{\sqrt{2}}|00\rangle -  \frac{1}{\sqrt{2}}|11\rangle \\
+                            |\Psi^{+}\rangle = \frac{1}{\sqrt{2}}|01\rangle +  \frac{1}{\sqrt{2}}|10\rangle \\
+                            |\Psi^{-}\rangle = \frac{1}{\sqrt{2}}|01\rangle -  \frac{1}{\sqrt{2}}|10\rangle
+                        \end{cases}
     \implies
     \begin{cases}
         |00\rangle = \frac{1}{\sqrt{2}}(|\Phi^{+}\rangle + |\Phi^{-}\rangle) \\
@@ -856,36 +856,117 @@ Ta có cơ sở Bell:
 \end{align*}
 Vậy tạo độ của $|\phi\rangle$ theo cơ sở Bell là:
 \begin{align*}
-    |\phi\rangle & = \frac{1}{2}|00\rangle + \frac{i}{\sqrt{2}}|10\rangle + \frac{\sqrt{3}+i}{4}|11\rangle \\
-    & = \frac{1}{2}\cdot\frac{1}{\sqrt{2}}(|\Phi^{+}\rangle + |\Phi^{-}\rangle) + \frac{i}{\sqrt{2}}\cdot\frac{1}{\sqrt{2}}(|\Psi^{+}\rangle - |\Psi^{-}\rangle) + \frac{\sqrt{3}+i}{4}\cdot\frac{1}{\sqrt{2}}(|\Phi^{+}\rangle - |\Phi^{-}\rangle) \\
-    & = \left(\frac{1}{2\sqrt{2}} + \frac{\sqrt{3}+i}{4\sqrt{2}}\right)|\Phi^{+}\rangle + \left(\frac{1}{2\sqrt{2}} - \frac{\sqrt{3}+i}{4\sqrt{2}}\right)|\Phi^{-}\rangle + \frac{i}{2}|\Psi^{+}\rangle - \frac{i}{2}|\Psi^{-}\rangle\\
-    &\implies
+    |\phi\rangle & = \frac{1}{2}|00\rangle + \frac{i}{\sqrt{2}}|10\rangle + \frac{\sqrt{3}+i}{4}|11\rangle                                                                                                                                                       \\
+                 & = \frac{1}{2}\cdot\frac{1}{\sqrt{2}}(|\Phi^{+}\rangle + |\Phi^{-}\rangle) + \frac{i}{\sqrt{2}}\cdot\frac{1}{\sqrt{2}}(|\Psi^{+}\rangle - |\Psi^{-}\rangle) + \frac{\sqrt{3}+i}{4}\cdot\frac{1}{\sqrt{2}}(|\Phi^{+}\rangle - |\Phi^{-}\rangle) \\
+                 & = \left(\frac{1}{2\sqrt{2}} + \frac{\sqrt{3}+i}{4\sqrt{2}}\right)|\Phi^{+}\rangle + \left(\frac{1}{2\sqrt{2}} - \frac{\sqrt{3}+i}{4\sqrt{2}}\right)|\Phi^{-}\rangle + \frac{i}{2}|\Psi^{+}\rangle - \frac{i}{2}|\Psi^{-}\rangle               \\
+                 & \implies
     [|\phi\rangle]_{B_{\mathrm{Bell}}} = \begin{bmatrix}
                                              \frac{1}{2\sqrt{2}} + \frac{\sqrt{3}+i}{4\sqrt{2}} \\
                                              \frac{1}{2\sqrt{2}} - \frac{\sqrt{3}+i}{4\sqrt{2}} \\
-                                             \frac{i}{2}                                      \\
+                                             \frac{i}{2}                                        \\
                                              -\frac{i}{2}
                                          \end{bmatrix}
 \end{align*}
 
 \section{Bài 7}
-Kiểm tra các vector sau có phân tách được (separable)
+Kiểm tra các vector sau có phân tách được.
 
 \subsection{(a)}
-\textbf{Đề bài:} $|\phi_{1}\rangle=\frac{1}{2}(|00\rangle-|01\rangle+|10\rangle-|11\rangle).$
-\textbf{Bài làm:}
+\textbf{Đề bài:} $|\phi_{1}\rangle=\frac{1}{2}(|00\rangle-|01\rangle+|10\rangle-|11\rangle).$\\
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    |\phi_{1}\rangle & = \frac{1}{2}(|0\rangle \otimes |0\rangle - |0\rangle \otimes |1\rangle + |1\rangle \otimes |0\rangle - |1\rangle \otimes |1\rangle) \\
+                     & = \frac{1}{2}[|0\rangle \otimes (|0\rangle - |1\rangle) + |1\rangle \otimes (|0\rangle - |1\rangle)]                                 \\
+                     & = \frac{1}{2}[(|0\rangle + |1\rangle) \otimes (|0\rangle - |1\rangle)]                                                               \\
+                     & = |+\rangle \otimes |-\rangle
+\end{align*}
+Vậy $|\phi_{1}\rangle$ tách được
 
 \subsection{(b)}
-\textbf{Đề bài:} $|\phi_{2}\rangle=\frac{1}{2\sqrt{2}}(\sqrt{3}|00\rangle-\sqrt{3}|01\rangle+|10\rangle-|11\rangle)$.
-\textbf{Bài làm:}
+\textbf{Đề bài:} $|\phi_{2}\rangle=\frac{1}{2\sqrt{2}}(\sqrt{3}|00\rangle-\sqrt{3}|01\rangle+|10\rangle-|11\rangle)$.\\
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    |\phi_{2}\rangle & = \frac{1}{2\sqrt{2}}\left(\sqrt{3}|00\rangle-\sqrt{3}|01\rangle+|10\rangle-|11\rangle\right) \\
+                     & = \frac{1}{2\sqrt{2}}\left[(\sqrt{3}|0\rangle+|1\rangle) \otimes (|0\rangle-|1\rangle)\right] \quad
+                     := |\psi_1\rangle \otimes |\psi_2\rangle
+\end{align*}
+Vậy $|\phi_{2}\rangle$ tách được
 
 \subsection{(c)}
-\textbf{Đề bài:} $|\phi_{3}\rangle=\frac{1}{\sqrt{2}}(|10\rangle+i|11\rangle)$.
-\textbf{Bài làm:}
+\textbf{Đề bài:} $|\phi_{3}\rangle=\frac{1}{\sqrt{2}}(|10\rangle+i|11\rangle)$.\\
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    |\phi_{3}\rangle&=\frac{1}{\sqrt{2}}\left(|10\rangle+i|11\rangle\right)\\
+    &= \frac{1}{\sqrt{2}}\left[|1\rangle \otimes \left(|0\rangle + i|1\rangle\right) \right]\\
+    &= |1\rangle \otimes \left(\frac{1}{\sqrt{2}}|0\rangle + \frac{i}{\sqrt{2}}|1\rangle\right)\\
+    &= |1\rangle \otimes |i\rangle
+\end{align*}
+Vậy $|\phi_{3}\rangle$ tách được
 
 \subsection{(d)}
-\textbf{Đề bài:} $|\phi_{4}\rangle=\frac{1}{\sqrt{3}}|0+\rangle+\sqrt{\frac{2}{3}}|1-\rangle$.
-\textbf{Bài làm:}
+\textbf{Đề bài:} $|\phi_{4}\rangle=\frac{1}{\sqrt{3}}|0+\rangle+\sqrt{\frac{2}{3}}|1-\rangle$.\\
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+|\phi_{4}\rangle&=\frac{1}{\sqrt{3}}|0+\rangle+\sqrt{\frac{2}{3}}|1-\rangle\\
+&= \frac{1}{\sqrt{3}} \begin{bmatrix}
+    1\\0
+\end{bmatrix} \otimes \begin{bmatrix}
+    \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{bmatrix}
++ \sqrt{\frac{2}{3}} \begin{bmatrix}
+    0\\1
+\end{bmatrix} \otimes \begin{bmatrix}
+    \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}}
+\end{bmatrix}
+= \begin{bmatrix}
+    \frac{1}{\sqrt{6}}\\
+    \frac{1}{\sqrt{6}}\\
+    \frac{1}{\sqrt{3}}\\
+    -\frac{1}{\sqrt{3}}
+\end{bmatrix}
+\end{align*}
+Giả sử $|\phi_{4}\rangle$ tách được, tức là tồn tại $|\psi_1\rangle=\begin{bmatrix}a\\b\end{bmatrix}$ và $|\psi_2\rangle=\begin{bmatrix}c\\d\end{bmatrix}$ sao cho $|\phi_{4}\rangle=|\psi_1\rangle \otimes |\psi_2\rangle$\\
+Ta có:
+\begin{align*}
+    |\psi_1\rangle \otimes |\psi_2\rangle = \begin{bmatrix}
+        ac\\
+        ad\\
+        bc\\
+        bd
+    \end{bmatrix}\\
+    |\phi_{4}\rangle=|\psi_1\rangle \otimes |\psi_2\rangle
+    \implies \begin{bmatrix}
+    \frac{1}{\sqrt{6}}\\
+    \frac{1}{\sqrt{6}}\\
+    \frac{1}{\sqrt{3}}\\
+    -\frac{1}{\sqrt{3}}
+\end{bmatrix} = \begin{bmatrix}
+        ac\\
+        ad\\
+        bc\\
+        bd
+    \end{bmatrix}
+\end{align*}
+Từ đó ta có hệ phương trình:
+\begin{align*}
+    \begin{cases}
+        ac = \frac{1}{\sqrt{6}}\\
+        ad = \frac{1}{\sqrt{6}}\\
+        bc = \frac{1}{\sqrt{3}}\\
+        bd = -\frac{1}{\sqrt{3}}
+    \end{cases}
+    \implies
+    \begin{cases}
+        \frac{ac}{ad} = \frac{c}{d} = 1\\
+        \frac{bc}{bd} = \frac{c}{d} = -1
+    \end{cases}
+    (\text{Mâu thuẫn})
+\end{align*}
+Vậy $|\phi_{4}\rangle$ không tách được.
 
 \section{Bài 8}
 Cho $|\phi\rangle=\frac{1}{4}|00\rangle+\frac{1}{2}|01\rangle+\frac{1}{\sqrt{2}}|10\rangle+\frac{\sqrt{3}}{4}|11\rangle$.
