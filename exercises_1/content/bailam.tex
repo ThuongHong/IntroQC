@@ -5,24 +5,24 @@ Cho $x=e^{i\frac{\pi}{3}}$ và $y=2e^{i\frac{\pi}{6}}$.
 \textbf{Đề bài:} Vẽ minh họa $x, y$ trên mặt phẳng phức.\\
 \textbf{Bài làm:}
 \begin{center}
-\begin{tikzpicture}[scale=2]
+    \begin{tikzpicture}[scale=2]
 
-    % gốc tọa độ và trục
-    \draw[->, gray] (-0.5, 0) -- (2.5, 0) node[right] {$\mathrm{Re}$};
-    \draw[->, gray] (0, -0.5) -- (0, 1.5) node[above] {$\mathrm{Im}$};
-    \coordinate (O) at (0, 0);
+        % gốc tọa độ và trục
+        \draw[->, gray] (-0.5, 0) -- (2.5, 0) node[right] {$\mathrm{Re}$};
+        \draw[->, gray] (0, -0.5) -- (0, 1.5) node[above] {$\mathrm{Im}$};
+        \coordinate (O) at (0, 0);
 
-    % số phức x
-    \coordinate (X) at ({cos(60)}, {sin(60)});
-    \draw[->, very thick, blue!70] (O) -- (X) node[above right] {$x$};
-    \draw[blue!70] (0.3, 0) arc (0:60:0.3);
+        % số phức x
+        \coordinate (X) at ({cos(60)}, {sin(60)});
+        \draw[->, very thick, blue!70] (O) -- (X) node[above right] {$x$};
+        \draw[blue!70] (0.3, 0) arc (0:60:0.3);
 
-    % số phức y
-    \coordinate (Y) at ({2*cos(30)}, {2*sin(30)});
-    \draw[->, very thick, red!70] (O) -- (Y) node[above] {$y$};
-    \draw[red!70] (0.5, 0) arc (0:30:0.5);
+        % số phức y
+        \coordinate (Y) at ({2*cos(30)}, {2*sin(30)});
+        \draw[->, very thick, red!70] (O) -- (Y) node[above] {$y$};
+        \draw[red!70] (0.5, 0) arc (0:30:0.5);
 
-\end{tikzpicture}
+    \end{tikzpicture}
 \end{center}
 
 \subsection{(b)}
@@ -30,16 +30,16 @@ Cho $x=e^{i\frac{\pi}{3}}$ và $y=2e^{i\frac{\pi}{6}}$.
 \textbf{Bài làm:}
 \begin{itemize}
     \item \textbf{Dạng cực}:
-        \begin{align*}
-            x &= \cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right)\\
-            y &= 2\left(\cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right)\right)
-        \end{align*}
+          \begin{align*}
+              x & = \cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right)               \\
+              y & = 2\left(\cos\left(\frac{\pi}{6}\right) + i\sin\left(\frac{\pi}{6}\right)\right)
+          \end{align*}
 
     \item \textbf{Dạng đại số}:
-        \begin{align*}
-            x &= \frac{1}{2} + i\frac{\sqrt{3}}{2}\\
-            y &= \sqrt{3} + i
-        \end{align*}
+          \begin{align*}
+              x & = \frac{1}{2} + i\frac{\sqrt{3}}{2} \\
+              y & = \sqrt{3} + i
+          \end{align*}
 \end{itemize}
 
 \subsection{(c)}
@@ -95,14 +95,14 @@ Cho $x, y\in\mathbb{C}$ chứng minh
 \textbf{Đề bài:} $x\overline{x}=\overline{x}x=|x|^{2}$.\\
 \textbf{Bài làm:}
 \begin{align*}
-    x \overline{x} &= (a + bi)(a - bi) = a^{2} + b^{2} = |x|^{2} \quad (\text{ĐPCM})\\
+    x \overline{x} & = (a + bi)(a - bi) = a^{2} + b^{2} = |x|^{2} \quad (\text{ĐPCM}) \\
 \end{align*}
 
 \subsection{(b)}
 \textbf{Đề bài:} $\overline{x^{-1}}=(\overline{x})^{-1}(x\ne0)$.\\
 \textbf{Bài làm:}
 \begin{align*}
-    \overline{x^{-1}} &= \overline{\left(\frac{1}{x}\right)} = \frac{1}{\overline{x}} = (\overline{x})^{-1} \quad (\text{ĐPCM})\\
+    \overline{x^{-1}} & = \overline{\left(\frac{1}{x}\right)} = \frac{1}{\overline{x}} = (\overline{x})^{-1} \quad (\text{ĐPCM}) \\
 \end{align*}
 
 \subsection{(c)}
@@ -111,12 +111,12 @@ Cho $x, y\in\mathbb{C}$ chứng minh
 \\Xét $x=a+bi$, $y=c+di$. \\
 Ta có:
 \begin{align}
-    |xy| &= |(a + bi)(c + di)| = |(ac - bd) + (ad + bc)i| = \sqrt{(ac - bd)^{2} + (ad + bc)^{2}}\\
-    &= \sqrt{a^{2}c^{2} - 2abcd + b^{2}d^{2} + a^{2}d^{2} + 2abcd + b^{2}c^{2}} = \sqrt{a^{2}c^{2} + b^{2}d^{2} + a^{2}d^{2} + b^{2}c^{2}}\\
+    |xy| & = |(a + bi)(c + di)| = |(ac - bd) + (ad + bc)i| = \sqrt{(ac - bd)^{2} + (ad + bc)^{2}}                                                \\
+         & = \sqrt{a^{2}c^{2} - 2abcd + b^{2}d^{2} + a^{2}d^{2} + 2abcd + b^{2}c^{2}} = \sqrt{a^{2}c^{2} + b^{2}d^{2} + a^{2}d^{2} + b^{2}c^{2}} \\
 \end{align}
 Mặt khác:
 \begin{align}
-    |x||y| &= \sqrt{a^{2} + b^{2}}\sqrt{c^{2} + d^{2}} = \sqrt{(a^{2} + b^{2})(c^{2} + d^{2})} = \sqrt{a^{2}c^{2} + a^{2}d^{2} + b^{2}c^{2} + b^{2}d^{2}}\\ 
+    |x||y| & = \sqrt{a^{2} + b^{2}}\sqrt{c^{2} + d^{2}} = \sqrt{(a^{2} + b^{2})(c^{2} + d^{2})} = \sqrt{a^{2}c^{2} + a^{2}d^{2} + b^{2}c^{2} + b^{2}d^{2}} \\
 \end{align}
 Vậy $|xy| = |x||y|$ (ĐPCM).
 
@@ -126,10 +126,10 @@ Vậy $|xy| = |x||y|$ (ĐPCM).
 Xét $x=a+bi$, $y=c+di$. \\
 Ta có:
 \begin{align*}
-    |x+y| &= |(a+c) + (b+d)i| = \sqrt{(a+c)^{2} + (b+d)^{2}} = \sqrt{a^{2} + 2ac + c^{2} + b^{2} + 2bd + d^{2}}\\
-    &= \sqrt{(a^{2} + b^{2}) + (c^{2} + d^{2}) + 2(ac + bd)}\\
-    &\le \sqrt{(a^{2} + b^{2}) + (c^{2} + d^{2}) + 2\sqrt{(a^{2} + b^{2})(c^{2} + d^{2})}} \quad (\text{BĐT Cauchy-Schwarz})\\
-    &= \sqrt{(\sqrt{a^{2} + b^{2}} + \sqrt{c^{2} + d^{2}})^{2}} = \sqrt{(|x| + |y|)^2} =|x| + |y| \quad (\text{ĐPCM})
+    |x+y| & = |(a+c) + (b+d)i| = \sqrt{(a+c)^{2} + (b+d)^{2}} = \sqrt{a^{2} + 2ac + c^{2} + b^{2} + 2bd + d^{2}}                    \\
+          & = \sqrt{(a^{2} + b^{2}) + (c^{2} + d^{2}) + 2(ac + bd)}                                                                 \\
+          & \le \sqrt{(a^{2} + b^{2}) + (c^{2} + d^{2}) + 2\sqrt{(a^{2} + b^{2})(c^{2} + d^{2})}} \quad (\text{BĐT Cauchy-Schwarz}) \\
+          & = \sqrt{(\sqrt{a^{2} + b^{2}} + \sqrt{c^{2} + d^{2}})^{2}} = \sqrt{(|x| + |y|)^2} =|x| + |y| \quad (\text{ĐPCM})
 \end{align*}
 
 \section{Bài 3}
@@ -148,156 +148,156 @@ Cho $|\phi\rangle=\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle$, $|\psi\rang
 \textbf{Bài làm:}
 Ta có:
 \begin{align*}
-    \langle0|0\rangle &= 1, & \langle0|1\rangle &= 0,\\
-    \langle1|0\rangle &= 0, & \langle1|1\rangle &= 1.
+    \langle0|0\rangle & = 1, & \langle0|1\rangle & = 0, \\
+    \langle1|0\rangle & = 0, & \langle1|1\rangle & = 1.
 \end{align*}
 $\implies$
 \begin{align*}
-    \langle\phi|\psi\rangle &= \left(\frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|\right)\left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\\
-    &= \frac{\sqrt{3}}{2}\cdot\frac{2}{3}\langle0|0\rangle + \frac{\sqrt{3}}{2}\cdot\frac{1-2i}{3}\langle0|1\rangle + \frac{1}{2}\cdot\frac{2}{3}\langle1|0\rangle + \frac{1}{2}\cdot\frac{1-2i}{3}\langle1|1\rangle\\
-    &= \frac{\sqrt{3}}{3} + 0 + 0 + \frac{1-2i}{6} = \frac{\sqrt{3}}{3} + \frac{1-2i}{6}\\
-    &= \frac{2\sqrt{3} + 1 - 2i}{6}
+    \langle\phi|\psi\rangle & = \left(\frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|\right)\left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)                                                                                        \\
+                            & = \frac{\sqrt{3}}{2}\cdot\frac{2}{3}\langle0|0\rangle + \frac{\sqrt{3}}{2}\cdot\frac{1-2i}{3}\langle0|1\rangle + \frac{1}{2}\cdot\frac{2}{3}\langle1|0\rangle + \frac{1}{2}\cdot\frac{1-2i}{3}\langle1|1\rangle \\
+                            & = \frac{\sqrt{3}}{3} + 0 + 0 + \frac{1-2i}{6} = \frac{\sqrt{3}}{3} + \frac{1-2i}{6}                                                                                                                             \\
+                            & = \frac{2\sqrt{3} + 1 - 2i}{6}
 \end{align*}
 \begin{align*}
-    \langle\psi|\phi\rangle &= \left(\frac{2}{3}\langle0|+\frac{1+2i}{3}\langle1|\right)\left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\\
-    &= \frac{2}{3}\cdot\frac{\sqrt{3}}{2}\langle0|0\rangle + \frac{2}{3}\cdot\frac{1}{2}\langle0|1\rangle + \frac{1+2i}{3}\cdot\frac{\sqrt{3}}{2}\langle1|0\rangle + \frac{1+2i}{3}\cdot\frac{1}{2}\langle1|1\rangle\\
-    &= \frac{\sqrt{3}}{3} + 0 + 0 + \frac{1+2i}{6} = \frac{\sqrt{3}}{3} + \frac{1+2i}{6}\\
-    &= \frac{2\sqrt{3} + 1 + 2i}{6}
+    \langle\psi|\phi\rangle & = \left(\frac{2}{3}\langle0|+\frac{1+2i}{3}\langle1|\right)\left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)                                                                                        \\
+                            & = \frac{2}{3}\cdot\frac{\sqrt{3}}{2}\langle0|0\rangle + \frac{2}{3}\cdot\frac{1}{2}\langle0|1\rangle + \frac{1+2i}{3}\cdot\frac{\sqrt{3}}{2}\langle1|0\rangle + \frac{1+2i}{3}\cdot\frac{1}{2}\langle1|1\rangle \\
+                            & = \frac{\sqrt{3}}{3} + 0 + 0 + \frac{1+2i}{6} = \frac{\sqrt{3}}{3} + \frac{1+2i}{6}                                                                                                                             \\
+                            & = \frac{2\sqrt{3} + 1 + 2i}{6}
 \end{align*}
 
 \subsection{(c)}
 \textbf{Đề bài:} Tính $|\phi\rangle\langle\phi|$ và $|\psi\rangle\langle\phi|$.\\
 \textbf{Bài làm:}
 \begin{align*}
-    |\phi\rangle\langle\phi| &= \left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\left(\frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|\right)\\
-    &= \frac{3}{4}|0\rangle\langle0| + \frac{\sqrt{3}}{4}|0\rangle\langle1| + \frac{\sqrt{3}}{4}|1\rangle\langle0| + \frac{1}{4}|1\rangle\langle1|\\
-    &= \frac{3}{4} \begin{bmatrix}
-        1 & 0 \\
-        0 & 0
-    \end{bmatrix}
+    |\phi\rangle\langle\phi| & = \left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\left(\frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|\right)                  \\
+                             & = \frac{3}{4}|0\rangle\langle0| + \frac{\sqrt{3}}{4}|0\rangle\langle1| + \frac{\sqrt{3}}{4}|1\rangle\langle0| + \frac{1}{4}|1\rangle\langle1| \\
+                             & = \frac{3}{4} \begin{bmatrix}
+                                                 1 & 0 \\
+                                                 0 & 0
+                                             \end{bmatrix}
     + \frac{\sqrt{3}}{4} \begin{bmatrix}
-        0 & 1 \\
-        0 & 0
-    \end{bmatrix}
+                             0 & 1 \\
+                             0 & 0
+                         \end{bmatrix}
     + \frac{\sqrt{3}}{4} \begin{bmatrix}
-        0 & 0 \\
-        1 & 0
-    \end{bmatrix}
+                             0 & 0 \\
+                             1 & 0
+                         \end{bmatrix}
     + \frac{1}{4} \begin{bmatrix}
-        0 & 0 \\
-        0 & 1
-    \end{bmatrix}\\
-    &= \begin{bmatrix}
-        \frac{3}{4} & \frac{\sqrt{3}}{4} \\
-        \frac{\sqrt{3}}{4} & \frac{1}{4}
-    \end{bmatrix}
+                      0 & 0 \\
+                      0 & 1
+                  \end{bmatrix}                                                                                                                                             \\
+                             & = \begin{bmatrix}
+                                     \frac{3}{4}        & \frac{\sqrt{3}}{4} \\
+                                     \frac{\sqrt{3}}{4} & \frac{1}{4}
+                                 \end{bmatrix}
 \end{align*}
 \begin{align*}
-    |\psi\rangle\langle\phi| &= \left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\left(\frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|\right)\\
-    &= \frac{\sqrt{3}}{3}|0\rangle\langle0| + \frac{1}{3}|0\rangle\langle1| + \frac{(1-2i)\sqrt{3}}{6}|1\rangle\langle0| + \frac{1-2i}{6}|1\rangle\langle1|\\
-    &= \frac{\sqrt{3}}{3} \begin{bmatrix}
-        1 & 0 \\
-        0 & 0
-    \end{bmatrix}
+    |\psi\rangle\langle\phi| & = \left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\left(\frac{\sqrt{3}}{2}\langle0|+\frac{1}{2}\langle1|\right)                               \\
+                             & = \frac{\sqrt{3}}{3}|0\rangle\langle0| + \frac{1}{3}|0\rangle\langle1| + \frac{(1-2i)\sqrt{3}}{6}|1\rangle\langle0| + \frac{1-2i}{6}|1\rangle\langle1| \\
+                             & = \frac{\sqrt{3}}{3} \begin{bmatrix}
+                                                        1 & 0 \\
+                                                        0 & 0
+                                                    \end{bmatrix}
     + \frac{1}{3} \begin{bmatrix}
-        0 & 1 \\
-        0 & 0
-    \end{bmatrix}
+                      0 & 1 \\
+                      0 & 0
+                  \end{bmatrix}
     + \frac{(1-2i)\sqrt{3}}{6} \
     \begin{bmatrix}
         0 & 0 \\
         1 & 0
     \end{bmatrix}
     + \frac{1-2i}{6} \begin{bmatrix}
-        0 & 0 \\
-        0 & 1
-    \end{bmatrix}\\
-    &= \begin{bmatrix}
-        \frac{\sqrt{3}}{3} & \frac{1}{3} \\
-        \frac{(1-2i)\sqrt{3}}{6} & \frac{1-2i}{6}
-    \end{bmatrix}
+                         0 & 0 \\
+                         0 & 1
+                     \end{bmatrix}                                                                                                                                                   \\
+                             & = \begin{bmatrix}
+                                     \frac{\sqrt{3}}{3}       & \frac{1}{3}    \\
+                                     \frac{(1-2i)\sqrt{3}}{6} & \frac{1-2i}{6}
+                                 \end{bmatrix}
 \end{align*}
 
 \subsection{(d)}
 \textbf{Đề bài:} Tính $|\phi\rangle|\psi\rangle$ và $|\psi\rangle|\phi\rangle$.\\
 \textbf{Bài làm:}
 \begin{align*}
-    |\phi\rangle|\psi\rangle &= \left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\\
-    &= \frac{\sqrt{3}}{2}\cdot\frac{2}{3}|00\rangle + \frac{\sqrt{3}}{2}\cdot\frac{1-2i}{3}|01\rangle + \frac{1}{2}\cdot\frac{2}{3}|10\rangle + \frac{1}{2}\cdot\frac{1-2i}{3}|11\rangle\\
-    &= \frac{\sqrt{3}}{3}|00\rangle + \frac{\sqrt{3}(1-2i)}{6}|01\rangle + \frac{1}{3}|10\rangle + \frac{1-2i}{6}|11\rangle\\
-    &= \frac{\sqrt{3}}{3} \begin{bmatrix}
-        1 \\
-        0 \\
-        0 \\
-        0
-    \end{bmatrix}
+    |\phi\rangle|\psi\rangle & = \left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)                                                            \\
+                             & = \frac{\sqrt{3}}{2}\cdot\frac{2}{3}|00\rangle + \frac{\sqrt{3}}{2}\cdot\frac{1-2i}{3}|01\rangle + \frac{1}{2}\cdot\frac{2}{3}|10\rangle + \frac{1}{2}\cdot\frac{1-2i}{3}|11\rangle \\
+                             & = \frac{\sqrt{3}}{3}|00\rangle + \frac{\sqrt{3}(1-2i)}{6}|01\rangle + \frac{1}{3}|10\rangle + \frac{1-2i}{6}|11\rangle                                                              \\
+                             & = \frac{\sqrt{3}}{3} \begin{bmatrix}
+                                                        1 \\
+                                                        0 \\
+                                                        0 \\
+                                                        0
+                                                    \end{bmatrix}
     + \frac{\sqrt{3}(1-2i)}{6} \begin{bmatrix}
-        0 \\
-        1 \\
-        0 \\
-        0
-    \end{bmatrix}
+                                   0 \\
+                                   1 \\
+                                   0 \\
+                                   0
+                               \end{bmatrix}
     + \frac{1}{3} \begin{bmatrix}
-        0 \\
-        0 \\
-        1 \\
-        0
-    \end{bmatrix}
+                      0 \\
+                      0 \\
+                      1 \\
+                      0
+                  \end{bmatrix}
     + \frac{1-2i}{6} \begin{bmatrix}
-        0 \\
-        0 \\
-        0 \\
-        1
-    \end{bmatrix}\\
-    &= \begin{bmatrix}
-        \frac{\sqrt{3}}{3} \\
-        \frac{\sqrt{3}(1-2i)}{6} \\
-        \frac{1}{3} \\
-        \frac{1-2i}{6}
-    \end{bmatrix}
+                         0 \\
+                         0 \\
+                         0 \\
+                         1
+                     \end{bmatrix}                                                                                                                                                                                \\
+                             & = \begin{bmatrix}
+                                     \frac{\sqrt{3}}{3}       \\
+                                     \frac{\sqrt{3}(1-2i)}{6} \\
+                                     \frac{1}{3}              \\
+                                     \frac{1-2i}{6}
+                                 \end{bmatrix}
 \end{align*}
 \begin{align*}
-    |\psi\rangle|\phi\rangle &= \left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)\\
-    &= \frac{2}{3}\cdot\frac{\sqrt{3}}{2}|00\rangle + \frac{2}{3}\cdot\frac{1}{2}|01\rangle + \frac{1-2i}{3}\cdot\frac{\sqrt{3}}{2}|10\rangle + \frac{1-2i}{3}\cdot\frac{1}{2}|11\rangle\\
-    &= \frac{\sqrt{3}}{3}|00\rangle + \frac{1}{3}|01\rangle + \frac{(1-2i)\sqrt{3}}{6}|10\rangle + \frac{1-2i}{6}|11\rangle\\
-    &= \frac{\sqrt{3}}{3} \begin{bmatrix}
-        1 \\
-        0 \\
-        0 \\
-        0
-    \end{bmatrix}
+    |\psi\rangle|\phi\rangle & = \left(\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle\right)\left(\frac{\sqrt{3}}{2}|0\rangle+\frac{1}{2}|1\rangle\right)                                                            \\
+                             & = \frac{2}{3}\cdot\frac{\sqrt{3}}{2}|00\rangle + \frac{2}{3}\cdot\frac{1}{2}|01\rangle + \frac{1-2i}{3}\cdot\frac{\sqrt{3}}{2}|10\rangle + \frac{1-2i}{3}\cdot\frac{1}{2}|11\rangle \\
+                             & = \frac{\sqrt{3}}{3}|00\rangle + \frac{1}{3}|01\rangle + \frac{(1-2i)\sqrt{3}}{6}|10\rangle + \frac{1-2i}{6}|11\rangle                                                              \\
+                             & = \frac{\sqrt{3}}{3} \begin{bmatrix}
+                                                        1 \\
+                                                        0 \\
+                                                        0 \\
+                                                        0
+                                                    \end{bmatrix}
     + \frac{1}{3} \begin{bmatrix}
-        0 \\
-        1 \\
-        0 \\
-        0
-    \end{bmatrix}
+                      0 \\
+                      1 \\
+                      0 \\
+                      0
+                  \end{bmatrix}
     + \frac{(1-2i)\sqrt{3}}{6} \begin{bmatrix}
-        0 \\
-        0 \\
-        1 \\
-        0
-    \end{bmatrix}
+                                   0 \\
+                                   0 \\
+                                   1 \\
+                                   0
+                               \end{bmatrix}
     + \frac{1-2i}{6} \begin{bmatrix}
-        0 \\
-        0 \\
-        0 \\
-        1
-    \end{bmatrix}\\
-    &= \begin{bmatrix}
-        \frac{\sqrt{3}}{3} \\
-        \frac{1}{3} \\
-        \frac{(1-2i)\sqrt{3}}{6} \\
-        \frac{1-2i}{6}
-    \end{bmatrix}
+                         0 \\
+                         0 \\
+                         0 \\
+                         1
+                     \end{bmatrix}                                                                                                                                                                                \\
+                             & = \begin{bmatrix}
+                                     \frac{\sqrt{3}}{3}       \\
+                                     \frac{1}{3}              \\
+                                     \frac{(1-2i)\sqrt{3}}{6} \\
+                                     \frac{1-2i}{6}
+                                 \end{bmatrix}
 \end{align*}
 
 \subsection{(e)}
 \textbf{Đề bài:} Tính $||\phi||$ và $||\psi||$.\\
 \textbf{Bài làm:}
 \begin{align*}
-    ||\phi|| &= \sqrt{\left|\frac{\sqrt{3}}{2}\right|^2 + \left|\frac{1}{2}\right|^2} = 1\\
-    ||\psi|| &= \sqrt{\left|\frac{2}{3}\right|^2 + \left|\frac{1-2i}{3}\right|^2} = 1\\
+    ||\phi|| & = \sqrt{\left|\frac{\sqrt{3}}{2}\right|^2 + \left|\frac{1}{2}\right|^2} = 1 \\
+    ||\psi|| & = \sqrt{\left|\frac{2}{3}\right|^2 + \left|\frac{1-2i}{3}\right|^2} = 1     \\
 \end{align*}
 
 \subsection{(f)}
@@ -306,25 +306,25 @@ $\implies$
 Gọi $\theta$ là góc giữa $\phi\rangle$ và $\psi\rangle$.\\
 Ta có:
 \begin{align*}
-    \cos\theta &= \frac{|\langle\phi, \psi\rangle|}{||\phi||||\psi||}
+    \cos\theta      & = \frac{|\langle\phi, \psi\rangle|}{||\phi||||\psi||}
     = \frac{|\langle\phi|\psi\rangle|}{||\phi||||\psi||}
     = \frac{\left|\frac{2\sqrt{3} + 1 - 2i}{6}\right|}{1 \cdot 1}
-    = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right|\\
-\implies \theta &= \arccos\left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| \approx 0.6175934679 \quad (\mathrm{rad})
+    = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right|                                                                    \\
+    \implies \theta & = \arccos\left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| \approx 0.6175934679 \quad (\mathrm{rad})
 \end{align*}
 
 \subsection{(g)}
 \textbf{Đề bài:} Tính $\mathrm{proj}_{|\psi\rangle}|\phi\rangle$ và $\mathrm{proj}_{|\phi\rangle}|\psi\rangle$.\\
 \textbf{Bài làm:}
 \begin{align*}
-    \mathrm{proj}_{|\psi\rangle}|\phi\rangle &= \frac{\langle\psi|\phi\rangle}{||\psi||^2} \psi = \langle\psi|\phi\rangle\psi = \frac{2\sqrt{3} + 1 + 2i}{6} \begin{bmatrix}
-        \frac{2}{3} \\
-        \frac{1-2i}{3}
-    \end{bmatrix}\\
-    \mathrm{proj}_{|\phi\rangle}|\psi\rangle &= \frac{\langle\phi|\psi\rangle}{||\phi||^2} \phi = \langle\phi|\psi\rangle\phi = \frac{2\sqrt{3} + 1 - 2i}{6} \begin{bmatrix}
-        \frac{\sqrt{3}}{2} \\
-        \frac{1}{2}
-    \end{bmatrix}
+    \mathrm{proj}_{|\psi\rangle}|\phi\rangle & = \frac{\langle\psi|\phi\rangle}{||\psi||^2} \psi = \langle\psi|\phi\rangle\psi = \frac{2\sqrt{3} + 1 + 2i}{6} \begin{bmatrix}
+                                                                                                                                                                  \frac{2}{3} \\
+                                                                                                                                                                  \frac{1-2i}{3}
+                                                                                                                                                              \end{bmatrix}                    \\
+    \mathrm{proj}_{|\phi\rangle}|\psi\rangle & = \frac{\langle\phi|\psi\rangle}{||\phi||^2} \phi = \langle\phi|\psi\rangle\phi = \frac{2\sqrt{3} + 1 - 2i}{6} \begin{bmatrix}
+                                                                                                                                                                  \frac{\sqrt{3}}{2} \\
+                                                                                                                                                                  \frac{1}{2}
+                                                                                                                                                              \end{bmatrix}
 \end{align*}
 
 \subsection{(h)}
@@ -332,19 +332,19 @@ Ta có:
 \textbf{Bài làm:}\\
 Ta có:
 \begin{align*}
-    ||\mathrm{proj}_{|\psi\rangle}|\phi\rangle|| &= \left|\frac{2\sqrt{3} + 1 + 2i}{6}\right| \cdot ||\psi|| = \left|\frac{2\sqrt{3} + 1 + 2i}{6}\right| \cdot 1 = \left|\frac{2\sqrt{3} + 1 + 2i}{6}\right| := \mathbb{A}\\
-    ||\mathrm{proj}_{|\phi\rangle}|\psi\rangle|| &= \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| \cdot ||\phi|| = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| \cdot 1 = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| := \mathbb{B}
+    ||\mathrm{proj}_{|\psi\rangle}|\phi\rangle|| & = \left|\frac{2\sqrt{3} + 1 + 2i}{6}\right| \cdot ||\psi|| = \left|\frac{2\sqrt{3} + 1 + 2i}{6}\right| \cdot 1 = \left|\frac{2\sqrt{3} + 1 + 2i}{6}\right| := \mathbb{A} \\
+    ||\mathrm{proj}_{|\phi\rangle}|\psi\rangle|| & = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| \cdot ||\phi|| = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| \cdot 1 = \left|\frac{2\sqrt{3} + 1 - 2i}{6}\right| := \mathbb{B}
 \end{align*}
 Vậy:
 \begin{align*}
-    \mathrm{norm}(\mathrm{proj}_{|\psi\rangle}|\phi\rangle) &= \frac{1}{||\mathrm{proj}_{|\psi\rangle}|\phi\rangle||} \mathrm{proj}_{|\psi\rangle}|\phi\rangle = \frac{1}{\mathbb{A}} \cdot \frac{2\sqrt{3} + 1 + 2i}{6} \begin{bmatrix}
-        \frac{2}{3} \\
-        \frac{1-2i}{3}
-    \end{bmatrix}\\
-    \mathrm{norm}(\mathrm{proj}_{|\phi\rangle}|\psi\rangle) &= \frac{1}{||\mathrm{proj}_{|\phi\rangle}|\psi\rangle||} \mathrm{proj}_{|\phi\rangle}|\psi\rangle = \frac{1}{\mathbb{B}} \cdot \frac{2\sqrt{3} + 1 - 2i}{6} \begin{bmatrix}
-        \frac{\sqrt{3}}{2} \\
-        \frac{1}{2}
-    \end{bmatrix}
+    \mathrm{norm}(\mathrm{proj}_{|\psi\rangle}|\phi\rangle) & = \frac{1}{||\mathrm{proj}_{|\psi\rangle}|\phi\rangle||} \mathrm{proj}_{|\psi\rangle}|\phi\rangle = \frac{1}{\mathbb{A}} \cdot \frac{2\sqrt{3} + 1 + 2i}{6} \begin{bmatrix}
+                                                                                                                                                                                                                              \frac{2}{3} \\
+                                                                                                                                                                                                                              \frac{1-2i}{3}
+                                                                                                                                                                                                                          \end{bmatrix}                    \\
+    \mathrm{norm}(\mathrm{proj}_{|\phi\rangle}|\psi\rangle) & = \frac{1}{||\mathrm{proj}_{|\phi\rangle}|\psi\rangle||} \mathrm{proj}_{|\phi\rangle}|\psi\rangle = \frac{1}{\mathbb{B}} \cdot \frac{2\sqrt{3} + 1 - 2i}{6} \begin{bmatrix}
+                                                                                                                                                                                                                              \frac{\sqrt{3}}{2} \\
+                                                                                                                                                                                                                              \frac{1}{2}
+                                                                                                                                                                                                                          \end{bmatrix}
 \end{align*}
 
 \subsection{(i)}
@@ -353,19 +353,19 @@ Vậy:
 \textbf{Cơ sở $B_{Z}$:}\\
 \begin{align*}
     \begin{cases}
-        |\phi\rangle = \frac{\sqrt{3}}{2}|0\rangle + \frac{1}{2}|1\rangle\\
+        |\phi\rangle = \frac{\sqrt{3}}{2}|0\rangle + \frac{1}{2}|1\rangle \\
         |\psi\rangle = \frac{2}{3}|0\rangle + \frac{1-2i}{3}|1\rangle
     \end{cases}
     \implies
     \begin{cases}
         [|\phi\rangle]_{B_{Z}} = \begin{pmatrix}
-            \frac{\sqrt{3}}{2},
-            \frac{1}{2}
-        \end{pmatrix}\\
+                                     \frac{\sqrt{3}}{2},
+                                     \frac{1}{2}
+                                 \end{pmatrix} \\
         [|\psi\rangle]_{B_{Z}} = \begin{pmatrix}
-            \frac{2}{3},
-            \frac{1-2i}{3}
-        \end{pmatrix}
+                                     \frac{2}{3},
+                                     \frac{1-2i}{3}
+                                 \end{pmatrix}
     \end{cases}
 \end{align*}
 
@@ -373,19 +373,19 @@ Vậy:
 \begin{align*}
     \begin{cases}
         [|\phi\rangle]_{B_{X}} = \begin{pmatrix}
-            \langle+|\phi\rangle,
-            \langle-|\phi\rangle
-        \end{pmatrix} = \begin{pmatrix}
-            \frac{\sqrt{3} + 1}{2\sqrt{2}},
-            \frac{\sqrt{3} - 1}{2\sqrt{2}}
-        \end{pmatrix}\\
+                                     \langle+|\phi\rangle,
+                                     \langle-|\phi\rangle
+                                 \end{pmatrix} = \begin{pmatrix}
+                                                     \frac{\sqrt{3} + 1}{2\sqrt{2}},
+                                                     \frac{\sqrt{3} - 1}{2\sqrt{2}}
+                                                 \end{pmatrix} \\
         [|\psi\rangle]_{B_{X}} = \begin{pmatrix}
-            \langle+|\psi\rangle,
-            \langle-|\psi\rangle
-        \end{pmatrix} = \begin{pmatrix}
-            \frac{3 - 2i}{3\sqrt{2}},
-            \frac{1 + 2i}{3\sqrt{2}}
-        \end{pmatrix}
+                                     \langle+|\psi\rangle,
+                                     \langle-|\psi\rangle
+                                 \end{pmatrix} = \begin{pmatrix}
+                                                     \frac{3 - 2i}{3\sqrt{2}},
+                                                     \frac{1 + 2i}{3\sqrt{2}}
+                                                 \end{pmatrix}
     \end{cases}
 \end{align*}
 
@@ -393,19 +393,19 @@ Vậy:
 \begin{align*}
     \begin{cases}
         [|\phi\rangle]_{B_{Y}} = \begin{pmatrix}
-            \langle i|\phi\rangle,
-            \langle -i|\phi\rangle
-        \end{pmatrix} = \begin{pmatrix}
-            \frac{\sqrt{3} - i}{2\sqrt{2}},
-            \frac{\sqrt{3} + i}{2\sqrt{2}}
-        \end{pmatrix}\\
+                                     \langle i|\phi\rangle,
+                                     \langle -i|\phi\rangle
+                                 \end{pmatrix} = \begin{pmatrix}
+                                                     \frac{\sqrt{3} - i}{2\sqrt{2}},
+                                                     \frac{\sqrt{3} + i}{2\sqrt{2}}
+                                                 \end{pmatrix} \\
         [|\psi\rangle]_{B_{Y}} = \begin{pmatrix}
-            \langle i|\psi\rangle,
-            \langle -i|\psi\rangle
-        \end{pmatrix} = \begin{pmatrix}
-            \frac{-i}{3\sqrt{2}},
-            \frac{4 + i}{3\sqrt{2}}
-        \end{pmatrix}
+                                     \langle i|\psi\rangle,
+                                     \langle -i|\psi\rangle
+                                 \end{pmatrix} = \begin{pmatrix}
+                                                     \frac{-i}{3\sqrt{2}},
+                                                     \frac{4 + i}{3\sqrt{2}}
+                                                 \end{pmatrix}
     \end{cases}
 \end{align*}
 
@@ -415,29 +415,29 @@ Vậy:
 Ta cần chứng minh $\langle a|b\rangle=0$ và $||a||=||b||=1$.\\
 Ta có:
 \begin{align*}
-    \langle a|b\rangle &= \left(\frac{\sqrt{3}}{2}\langle0| - \frac{i}{2}\langle1|\right)\left(\frac{i}{2}|0\rangle + \frac{\sqrt{3}}{2}|1\rangle\right)\\
-    &= \frac{\sqrt{3}i}{4}\langle0|0\rangle + \frac{3}{4}\langle0|1\rangle - \frac{i^{2}}{4}\langle1|0\rangle - \frac{i\sqrt{3}}{4}\langle1|1\rangle\\
-    &= \frac{\sqrt{3}i}{4} + 0 - 0 - \frac{i\sqrt{3}}{4} = 0 \quad (\text{*})\\
-    ||a|| &= \sqrt{\left|\frac{\sqrt{3}}{2}\right|^2 + \left|\frac{i}{2}\right|^2} = 1 = \sqrt{\left|\frac{i}{2}\right|^2 + \left|\frac{\sqrt{3}}{2}\right|^2} = ||b|| \quad (\text{**})
+    \langle a|b\rangle & = \left(\frac{\sqrt{3}}{2}\langle0| - \frac{i}{2}\langle1|\right)\left(\frac{i}{2}|0\rangle + \frac{\sqrt{3}}{2}|1\rangle\right)                                              \\
+                       & = \frac{\sqrt{3}i}{4}\langle0|0\rangle + \frac{3}{4}\langle0|1\rangle - \frac{i^{2}}{4}\langle1|0\rangle - \frac{i\sqrt{3}}{4}\langle1|1\rangle                               \\
+                       & = \frac{\sqrt{3}i}{4} + 0 - 0 - \frac{i\sqrt{3}}{4} = 0 \quad (\text{*})                                                                                                      \\
+    ||a||              & = \sqrt{\left|\frac{\sqrt{3}}{2}\right|^2 + \left|\frac{i}{2}\right|^2} = 1 = \sqrt{\left|\frac{i}{2}\right|^2 + \left|\frac{\sqrt{3}}{2}\right|^2} = ||b|| \quad (\text{**})
 \end{align*}
 Từ (*) và (**), suy ra $B=\{a,b\}$ là một cơ sở trực chuẩn của $\mathbb{C}^{2}$.\\
 Ta tìm toạ độ của $|\phi\rangle$ và $|\psi\rangle$ theo $B$:
 \begin{align*}
     \begin{cases}
         [|\phi\rangle]_{B} = \begin{pmatrix}
-            \langle a|\phi\rangle,
-            \langle b|\phi\rangle
-        \end{pmatrix} = \begin{pmatrix}
-            \frac{3 - i}{4},
-            \frac{\sqrt{3} - i\sqrt{3}}{4}
-        \end{pmatrix}\\
+                                 \langle a|\phi\rangle,
+                                 \langle b|\phi\rangle
+                             \end{pmatrix} = \begin{pmatrix}
+                                                 \frac{3 - i}{4},
+                                                 \frac{\sqrt{3} - i\sqrt{3}}{4}
+                                             \end{pmatrix} \\
         [|\psi\rangle]_{B} = \begin{pmatrix}
-            \langle a|\psi\rangle,
-            \langle b|\psi\rangle
-        \end{pmatrix} = \begin{pmatrix}
-            \frac{2\sqrt{3} - 2 - i}{6},
-            \frac{\sqrt{3} - 2i(1 + \sqrt{3})}{6}
-        \end{pmatrix}
+                                 \langle a|\psi\rangle,
+                                 \langle b|\psi\rangle
+                             \end{pmatrix} = \begin{pmatrix}
+                                                 \frac{2\sqrt{3} - 2 - i}{6},
+                                                 \frac{\sqrt{3} - 2i(1 + \sqrt{3})}{6}
+                                             \end{pmatrix}
     \end{cases}
 \end{align*}
 
@@ -449,29 +449,29 @@ Cho $U$ là toán tử trên $\mathbb{C}^{2}$ với $U|0\rangle=\frac{1}{\sqrt{2
 \textbf{Bài làm:}\\
 Ma trận biểu diễn của $U$ trong cơ sở chính tắc $B_{Z}$ là:
 \begin{align*}
-    [U]_{B_{Z}} &= \begin{bmatrix}
-        U|0\rangle & U|1\rangle
-    \end{bmatrix} = \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & -i \\
-        -i & 1
-    \end{bmatrix}
+    [U]_{B_{Z}} & = \begin{bmatrix}
+                        U|0\rangle & U|1\rangle
+                    \end{bmatrix} = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                          1  & -i \\
+                                                          -i & 1
+                                                      \end{bmatrix}
 \end{align*}
 
 \subsection{(b)}
 \textbf{Đề bài:} Cho $|\phi\rangle=\begin{bmatrix}\alpha\\ \beta\end{bmatrix}\in\mathbb{C}^{2},$ tìm $U|\phi\rangle$.\\
 \textbf{Bài làm:}
 \begin{align*}
-    U|\phi\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & -i \\
-        -i & 1
-    \end{bmatrix}
+    U|\phi\rangle & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                            1  & -i \\
+                                            -i & 1
+                                        \end{bmatrix}
     \begin{bmatrix}
-        \alpha\\\beta
+        \alpha \\\beta
     \end{bmatrix}
     = \frac{1}{\sqrt{2}}\begin{bmatrix}
-        \alpha - i\beta \\
-        -i\alpha + \beta
-    \end{bmatrix}
+                            \alpha - i\beta \\
+                            -i\alpha + \beta
+                        \end{bmatrix}
 \end{align*}
 
 \subsection{(c)}
@@ -479,25 +479,25 @@ Ma trận biểu diễn của $U$ trong cơ sở chính tắc $B_{Z}$ là:
 \textbf{Bài làm:}\\
 Ta có:
 \begin{align*}
-    U^\dagger &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & i\\
-        i & 1
-    \end{bmatrix}\\
-    U^\dagger U &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & i\\
-        i & 1
-    \end{bmatrix}
+    U^\dagger   & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                          1 & i \\
+                                          i & 1
+                                      \end{bmatrix} \\
+    U^\dagger U & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                          1 & i \\
+                                          i & 1
+                                      \end{bmatrix}
     \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & -i\\
-        -i & 1
-    \end{bmatrix}
+                          1  & -i \\
+                          -i & 1
+                      \end{bmatrix}
     = \frac{1}{2} \begin{bmatrix}
-        2 & 0 \\
-        0 & 2
-    \end{bmatrix} = \begin{bmatrix}
-        1 & 0 \\
-        0 & 1
-    \end{bmatrix} = UU^\dagger
+                      2 & 0 \\
+                      0 & 2
+                  \end{bmatrix} = \begin{bmatrix}
+                                      1 & 0 \\
+                                      0 & 1
+                                  \end{bmatrix} = UU^\dagger
 \end{align*}
 Vậy $U$ có unita
 
@@ -506,14 +506,14 @@ Vậy $U$ có unita
 \textbf{Bài làm:}\\
 Ta có:
 \begin{align*}
-    U &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & -i\\
-        -i & 1
-    \end{bmatrix}\\
-    U^\dagger &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & i\\
-        i & 1
-    \end{bmatrix} 
+    U         & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                        1  & -i \\
+                                        -i & 1
+                                    \end{bmatrix} \\
+    U^\dagger & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                        1 & i \\
+                                        i & 1
+                                    \end{bmatrix}
 \end{align*}
 Vì $U \ne U^\dagger$, nên $U$ không Hermite.
 
@@ -522,9 +522,9 @@ Vì $U \ne U^\dagger$, nên $U$ không Hermite.
 \textbf{Bài làm:}
 \begin{align*}
     U^{-1} = U^\dagger = \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & i\\
-        i & 1
-    \end{bmatrix} \quad (\text{vì $U$ unita})
+                                               1 & i \\
+                                               i & 1
+                                           \end{bmatrix} \quad (\text{vì $U$ unita})
 \end{align*}
 
 \subsection{(f)}
@@ -532,65 +532,65 @@ Vì $U \ne U^\dagger$, nên $U$ không Hermite.
 \textbf{Bài làm:}\\
 Ta có ma trận Hadamard $H$ là:
 \begin{align*}
-    H &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & 1\\
-        1 & -1
-    \end{bmatrix}
+    H & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                1 & 1  \\
+                                1 & -1
+                            \end{bmatrix}
 \end{align*}
 Vậy:
 \begin{align*}
-    HUH &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & 1\\
-        1 & -1
-    \end{bmatrix}
+    HUH                   & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                    1 & 1  \\
+                                                    1 & -1
+                                                \end{bmatrix}
     \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & -i\\
-        -i & 1
-    \end{bmatrix}
+                          1  & -i \\
+                          -i & 1
+                      \end{bmatrix}
     \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & 1\\
-        1 & -1
-    \end{bmatrix}\\
-    &= \frac{1}{2\sqrt{2}}\begin{bmatrix}
-        1 - i & 1 - i\\
-        1 + i & -1 - i
-    \end{bmatrix}
+                          1 & 1  \\
+                          1 & -1
+                      \end{bmatrix}                             \\
+                          & = \frac{1}{2\sqrt{2}}\begin{bmatrix}
+                                                     1 - i & 1 - i  \\
+                                                     1 + i & -1 - i
+                                                 \end{bmatrix}
     \begin{bmatrix}
-        1 & 1\\
+        1 & 1  \\
         1 & -1
-    \end{bmatrix}\\
-    &= \frac{1}{2\sqrt{2}}\begin{bmatrix}
-        2 - 2i & 0\\
-        0 & 2 + 2i
-    \end{bmatrix} \\
-    &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 - i & 0\\
-        0 & 1 + i
-    \end{bmatrix}\\
-    \implies HUH|0\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 - i & 0\\
-        0 & 1 + i
-    \end{bmatrix}
+    \end{bmatrix}                                               \\
+                          & = \frac{1}{2\sqrt{2}}\begin{bmatrix}
+                                                     2 - 2i & 0      \\
+                                                     0      & 2 + 2i
+                                                 \end{bmatrix} \\
+                          & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                    1 - i & 0     \\
+                                                    0     & 1 + i
+                                                \end{bmatrix}   \\
+    \implies HUH|0\rangle & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                    1 - i & 0     \\
+                                                    0     & 1 + i
+                                                \end{bmatrix}
     \begin{bmatrix}
-        1\\
+        1 \\
         0
     \end{bmatrix}
     = \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 - i\\
-        0
-    \end{bmatrix}\\
-    HUH|1\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 - i & 0\\
-        0 & 1 + i
-    \end{bmatrix}
+                            1 - i \\
+                            0
+                        \end{bmatrix}                           \\
+    HUH|1\rangle          & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                    1 - i & 0     \\
+                                                    0     & 1 + i
+                                                \end{bmatrix}
     \begin{bmatrix}
-        0\\
+        0 \\
         1
     \end{bmatrix}
     = \frac{1}{\sqrt{2}}\begin{bmatrix}
-        0\\
-        1 + i
-    \end{bmatrix}
+                            0 \\
+                            1 + i
+                        \end{bmatrix}
 \end{align*}
 
 \subsection{(g)}
@@ -598,59 +598,59 @@ Vậy:
 \textbf{Bài làm:}\\
 Ta có:
 \begin{align*}
-    UHU &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & -i\\
-        -i & 1
-    \end{bmatrix}
+    UHU                   & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                    1  & -i \\
+                                                    -i & 1
+                                                \end{bmatrix}
     \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & 1\\
-        1 & -1
-    \end{bmatrix}
+                          1 & 1  \\
+                          1 & -1
+                      \end{bmatrix}
     \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 & -i\\
-        -i & 1
-    \end{bmatrix}\\
-    &= \frac{1}{2\sqrt{2}}\begin{bmatrix}
-        1 - i & 1 + i\\
-        1 - i & - 1 - i
-    \end{bmatrix}
+                          1  & -i \\
+                          -i & 1
+                      \end{bmatrix}                              \\
+                          & = \frac{1}{2\sqrt{2}}\begin{bmatrix}
+                                                     1 - i & 1 + i   \\
+                                                     1 - i & - 1 - i
+                                                 \end{bmatrix}
     \begin{bmatrix}
-        1 & -i\\
+        1  & -i \\
         -i & 1
-    \end{bmatrix}\\
-    &= \frac{1}{2\sqrt{2}}\begin{bmatrix}
-        2 - 2i & 0\\
-        0 & -2 - 2i
-    \end{bmatrix} \\
-    &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 - i & 0\\
-        0 & -1 - i
-    \end{bmatrix}\\
-    \implies UHU|0\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 - i & 0\\
-        0 & -1 - i
-    \end{bmatrix}
+    \end{bmatrix}                                                \\
+                          & = \frac{1}{2\sqrt{2}}\begin{bmatrix}
+                                                     2 - 2i & 0       \\
+                                                     0      & -2 - 2i
+                                                 \end{bmatrix} \\
+                          & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                    1 - i & 0      \\
+                                                    0     & -1 - i
+                                                \end{bmatrix}    \\
+    \implies UHU|0\rangle & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                    1 - i & 0      \\
+                                                    0     & -1 - i
+                                                \end{bmatrix}
     \begin{bmatrix}
-        1\\
+        1 \\
         0
     \end{bmatrix}
     = \frac{1}{\sqrt{2}}\begin{bmatrix}
-        1 - i\\
-        0
-    \end{bmatrix}\\
-    UHU|1\rangle &= \frac{1}{\sqrt{2}}
+                            1 - i \\
+                            0
+                        \end{bmatrix}                            \\
+    UHU|1\rangle          & = \frac{1}{\sqrt{2}}
     \begin{bmatrix}
-        1 - i & 0\\
-        0 & -1 - i
+        1 - i & 0      \\
+        0     & -1 - i
     \end{bmatrix}
     \begin{bmatrix}
-        0\\
+        0 \\
         1
     \end{bmatrix}
     = \frac{1}{\sqrt{2}}\begin{bmatrix}
-        0\\
-        -1 - i
-    \end{bmatrix}
+                            0 \\
+                            -1 - i
+                        \end{bmatrix}
 \end{align*}
 
 \section{Bài 5}
@@ -661,21 +661,21 @@ Chứng minh $XY=iZ$ bằng cách
 \textbf{Bài làm:}
 Ta có:
 \begin{align*}
-    XY &= \begin{bmatrix}
-        0 & 1\\
-        1 & 0
-    \end{bmatrix}
+    XY & = \begin{bmatrix}
+               0 & 1 \\
+               1 & 0
+           \end{bmatrix}
     \begin{bmatrix}
-        0 & -i\\
+        0 & -i \\
         i & 0
     \end{bmatrix}
     = \begin{bmatrix}
-        i & 0\\
-        0 & -i
-    \end{bmatrix} = i\begin{bmatrix}
-        1 & 0\\
-        0 & -1
-    \end{bmatrix} = iZ \quad (\text{ĐPCM})
+          i & 0  \\
+          0 & -i
+      \end{bmatrix} = i\begin{bmatrix}
+                           1 & 0  \\
+                           0 & -1
+                       \end{bmatrix} = iZ \quad (\text{ĐPCM})
 \end{align*}
 
 \subsection{(b)}
@@ -683,89 +683,89 @@ Ta có:
 \textbf{Bài làm:}\\
 Xét $XY|0\rangle$ và $XY|1\rangle$:
 \begin{align*}
-    XY|0\rangle &= X(Y|0\rangle) = X\left(\begin{bmatrix}
-        0 & -i\\
-        i & 0
-    \end{bmatrix}
+    XY|0\rangle & = X(Y|0\rangle) = X\left(\begin{bmatrix}
+                                               0 & -i \\
+                                               i & 0
+                                           \end{bmatrix}
     \begin{bmatrix}
-        1\\
+        1 \\
         0
     \end{bmatrix}\right)
     = X\begin{bmatrix}
-        0\\
+           0 \\
+           i
+       \end{bmatrix}
+    = \begin{bmatrix}
+          0 & 1 \\
+          1 & 0
+      \end{bmatrix}
+    \begin{bmatrix}
+        0 \\
         i
     \end{bmatrix}
     = \begin{bmatrix}
-        0 & 1\\
-        1 & 0
-    \end{bmatrix}
+          i \\
+          0
+      \end{bmatrix}                                      \\
+    XY|1\rangle & = X(Y|1\rangle) = X\left(\begin{bmatrix}
+                                               0 & -i \\
+                                               i & 0
+                                           \end{bmatrix}
     \begin{bmatrix}
-        0\\
-        i
-    \end{bmatrix}
-    = \begin{bmatrix}
-        i\\
-        0
-    \end{bmatrix}\\
-    XY|1\rangle &= X(Y|1\rangle) = X\left(\begin{bmatrix}
-        0 & -i\\
-        i & 0
-    \end{bmatrix}
-    \begin{bmatrix}
-        0\\
+        0 \\
         1
     \end{bmatrix}\right)
     = X\begin{bmatrix}
-        -i\\
-        0
-    \end{bmatrix}
+           -i \\
+           0
+       \end{bmatrix}
     = \begin{bmatrix}
-        0 & 1\\
-        1 & 0
-    \end{bmatrix}
+          0 & 1 \\
+          1 & 0
+      \end{bmatrix}
     \begin{bmatrix}
-        -i\\
+        -i \\
         0
     \end{bmatrix}
     = \begin{bmatrix}
-        0\\
-        -i
-    \end{bmatrix}
+          0 \\
+          -i
+      \end{bmatrix}
 \end{align*}
 Xét $iZ|0\rangle$ và $iZ|1\rangle$:
 \begin{align*}
-    iZ|0\rangle &= i\left(\begin{bmatrix}
-        1 & 0\\
-        0 & -1
-    \end{bmatrix}
+    iZ|0\rangle & = i\left(\begin{bmatrix}
+                               1 & 0  \\
+                               0 & -1
+                           \end{bmatrix}
     \begin{bmatrix}
-        1\\
+        1 \\
         0
     \end{bmatrix}\right)
     = i\begin{bmatrix}
-        1\\
-        0
-    \end{bmatrix}
+           1 \\
+           0
+       \end{bmatrix}
     = \begin{bmatrix}
-        i\\
-        0
-    \end{bmatrix}\\
-    iZ|1\rangle &= i\left(\begin{bmatrix}
-        1 & 0\\
-        0 & -1
-    \end{bmatrix}
+          i \\
+          0
+      \end{bmatrix}                      \\
+    iZ|1\rangle & = i\left(\begin{bmatrix}
+                               1 & 0  \\
+                               0 & -1
+                           \end{bmatrix}
     \begin{bmatrix}
-        0\\
+        0 \\
         1
     \end{bmatrix}\right)
     = i\begin{bmatrix}
-        0\\
-        -1
-    \end{bmatrix}
+           0 \\
+           -1
+       \end{bmatrix}
     = \begin{bmatrix}
-        0\\
-        -i
-    \end{bmatrix}
+          0 \\
+          -i
+      \end{bmatrix}
 \end{align*}
 Vì $XY|0\rangle = iZ|0\rangle$, $XY|1\rangle = iZ|1\rangle$ và $B_Z = \{|0\rangle, |1\rangle\}$ là cơ sở trên $\mathbb{C}^2$, nên $XY = iZ$. (ĐPCM)
 
@@ -773,20 +773,100 @@ Vì $XY|0\rangle = iZ|0\rangle$, $XY|1\rangle = iZ|1\rangle$ và $B_Z = \{|0\ran
 Cho $|\phi\rangle=\frac{1}{2}|00\rangle+\frac{i}{\sqrt{2}}|10\rangle+\frac{\sqrt{3}+i}{4}|11\rangle$.
 
 \subsection{(a)}
-\textbf{Đề bài:} Cho thấy $|\phi\rangle$ là vector đơn vị.
-\textbf{Bài làm:}
+\textbf{Đề bài:} Cho thấy $|\phi\rangle$ là vector đơn vị.\\
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    ||\phi|| & = \sqrt{\left|\frac{1}{2}\right|^2 + \left|\frac{i}{\sqrt{2}}\right|^2 + \left|\frac{\sqrt{3}+i}{4}\right|^2} \\
+             & = \sqrt{\frac{1}{4} + \frac{1}{2} + \frac{1}{4}}                                                              \\
+             & = \sqrt{1} = 1
+\end{align*}
+Vậy $|\phi\rangle$ là vector đơn vị.
 
 \subsection{(b)}
-\textbf{Đề bài:} Tính $\mathrm{proj}_{|+-\rangle}|\phi\rangle$ và chuẩn hóa $\mathrm{proj}_{|+-\rangle}|\phi\rangle$.
-\textbf{Bài làm:}
-\begin{itemize}
-    \item $\mathrm{proj}_{|+-\rangle}|\phi\rangle = \dots$
-    \item Chuẩn hóa $\mathrm{proj}_{|+-\rangle}|\phi\rangle = \dots$
-\end{itemize}
+\textbf{Đề bài:} Tính $\mathrm{proj}_{|+-\rangle}|\phi\rangle$ và chuẩn hóa $\mathrm{proj}_{|+-\rangle}|\phi\rangle$.\\
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    |+-\rangle          & = |+\rangle \otimes |-\rangle = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                                                1 \\
+                                                                                1
+                                                                            \end{bmatrix} \otimes \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                                                                                        1 \\
+                                                                                                                        -1
+                                                                                                                    \end{bmatrix} = \frac{1}{2}\begin{bmatrix}
+                                                                                                                                                   1  \\
+                                                                                                                                                   -1 \\
+                                                                                                                                                   1  \\
+                                                                                                                                                   -1
+                                                                                                                                               \end{bmatrix} \\
+    \implies \langle+-| & = \frac{1}{2}\begin{bmatrix}
+                                           1 & -1 & 1 & -1
+                                       \end{bmatrix}
+\end{align*}
+\begin{align*}
+    \mathrm{proj}_{|+-\rangle}|\phi\rangle & = \frac{\langle+-|\phi\rangle}{|||+-\rangle||^2} |+-\rangle = \langle+-|\phi\rangle |+-\rangle                                \\
+                                           & = \frac{1}{2}\begin{bmatrix}
+                                                              1 & -1 & 1 & -1
+                                                          \end{bmatrix}
+    \begin{bmatrix}
+        \frac{1}{2}        \\
+        0                  \\
+        \frac{i}{\sqrt{2}} \\
+        \frac{\sqrt{3}+i}{4}
+    \end{bmatrix}
+    \cdot \frac{1}{2}\begin{bmatrix}
+                         1  \\
+                         -1 \\
+                         1  \\
+                         -1
+                     \end{bmatrix}                                                                                                                                \\
+                                           & = \frac{1}{2}\left(\frac{1}{2} + 0 + \frac{i}{\sqrt{2}} - \frac{\sqrt{3}+i}{4}\right) \cdot \frac{1}{2}\begin{bmatrix}
+                                                                                                                                                        1  \\
+                                                                                                                                                        -1 \\
+                                                                                                                                                        1  \\
+                                                                                                                                                        -1
+                                                                                                                                                    \end{bmatrix} \\
+                                           & =  \left(\frac{2 - \sqrt{3}}{16} + \frac{-1 + 2\sqrt{2}}{16}i\right)|+-\rangle
+\end{align*}
+Chuẩn hoá $\mathrm{proj}_{|+-\rangle}|\phi\rangle$:
+\begin{align*}
+    ||\mathrm{proj}_{|+-\rangle}|\phi\rangle|| & = \left|\frac{2 - \sqrt{3}}{16} + \frac{-1 + 2\sqrt{2}}{16}i\right| \cdot |||+-\rangle|| = \left|\frac{2 - \sqrt{3}}{16} + \frac{-1 + 2\sqrt{2}}{16}i\right| \cdot 1 := \mathbb{A} \\
+    \implies \mathrm{norm}(\mathrm{proj}_{|+-\rangle}|\phi\rangle) & = \frac{1}{||\mathrm{proj}_{|+-\rangle}|\phi\rangle||} \mathrm{proj}_{|+-\rangle}|\phi\rangle = \frac{1}{\mathbb{A}} \left(\frac{2 - \sqrt{3}}{16} + \frac{-1 + 2\sqrt{2}}{16}i\right)|+-\rangle
+\end{align*}
 
 \subsection{(c)}
-\textbf{Đề bài:} Tính tọa độ của $|\phi\rangle$ theo cơ sở Bell.
-\textbf{Bài làm:}
+\textbf{Đề bài:} Tính tọa độ của $|\phi\rangle$ theo cơ sở Bell.\\
+\textbf{Bài làm:}\\
+Ta có cơ sở Bell:
+\begin{align*}
+    B_{\mathrm{Bell}} = \begin{cases}
+        |\Phi^{+}\rangle = \frac{1}{\sqrt{2}}|00\rangle +  \frac{1}{\sqrt{2}}|11\rangle \\
+        |\Phi^{-}\rangle = \frac{1}{\sqrt{2}}|00\rangle -  \frac{1}{\sqrt{2}}|11\rangle \\
+        |\Psi^{+}\rangle = \frac{1}{\sqrt{2}}|01\rangle +  \frac{1}{\sqrt{2}}|10\rangle \\
+        |\Psi^{-}\rangle = \frac{1}{\sqrt{2}}|01\rangle -  \frac{1}{\sqrt{2}}|10\rangle
+    \end{cases}
+    \implies
+    \begin{cases}
+        |00\rangle = \frac{1}{\sqrt{2}}(|\Phi^{+}\rangle + |\Phi^{-}\rangle) \\
+        |01\rangle = \frac{1}{\sqrt{2}}(|\Psi^{+}\rangle + |\Psi^{-}\rangle) \\
+        |10\rangle = \frac{1}{\sqrt{2}}(|\Psi^{+}\rangle - |\Psi^{-}\rangle) \\
+        |11\rangle = \frac{1}{\sqrt{2}}(|\Phi^{+}\rangle - |\Phi^{-}\rangle)
+    \end{cases}
+\end{align*}
+Vậy tạo độ của $|\phi\rangle$ theo cơ sở Bell là:
+\begin{align*}
+    |\phi\rangle & = \frac{1}{2}|00\rangle + \frac{i}{\sqrt{2}}|10\rangle + \frac{\sqrt{3}+i}{4}|11\rangle \\
+    & = \frac{1}{2}\cdot\frac{1}{\sqrt{2}}(|\Phi^{+}\rangle + |\Phi^{-}\rangle) + \frac{i}{\sqrt{2}}\cdot\frac{1}{\sqrt{2}}(|\Psi^{+}\rangle - |\Psi^{-}\rangle) + \frac{\sqrt{3}+i}{4}\cdot\frac{1}{\sqrt{2}}(|\Phi^{+}\rangle - |\Phi^{-}\rangle) \\
+    & = \left(\frac{1}{2\sqrt{2}} + \frac{\sqrt{3}+i}{4\sqrt{2}}\right)|\Phi^{+}\rangle + \left(\frac{1}{2\sqrt{2}} - \frac{\sqrt{3}+i}{4\sqrt{2}}\right)|\Phi^{-}\rangle + \frac{i}{2}|\Psi^{+}\rangle - \frac{i}{2}|\Psi^{-}\rangle\\
+    &\implies
+    [|\phi\rangle]_{B_{\mathrm{Bell}}} = \begin{bmatrix}
+                                             \frac{1}{2\sqrt{2}} + \frac{\sqrt{3}+i}{4\sqrt{2}} \\
+                                             \frac{1}{2\sqrt{2}} - \frac{\sqrt{3}+i}{4\sqrt{2}} \\
+                                             \frac{i}{2}                                      \\
+                                             -\frac{i}{2}
+                                         \end{bmatrix}
+\end{align*}
 
 \section{Bài 7}
 Kiểm tra các vector sau có phân tách được (separable)

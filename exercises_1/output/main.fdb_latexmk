@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1760755228.53748 "d:/Study/25_26_Semester_1/IntroQC/exercises_1/main.tex" "output/main.pdf" "main" 1760755229.83354 0
-  "C:/Users/luuth/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1760244430 88371 b965f57369ed322039596060d18f4416 ""
+["pdflatex"] 1760758853.1366 "d:/Study/25_26_Semester_1/IntroQC/exercises_1/main.tex" "output/main.pdf" "main" 1760758854.43158 0
+  "C:/Users/luuth/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1760756715 88371 b965f57369ed322039596060d18f4416 ""
   "C:/Users/luuth/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1760244433 14064 face016f08d417d146a0c3a76b85aee4 ""
   "C:/Users/luuth/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760246158 13286967 640f272f94cb5c2f069cf620a7810623 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993062508 1444 95ffe0f19b974d50849790c8225c7ef7 ""
@@ -174,15 +174,15 @@
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vietnam.sty" 1368738347 2477 91784aa2c9213f74609391e3cae65a13 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vncaps.tex" 1368738347 3273 a55ebdb07413d2fea580f210e3c0b252 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "content/bailam.tex" 1760755228 27772 bd03afd2a2eb5a905365e75816e82b25 ""
+  "content/bailam.tex" 1760758852 46735 23929068626282553a161c17a31eb608 ""
   "content/title.tex" 1760465480 889 39dde0c60de55571a46c7504c1122541 ""
   "d:/Study/25_26_Semester_1/IntroQC/exercises_1/main.tex" 1760467181 1512 151a20379f38fa50d58e2be8837da146 ""
   "hcmus-report-template.sty" 1760241166 4528 ebd92f2c17f66633d60b58193d8c2c07 ""
   "img/hcmus-logo.png" 1760241167 258629 122747e63e393f11b7f15571540c7d20 ""
   "main.tex" 1760467181 1512 151a20379f38fa50d58e2be8837da146 ""
-  "output/main.aux" 1760755229 5304 bf421630c3f4aee0c1c0fc0892474c13 "pdflatex"
-  "output/main.out" 1760755229 3673 3777b12b76b8cbde786ab8728070f342 "pdflatex"
-  "output/main.toc" 1760755229 3214 7b78264c215922ca8ee39a5f5f14786a "pdflatex"
+  "output/main.aux" 1760758854 5304 fa623a8c7943e40a8e5e4a1f0ee052a5 "pdflatex"
+  "output/main.out" 1760758854 3673 3777b12b76b8cbde786ab8728070f342 "pdflatex"
+  "output/main.toc" 1760758854 3214 c119525452d532321c7611dbf3dcf7c6 "pdflatex"
   (generated)
   "output/main.aux"
   "output/main.log"
