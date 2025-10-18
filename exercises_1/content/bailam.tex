@@ -657,12 +657,117 @@ Ta có:
 Chứng minh $XY=iZ$ bằng cách
 
 \subsection{(a)}
-\textbf{Đề bài:} Nhân ma trận.
+\textbf{Đề bài:} Nhân ma trận.\\
 \textbf{Bài làm:}
+Ta có:
+\begin{align*}
+    XY &= \begin{bmatrix}
+        0 & 1\\
+        1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 & -i\\
+        i & 0
+    \end{bmatrix}
+    = \begin{bmatrix}
+        i & 0\\
+        0 & -i
+    \end{bmatrix} = i\begin{bmatrix}
+        1 & 0\\
+        0 & -1
+    \end{bmatrix} = iZ \quad (\text{ĐPCM})
+\end{align*}
 
 \subsection{(b)}
-\textbf{Đề bài:} Xét tác động của các toán tử trên $|0\rangle$, $|1\rangle$.
-\textbf{Bài làm:}
+\textbf{Đề bài:} Xét tác động của các toán tử trên $|0\rangle$, $|1\rangle$.\\
+\textbf{Bài làm:}\\
+Xét $XY|0\rangle$ và $XY|1\rangle$:
+\begin{align*}
+    XY|0\rangle &= X(Y|0\rangle) = X\left(\begin{bmatrix}
+        0 & -i\\
+        i & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}\right)
+    = X\begin{bmatrix}
+        0\\
+        i
+    \end{bmatrix}
+    = \begin{bmatrix}
+        0 & 1\\
+        1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        0\\
+        i
+    \end{bmatrix}
+    = \begin{bmatrix}
+        i\\
+        0
+    \end{bmatrix}\\
+    XY|1\rangle &= X(Y|1\rangle) = X\left(\begin{bmatrix}
+        0 & -i\\
+        i & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        0\\
+        1
+    \end{bmatrix}\right)
+    = X\begin{bmatrix}
+        -i\\
+        0
+    \end{bmatrix}
+    = \begin{bmatrix}
+        0 & 1\\
+        1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        -i\\
+        0
+    \end{bmatrix}
+    = \begin{bmatrix}
+        0\\
+        -i
+    \end{bmatrix}
+\end{align*}
+Xét $iZ|0\rangle$ và $iZ|1\rangle$:
+\begin{align*}
+    iZ|0\rangle &= i\left(\begin{bmatrix}
+        1 & 0\\
+        0 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}\right)
+    = i\begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}
+    = \begin{bmatrix}
+        i\\
+        0
+    \end{bmatrix}\\
+    iZ|1\rangle &= i\left(\begin{bmatrix}
+        1 & 0\\
+        0 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        0\\
+        1
+    \end{bmatrix}\right)
+    = i\begin{bmatrix}
+        0\\
+        -1
+    \end{bmatrix}
+    = \begin{bmatrix}
+        0\\
+        -i
+    \end{bmatrix}
+\end{align*}
+Vì $XY|0\rangle = iZ|0\rangle$, $XY|1\rangle = iZ|1\rangle$ và $B_Z = \{|0\rangle, |1\rangle\}$ là cơ sở trên $\mathbb{C}^2$, nên $XY = iZ$. (ĐPCM)
 
 \section{Bài 6}
 Cho $|\phi\rangle=\frac{1}{2}|00\rangle+\frac{i}{\sqrt{2}}|10\rangle+\frac{\sqrt{3}+i}{4}|11\rangle$.
