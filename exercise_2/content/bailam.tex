@@ -1,0 +1,331 @@
+\section{Bài 1}
+\textbf{Đề bài:} Khảo sát phép đo theo các cơ sở $B_{Z}=\{|0\rangle,|1\rangle\}$, $B_{X}=\{|+\rangle,|-\rangle\}$, $B_{Y}=\{|i\rangle,|-i\rangle\}$ của các trạng thái lượng tử sau.
+
+\subsection{(a)}
+\textbf{Đề bài:} $|\psi_{1}\rangle = \frac{\sqrt{3}}{2}|0\rangle + \frac{1}{2}|1\rangle$.\\
+\textbf{Bài làm:}\\
+\textbf{Cơ sở $B_{Z}$:} $[|\psi_1\rangle]_{B_{Z}} = \begin{pmatrix}
+        \frac{\sqrt{3}}{2},
+        \frac{1}{2}
+    \end{pmatrix}$.\\
+Khi đo $|\psi_1\rangle$ theo cơ sở $B_{Z}$ thì sẽ được $|0\rangle$ với xác suất là $\left|\frac{\sqrt{3}}{2}\right|^2 = \frac{3}{4}$, được $|1\rangle$ với xác suất là $\left|\frac{1}{2}\right|^2 = \frac{1}{4}$.
+
+\textbf{Cơ sở $B_{X}$:} Trạng thái $|\psi_1\rangle$ biểu diễn theo cơ sở $B_{X}$ như sau:
+\begin{align*}
+    |\psi_1\rangle & = \langle+|\psi_1\rangle |+\rangle + \langle-|\psi_1\rangle |-\rangle \\
+                   & = \left(\frac{\sqrt{3}}{2} \cdot \frac{1}{\sqrt{2}} + \frac{1}{2} \cdot \frac{1}{\sqrt{2}}\right) |+\rangle 
+                   + \left(\frac{\sqrt{3}}{2} \cdot \frac{1}{\sqrt{2}} - \frac{1}{2} \cdot \frac{1}{\sqrt{2}}\right) |-\rangle \\
+                   & = \frac{\sqrt{3} + 1}{2\sqrt{2}} |+\rangle + \frac{\sqrt{3} - 1}{2\sqrt{2}} |-\rangle
+\end{align*}
+Khi đo $|\psi_1\rangle$ theo cơ sở $B_{X}$ thì sẽ được $|+\rangle$ với xác suất là $\left|\frac{\sqrt{3} + 1}{2\sqrt{2}}\right|^2 = \frac{2 + \sqrt{3}}{4}$, được $|-\rangle$ với xác suất là $\left|\frac{\sqrt{3} - 1}{2\sqrt{2}}\right|^2 = \frac{2 - \sqrt{3}}{4}$.
+
+\textbf{Cơ sở $B_{Y}$:} Trạng thái $|\psi_1\rangle$ biểu diễn theo cơ sở $B_{Y}$ như sau:
+\begin{align*}
+    |\psi_1\rangle & = \langle i|\psi_1\rangle |i\rangle + \langle -i|\psi_1\rangle |-i\rangle \\
+                   & = \left(\frac{\sqrt{3}}{2} \cdot \frac{1}{\sqrt{2}} + \frac{1}{2} \cdot \frac{-i}{\sqrt{2}}\right) |i\rangle 
+                   + \left(\frac{\sqrt{3}}{2} \cdot \frac{1}{\sqrt{2}} + \frac{1}{2} \cdot \frac{i}{\sqrt{2}}\right) |-i\rangle \\
+                   & = \frac{\sqrt{3} - i}{2\sqrt{2}} |i\rangle + \frac{\sqrt{3} + i}{2\sqrt{2}} |-i\rangle
+\end{align*}
+Khi đo $|\psi_1\rangle$ theo cơ sở $B_{Y}$ thì sẽ được $|i\rangle$ với xác suất là $\left|\frac{\sqrt{3} - i}{2\sqrt{2}}\right|^2 = \frac{1}{2}$, được $|-i\rangle$ với xác suất là $\left|\frac{\sqrt{3} + i}{2\sqrt{2}}\right|^2 = \frac{1}{2}$.
+
+
+\subsection{(b)}
+\textbf{Đề bài:} $|\psi_{2}\rangle=\frac{1}{\sqrt{2}}(|0\rangle+e^{i\frac{\pi}{6}}|1\rangle)$.\\
+\textbf{Bài làm:}\\
+\textbf{Cơ sở $B_{Z}$:} $[|\psi_2\rangle]_{B_{Z}} = \begin{pmatrix}
+        \frac{1}{\sqrt{2}},
+        \frac{1}{\sqrt{2}} e^{i\frac{\pi}{6}}
+    \end{pmatrix}$.\\
+Khi đo $|\psi_2\rangle$ theo cơ sở $B_{Z}$ thì sẽ được $|0\rangle$ với xác suất là $\left|\frac{1}{\sqrt{2}}\right|^2 = \frac{1}{2}$, được $|1\rangle$ với xác suất là $\left|\frac{1}{\sqrt{2}} e^{i\frac{\pi}{6}}\right|^2 = \frac{1}{2}$.
+
+\textbf{Cơ sở $B_{X}$:} Trạng thái $|\psi_2\rangle$ biểu diễn theo cơ sở $B_{X}$ như sau:
+\begin{align*}
+    |\psi_2\rangle & = \langle+|\psi_2\rangle |+\rangle + \langle-|\psi_2\rangle |-\rangle \\
+                   & = \left(\frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} e^{i\frac{\pi}{6}} \cdot \frac{1}{\sqrt{2}}\right) |+\rangle + \left(\frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}e^{i\frac{\pi}{6}} \cdot \frac{1}{\sqrt{2}}\right) |-\rangle \\
+                   & = \left(\frac{1}{2} + \frac{1}{2} e^{i\frac{\pi}{6}}\right)|+\rangle + \left(\frac{1}{2} - \frac{1}{2} e^{i\frac{\pi}{6}}\right)|-\rangle                        
+\end{align*}
+Khi đo $|\psi_2\rangle$ theo cơ sở $B_{X}$ thì sẽ được $|+\rangle$ với xác suất là $\left|\frac{1}{2} + \frac{1}{2} e^{i\frac{\pi}{6}}\right|^2 = \frac{2 + \sqrt{3}}{4}$, được $|-\rangle$ với xác suất là $\left|\frac{1}{2} - \frac{1}{2} e^{i\frac{\pi}{6}}\right|^2 = \frac{2 - \sqrt{3}}{4}$.
+
+\textbf{Cơ sở $B_{Y}$:} Trạng thái $|\psi_2\rangle$ biểu diễn theo cơ sở $B_{Y}$ như sau: 
+\begin{align*}
+    |\psi_2\rangle & = \langle i|\psi_2\rangle |i\rangle + \langle -i|\psi_2\rangle |-i\rangle \\
+                   & = \left(\frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} e^{i\frac{\pi}{6}} \cdot \frac{-i}{\sqrt{2}}\right) |i\rangle + \left(\frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} e^{i\frac{\pi}{6}} \cdot \frac{i}{\sqrt{2}}\right) |-i\rangle \\
+                   & = \left(\frac{1}{2} - \frac{i}{2} e^{i\frac{\pi}{6}}\right)|i\rangle + \left(\frac{1}{2} + \frac{i}{2} e^{i\frac{\pi}{6}}\right)|-i\rangle
+\end{align*}
+Khi đo $|\psi_2\rangle$ theo cơ sở $B_{Y}$ thì sẽ được $|i\rangle$ với xác suất là $\left|\frac{1}{2} - \frac{i}{2} e^{i\frac{\pi}{6}}\right|^2 = \frac{3}{4}$, được $|-i\rangle$ với xác suất là $\left|\frac{1}{2} + \frac{i}{2} e^{i\frac{\pi}{6}}\right|^2 = \frac{1}{4}$.
+
+\subsection{(c)}
+\textbf{Đề bài:} $|\psi_{3}\rangle=\frac{2}{3}|0\rangle+\frac{1-2i}{3}|1\rangle$.\\
+\textbf{Bài làm:}\\
+\textbf{Cơ sở $B_{Z}$:} $[|\psi_3\rangle]_{B_{Z}} = \begin{pmatrix}
+        \frac{2}{3},
+        \frac{1-2i}{3}
+    \end{pmatrix}$.\\
+Khi đo $|\psi_3\rangle$ theo cơ sở $B_{Z}$ thì sẽ được $|0\rangle$ với xác suất là $\left|\frac{2}{3}\right|^2 = \frac{4}{9}$, được $|1\rangle$ với xác suất là $\left|\frac{1-2i}{3}\right|^2 = \frac{5}{9}$.
+
+\textbf{Cơ sở $B_{X}$:} Trạng thái $|\psi_3\rangle$ biểu diễn theo cơ sở $B_{X}$ như sau:
+\begin{align*}
+    |\psi_3\rangle & = \langle+|\psi_3\rangle |+\rangle + \langle-|\psi_3\rangle |-\rangle \\
+                   & = \left(\frac{2}{3} \cdot \frac{1}{\sqrt{2}} + \frac{1-2i}{3} \cdot \frac{1}{\sqrt{2}}\right) |+\rangle + \left(\frac{2}{3} \cdot \frac{1}{\sqrt{2}} - \frac{1-2i}{3} \cdot \frac{1}{\sqrt{2}}\right) |-\rangle \\
+                   & = \left(\frac{3 - 2i}{3\sqrt{2}}\right)|+\rangle + \left(\frac{1 + 2i}{3\sqrt{2}}\right)|-\rangle
+\end{align*}
+Khi đo $|\psi_3\rangle$ theo cơ sở $B_{X}$ thì sẽ được $|+\rangle$ với xác suất là $\left|\frac{3 - 2i}{3\sqrt{2}}\right|^2 = \frac{13}{18}$, được $|-\rangle$ với xác suất là $\left|\frac{1 + 2i}{3\sqrt{2}}\right|^2 = \frac{5}{18}$.
+
+\textbf{Cơ sở $B_{Y}$:} Trạng thái $|\psi_3\rangle$ biểu diễn theo cơ sở $B_{Y}$ như sau:
+\begin{align*}
+    |\psi_3\rangle & = \langle i|\psi_3\rangle |i\rangle + \langle -i|\psi_3\rangle |-i\rangle \\
+                   & = \left(\frac{2}{3} \cdot \frac{1}{\sqrt{2}} + \frac{1-2i}{3} \cdot \frac{-i}{\sqrt{2}}\right) |i\rangle + \left(\frac{2}{3} \cdot \frac{1}{\sqrt{2}} + \frac{1-2i}{3} \cdot \frac{i}{\sqrt{2}}\right) |-i\rangle \\
+                   & = \left(-\frac{\sqrt{2}}{6}i\right)|i\rangle + \left(\frac{2\sqrt{2}}{3}+\frac{\sqrt{2}}{6}i\right)|-i\rangle
+\end{align*}
+Khi đo $|\psi_3\rangle$ theo cơ sở $B_{Y}$ thì sẽ được $|i\rangle$ với xác suất là $\left|-\frac{\sqrt{2}}{6}i\right|^2 = \frac{1}{18}$, được $|-i\rangle$ với xác suất là $\left|\frac{2\sqrt{2}}{3}+\frac{\sqrt{2}}{6}i\right|^2 = \frac{17}{18}$.
+
+\section{Bài 2}
+\textbf{Đề bài:} Viết dạng Bloch và mô tả trên mặt cầu Bloch các trạng thái lượng tử ở Câu 1.\\
+\textbf{Bài làm:}
+% TODO
+
+\section{Bài 3}
+\textbf{Đề bài:} Cho U là một toán tử tuyến tính trên $\mathbb{C}^{2}$, biết
+$U|0\rangle=\frac{\sqrt{2}-i}{2}|0\rangle-\frac{1}{2}|1\rangle$,
+$U|1\rangle=\frac{1}{2}|0\rangle+\frac{\sqrt{2}+i}{2}|1\rangle$.
+
+\subsection{(a)}
+\textbf{Đề bài:} Chứng minh U là một cổng lượng tử.
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(b)}
+\textbf{Đề bài:} Cho biết kết quả biến đổi U trên các trạng thái $|+\rangle,|-\rangle,|i\rangle,|-i\rangle.$
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(c)}
+\textbf{Đề bài:} Cho biết kết quả biến đổi U trên các trạng thái của Câu 1.
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(d)}
+\textbf{Đề bài:} U tương ứng với phép quay quanh trục nào với góc bao nhiêu trên mặt cầu Bloch?
+\textbf{Bài làm:}
+% TODO
+
+\section{Bài 4}
+\textbf{Đề bài:} Từ trạng thái đầu vào $|0\rangle$,
+
+\subsection{(a)}
+\textbf{Đề bài:} Vẽ mạch mô tả tính toán HYTHX.
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(b)}
+\textbf{Đề bài:} Tính đầu ra của Câu (a).
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(c)}
+\textbf{Đề bài:} Thêm phép đo $\tilde{\sigma}$ cuối mạch của Câu (a) và tính xác suất được 1.
+\textbf{Bài làm:}
+% TODO
+
+\section{Bài 5}
+\textbf{Đề bài:} Cho biết các trạng thái sau là tách được hay vướng, nếu tách được thì biểu diễn trên mặt cầu Bloch.
+
+\subsection{(a)}
+\textbf{Đề bài:} $\frac{1}{\sqrt{2}}(|01\rangle+|10\rangle).$
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(b)}
+\textbf{Đề bài:} $\frac{1}{\sqrt{2}}(|10\rangle+i|11\rangle)$.
+\textbf{Bài làm:}\\
+(Lời giải được lấy từ Bài 7(c) trong file \texttt{bailam.tex})
+\begin{align*}
+    |\phi_{3}\rangle & =\frac{1}{\sqrt{2}}\left(|10\rangle+i|11\rangle\right)
+    \\
+                     & = \frac{1}{\sqrt{2}}\left[|1\rangle \otimes \left(|0\rangle + i|1\rangle\right) \right]    \\
+                     & = |1\rangle \otimes \left(\frac{1}{\sqrt{2}}|0\rangle + \frac{i}{\sqrt{2}}|1\rangle\right) \\
+                     & = |1\rangle \otimes |i\rangle
+\end{align*}
+Vậy $|\phi_{3}\rangle$ tách được.
+
+\subsection{(c)}
+\textbf{Đề bài:} $\frac{1}{4}(3|00\rangle-\sqrt{3}|01\rangle+\sqrt{3}|10\rangle-|11\rangle).$
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(d)}
+\textbf{Đề bài:} $\frac{1}{\sqrt{3}}|0\rangle|+\rangle+\sqrt{\frac{2}{3}}|1\rangle|-\rangle.$
+\textbf{Bài làm:}\\
+(Lời giải được lấy từ Bài 7(d) trong file \texttt{bailam.tex})
+\begin{align*}
+    |\phi_{4}\rangle & =\frac{1}{\sqrt{3}}|0+\rangle+\sqrt{\frac{2}{3}}|1-\rangle                                                     \\
+                     & = \frac{1}{\sqrt{3}} \begin{bmatrix}
+                                                1 \\0
+                                            \end{bmatrix} \otimes \begin{bmatrix}
+                                                                      \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+                                                                  \end{bmatrix}
+    + \sqrt{\frac{2}{3}} \begin{bmatrix}
+                             0 \\1
+                         \end{bmatrix} \otimes \begin{bmatrix}
+                                                   \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}}
+                                               \end{bmatrix}
+    = \begin{bmatrix}
+          \frac{1}{\sqrt{6}} \\
+          \frac{1}{\sqrt{6}} \\
+          \frac{1}{\sqrt{3}} \\
+          -\frac{1}{\sqrt{3}}
+      \end{bmatrix}
+\end{align*}
+Giả sử $|\phi_{4}\rangle$ tách được, tức là tồn tại $|\psi_1\rangle=\begin{bmatrix}a\\b\end{bmatrix}$ và $|\psi_2\rangle=\begin{bmatrix}c\\d\end{bmatrix}$ sao cho $|\phi_{4}\rangle=|\psi_1\rangle \otimes |\psi_2\rangle$\\
+Ta có:
+\begin{align*}
+    |\psi_1\rangle \otimes |\psi_2\rangle = \begin{bmatrix}
+                                                ac \\
+                                                ad \\
+                                                bc \\
+                                                bd
+                                            \end{bmatrix} \\
+    |\phi_{4}\rangle=|\psi_1\rangle \otimes |\psi_2\rangle
+    \implies \begin{bmatrix}
+                 \frac{1}{\sqrt{6}} \\
+                 \frac{1}{\sqrt{6}} \\
+                 \frac{1}{\sqrt{3}} \\
+                 -\frac{1}{\sqrt{3}}
+             \end{bmatrix} = \begin{bmatrix}
+                                 ac \\
+                                 ad \\
+                                 bc \\
+                                 bd
+                             \end{bmatrix}
+\end{align*}
+Từ đó ta có hệ phương trình:
+\begin{align*}
+    \begin{cases}
+        ac = \frac{1}{\sqrt{6}} \\
+        ad = \frac{1}{\sqrt{6}} \\
+        bc = \frac{1}{\sqrt{3}} \\
+        bd = -\frac{1}{\sqrt{3}}
+    \end{cases}
+    \implies
+    \begin{cases}
+        \frac{ac}{ad} = \frac{c}{d} = 1 \\
+        \frac{bc}{bd} = \frac{c}{d} = -1
+    \end{cases}
+    (\text{Mâu thuẫn})
+\end{align*}
+Vậy $|\phi_{4}\rangle$ không tách được.
+
+\section{Bài 6}
+\textbf{Đề bài:} Cho hệ 2 qubit với trạng thái $|\psi\rangle=\frac{1}{2}|00\rangle-\frac{i}{2}|10\rangle+\frac{1}{\sqrt{2}}|11\rangle$.
+Khảo sát các phép đo sau.
+
+\subsection{(a)}
+\textbf{Đề bài:} Đo đồng thời 2 qubit.
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(b)}
+\textbf{Đề bài:} Đo qubit 0.
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(c)}
+\textbf{Đề bài:} Đo qubit 1.
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(d)}
+\textbf{Đề bài:} Đo qubit 0 rồi đo qubit 1 và so kết quả với Câu (a).
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(e)}
+\textbf{Đề bài:} Đo qubit 1 rồi đo qubit 0 và so kết quả với Câu (a).
+\textbf{Bài làm:}
+% TODO
+
+\section{Bài 7}
+\textbf{Đề bài:} Khảo sát phép toán 2 qubit $U=H\otimes X$.
+
+\subsection{(a)}
+\textbf{Đề bài:} Cho biết tác động của U lên các vector của cơ sở tính toán.
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(b)}
+\textbf{Đề bài:} Xác định ma trận biểu diễn của U từ Câu (a).
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(c)}
+\textbf{Đề bài:} Xác định ma trận biểu diễn của U bằng phép tích tensor.
+\textbf{Bài làm:}\\
+(Lời giải được lấy từ phần đầu Bài 8(a) trong file \texttt{bailam.tex})
+\begin{align*}
+    H =                   & \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                  1 & 1  \\
+                                                  1 & -1
+                                              \end{bmatrix}, \quad
+    X = \begin{bmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{bmatrix}                                                                                    \\
+    \implies H\otimes X = & \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                  1 & 1  \\
+                                                  1 & -1
+                                              \end{bmatrix} \otimes \begin{bmatrix}
+                                                                        0 & 1 \\
+                                                                        1 & 0
+                                                                    \end{bmatrix}                        \\
+    =                     & \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                  1 \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} & 1 \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}  \\
+                                                  1 \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} & -1 \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}
+                                              \end{bmatrix} \\
+    =                     & \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                  0 & 1 & 0  & 1  \\
+                                                  1 & 0 & 1  & 0  \\
+                                                  0 & 1 & 0  & -1 \\
+                                                  1 & 0 & -1 & 0
+                                              \end{bmatrix}
+\end{align*}
+
+\subsection{(d)}
+\textbf{Đề bài:} Cho biết tác động của U lên trạng thái $|\psi\rangle=\frac{1}{4}|00\rangle+\frac{1}{2}|01\rangle+\frac{1}{\sqrt{2}}|10\rangle+\frac{\sqrt{3}}{4}|11\rangle$.
+\textbf{Bài làm:}\\
+(Lời giải được lấy từ phần sau Bài 8(a) trong file \texttt{bailam.tex}, sử dụng trạng thái $|\phi\rangle$ giống hệt $|\psi\rangle$ trong đề)
+\begin{align*}
+    (H\otimes X)|\psi\rangle & = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                       0 & 1 & 0  & 1  \\
+                                                       1 & 0 & 1  & 0  \\
+                                                       0 & 1 & 0  & -1 \\
+                                                       1 & 0 & -1 & 0
+                                                   \end{bmatrix} \begin{bmatrix}
+                                                                     \frac{1}{4}        \\
+                                                                     \frac{1}{2}        \\
+                                                                     \frac{1}{\sqrt{2}} \\
+                                                                     \frac{\sqrt{3}}{4}
+                                                                 \end{bmatrix} = \frac{1}{\sqrt{2}} \begin{bmatrix}
+                                                                                                        \frac{1}{2} + \frac{\sqrt{3}}{4} \\
+                                                                                                        \frac{1}{4} + \frac{1}{\sqrt{2}} \\
+                                                                                                        \frac{1}{2} - \frac{\sqrt{3}}{4} \\
+                                                                                                        \frac{1}{4} - \frac{1}{\sqrt{2}} \\
+                                                                                                    \end{bmatrix}
+\end{align*}
+
+\section{Bài 8}
+\textbf{Đề bài:} Xét trạng thái 3 qubit $|GHZ\rangle=\frac{1}{\sqrt{2}}|000\rangle+\frac{1}{\sqrt{2}}|111\rangle$.
+
+\subsection{(a)}
+\textbf{Đề bài:} Chứng minh $|GHZ\rangle$ là trạng thái vướng.
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(b)}
+\textbf{Đề bài:} Khảo sát phép đo riêng qubit 0, qubit 1, qubit 2 và nhận xét.
+\textbf{Bài làm:}
+% TODO
+
+\subsection{(c)}
+\textbf{Đề bài:} Thiết kế mạch 3 qubit để tạo trạng thái $|GHZ\rangle$.
+\textbf{Bài làm:}
+% TODO
