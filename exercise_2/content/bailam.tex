@@ -81,8 +81,53 @@ Khi đo $|\psi_3\rangle$ theo cơ sở $B_{Y}$ thì sẽ được $|i\rangle$ v�
 
 \section{Bài 2}
 \textbf{Đề bài:} Viết dạng Bloch và mô tả trên mặt cầu Bloch các trạng thái lượng tử ở Câu 1.\\
-\textbf{Bài làm:}
-% TODO
+\textbf{Bài làm:}\\
+\textbf{Trạng thái $\ket{\psi_1}$}:
+\begin{align*}
+    \ket{\psi_1} & = \frac{\sqrt{3}}{2}\ket{0} + \frac{1}{2}\ket{1} = \cos\frac{\pi}{6}\ket{0} + e^{i0}\sin\frac{\pi}{6}\ket{1}\\
+                & \implies \theta = \frac{\pi}{3}, \phi = 0
+\end{align*}
+Hình vẽ:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/psi_1.png}
+    \caption{Trạng thái $\ket{\psi_1}$ trên mặt cầu Bloch}
+\end{figure}
+
+\textbf{Trạng thái $\ket{\psi_2}$}:
+\begin{align*}
+    \ket{\psi_2} & = \frac{1}{\sqrt{2}}\ket{0} + \frac{1}{\sqrt{2}}e^{i\frac{\pi}{6}}\ket{1} = \cos\frac{\pi}{4}\ket{0} + e^{i\frac{\pi}{6}}\sin\frac{\pi}{4}\ket{1}\\
+                & \implies \theta = \frac{\pi}{2}, \phi = \frac{\pi}{6}
+\end{align*}
+Hình vẽ:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/psi_2.png}
+    \caption{Trạng thái $\ket{\psi_2}$ trên mặt cầu Bloch}
+\end{figure}
+
+\textbf{Trạng thái $\ket{\psi_3}$}:
+\begin{align*}
+    \ket{\psi_3} & = \frac{2}{3}\ket{0} + \frac{1-2i}{3}\ket{1} = \cos\frac{\theta}{2}\ket{0} + e^{i\phi}\sin\frac{\theta}{2}\ket{1}\\
+                & \implies \begin{cases}
+                    \cos\frac{\theta}{2} = \frac{2}{3} \\
+                    e^{i\phi}\sin\frac{\theta}{2} = \frac{1-2i}{3}
+                \end{cases} \\
+                & \implies \begin{cases}
+                    \cos\frac{\theta}{2} = \frac{2}{3} \\
+                    e^{i\phi} = \frac{\frac{1-2i}{3}}{\sqrt{1 - \cos^2{\frac{\theta}{2}}}} = \frac{\frac{1-2i}{3}}{\sqrt{1 - \left(\frac{2}{3}\right)^2}} = \frac{\frac{1-2i}{3}}{\sqrt{\frac{5}{9}}} = \frac{1-2i}{\sqrt{5}}
+                \end{cases}\\
+                & \implies \begin{cases}
+                    \theta = 2\arccos\frac{2}{3} \approx 0.841 \\
+                    \phi = \arg{\frac{1-2i}{\sqrt{5}}} = \arctan{\left(-2\right)} \approx -1.107
+                \end{cases}
+\end{align*}
+Hình vẽ:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/psi_3.png}
+    \caption{Trạng thái $\ket{\psi_3}$ trên mặt cầu Bloch}
+\end{figure}
 
 \section{Bài 3}
 \textbf{Đề bài:} Cho U là một toán tử tuyến tính trên $\mathbb{C}^{2}$, biết

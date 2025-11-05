@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.12)  2 NOV 2025 23:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.12)  5 NOV 2025 23:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -429,7 +429,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@posthook=\toks28
 ) (C:\Users\luuth\AppData\Local\Programs\MiKTeX\tex/latex/vntex\vncaps.tex
 File: vncaps.tex 2006/06/07 v1.1 Captions in Vietnamese
-)) (C:\Users\luuth\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
+)) (C:\Users\luuth\AppData\Local\Programs\MiKTeX\tex/latex/braket\braket.sty) (C:\Users\luuth\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
 \@float@every@algorithm=\toks29
 \c@algorithm=\count311
@@ -778,7 +778,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 ...}{\numberline {7.2}(b)}{7}{subsection.7.2}
+l.28 ...{\numberline {7.2}(b)}{10}{subsection.7.2}
                                                   % [1])
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -790,24 +790,48 @@ l.28 ...}{\numberline {7.2}(b)}{7}{subsection.7.2}
 [1]
 
 [2]
+<img/psi_1.png, id=213, 375.0813pt x 387.3672pt>
+File: img/psi_1.png Graphic file (type png)
+<use img/psi_1.png>
+Package pdftex.def Info: img/psi_1.png  used on input line 93.
+(pdftex.def)             Requested size: 303.53708pt x 313.49382pt.
+
 
 [3]
+<img/psi_2.png, id=218, 375.0813pt x 387.3672pt>
+File: img/psi_2.png Graphic file (type png)
+<use img/psi_2.png>
+Package pdftex.def Info: img/psi_2.png  used on input line 105.
+(pdftex.def)             Requested size: 303.53708pt x 313.49382pt.
 
-[4]
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 141.
+
+[4 <./img/psi_1.png>]
+<img/psi_3.png, id=226, 375.0813pt x 387.3672pt>
+File: img/psi_3.png Graphic file (type png)
+<use img/psi_3.png>
+Package pdftex.def Info: img/psi_3.png  used on input line 128.
+(pdftex.def)             Requested size: 303.53708pt x 313.49382pt.
+
+
+[5 <./img/psi_2.png>]
+
+[6 <./img/psi_3.png>]
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 186.
  (C:\Users\luuth\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 
-[5]
-
-[6]
-
 [7]
 
-[8])
+[8]
 
-[9] (d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.aux)
+[9]
+
+[10]
+
+[11])
+
+[12] (d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
@@ -816,17 +840,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A06A5057607EE5E54CCFCD1D13405082;2645.
  ) 
 Here is how much of TeX's memory you used:
- 23381 strings out of 468130
- 426746 string characters out of 5430632
- 828157 words of memory out of 5000000
- 51559 multiletter control sequences out of 15000+600000
+ 23451 strings out of 468130
+ 428006 string characters out of 5430632
+ 828437 words of memory out of 5000000
+ 51619 multiletter control sequences out of 15000+600000
  645595 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,20n,93p,431b,496s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.pdf (12 pages, 403318 bytes).
+<C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.pdf (15 pages, 716065 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 290 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 352 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 305 words of extra memory for PDF output out of 10000 (max. 10000000)
 
