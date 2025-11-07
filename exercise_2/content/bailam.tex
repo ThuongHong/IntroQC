@@ -389,34 +389,127 @@ $$
 \textbf{Đề bài:} Cho biết các trạng thái sau là tách được hay vướng, nếu tách được thì biểu diễn trên mặt cầu Bloch.
 
 \subsection{(a)}
-\textbf{Đề bài:} $\frac{1}{\sqrt{2}}(|01\rangle+|10\rangle).$
+\textbf{Đề bài:} $\frac{1}{\sqrt{2}}(|01\rangle+|10\rangle).$\\
 \textbf{Bài làm:}
-% TODO
+Ta có:
+\begin{align*}
+    \ket{\phi_{1}} &= \frac{1}{\sqrt{2}}\left(\ket{01} + \ket{10}\right) = \begin{bmatrix}
+        0 \\
+        \frac{1}{\sqrt{2}} \\
+        \frac{1}{\sqrt{2}} \\
+        0
+    \end{bmatrix}
+\end{align*}
+Giả sử $\ket{\phi_{1}}$ tách được, tức là tồn tại $\ket{\psi_1}=\begin{bmatrix}a\\b\end{bmatrix}$ và $\ket{\psi_2}=\begin{bmatrix}c\\d\end{bmatrix}$ sao cho $\ket{\phi_{1}}=\ket{\psi_1} \otimes \ket{\psi_2}$\\
+Ta có:
+\begin{align*}
+    \ket{\phi_{1}} &= \begin{bmatrix}
+        0 \\
+        \frac{1}{\sqrt{2}} \\
+        \frac{1}{\sqrt{2}} \\
+        0
+    \end{bmatrix} = \begin{bmatrix}
+        ac \\
+        ad \\
+        bc \\
+        bd
+    \end{bmatrix}
+\end{align*}
+Từ đó ta có hệ phương trình:
+\begin{align*}
+    \begin{cases}
+        ac = 0                     \\
+        ad = \frac{1}{\sqrt{2}}    \\
+        bc = \frac{1}{\sqrt{2}}    \\
+        bd = 0
+    \end{cases}
+    \implies
+    \begin{cases}
+        acbd = 0 \\
+        acbd = \frac{1}{2}
+    \end{cases}
+    (\text{Mâu thuẫn})
+\end{align*}
+Vậy $\ket{\phi_{1}}$ không tách được.
 
 \subsection{(b)}
-\textbf{Đề bài:} $\frac{1}{\sqrt{2}}(|10\rangle+i|11\rangle)$.
-\textbf{Bài làm:}\\
-(Lời giải được lấy từ Bài 7(c) trong file \texttt{bailam.tex})
+\textbf{Đề bài:} $\frac{1}{\sqrt{2}}(|10\rangle+i|11\rangle)$.\\
+\textbf{Bài làm:}
+Ta có:
 \begin{align*}
-    |\phi_{3}\rangle & =\frac{1}{\sqrt{2}}\left(|10\rangle+i|11\rangle\right)
+    |\phi_{2}\rangle & =\frac{1}{\sqrt{2}}\left(|10\rangle+i|11\rangle\right)
     \\
                      & = \frac{1}{\sqrt{2}}\left[|1\rangle \otimes \left(|0\rangle + i|1\rangle\right) \right]    \\
                      & = |1\rangle \otimes \left(\frac{1}{\sqrt{2}}|0\rangle + \frac{i}{\sqrt{2}}|1\rangle\right) \\
                      & = |1\rangle \otimes |i\rangle
 \end{align*}
-Vậy $|\phi_{3}\rangle$ tách được.
+Vậy $|\phi_{2}\rangle$ tách được.\\
+Dạng Bloch:
+\begin{align*}
+    \ket{1} & = \cos\frac{\pi}{2}\ket{0} + e^{i0}\sin\frac{\pi}{2}\ket{1} \implies \theta = \pi, \phi = 0 \\
+    \ket{i} & = \cos\frac{\pi}{4}\ket{0} + e^{i\frac{\pi}{2}}\sin\frac{\pi}{4}\ket{1} \implies \theta = \frac{\pi}{2}, \phi = \frac{\pi}{2}
+\end{align*}
+Hình vẽ:
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{img/5b1.png}
+        \caption{Trạng thái $\ket{1}$ trên mặt cầu Bloch}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{img/5b2.png}
+        \caption{Trạng thái $\ket{i}$ trên mặt cầu Bloch}
+    \end{minipage}
+\end{figure}
 
 \subsection{(c)}
-\textbf{Đề bài:} $\frac{1}{4}(3|00\rangle-\sqrt{3}|01\rangle+\sqrt{3}|10\rangle-|11\rangle).$
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} $\frac{1}{4}(3|00\rangle-\sqrt{3}|01\rangle+\sqrt{3}|10\rangle-|11\rangle).$\\
+\textbf{Bài làm:}\\
+Ta có:
+\begin{align*}
+    \ket{\phi_{3}} & = \frac{1}{4}\left(3\ket{00}-\sqrt{3}\ket{01}+\sqrt{3}\ket{10}-\ket{11}\right)                                                     \\
+                     & = \frac{1}{4}\left[\ket{0} \otimes (3\ket{0} - \sqrt{3}\ket{1}) + \frac{1}{\sqrt{3}}\ket{1} \otimes (3\ket{0} - \sqrt{3}\ket{1})\right] \\
+                    & = \frac{1}{4}\left[\left(\ket{0} + \frac{1}{\sqrt{3}}\ket{1}\right) \otimes \left(3\ket{0} - \sqrt{3}\ket{1}\right)\right]\\
+                    & = \left(\frac{1}{4}\ket{0} + \frac{1}{4\sqrt{3}}\ket{1}\right) \otimes \left(3\ket{0} - \sqrt{3}\ket{1}\right)\\
+                    &= \ket{\psi_1} \otimes \ket{\psi_2}
+\end{align*}
+Vậy $\ket{\phi_{3}}$ tách được.\\
+Chuẩn hoá $\ket{\psi_1}$ và $\ket{\psi_2}$ và chuyển về dạng Bloch:
+\begin{align*}
+    \ket{\psi_1} & = \frac{\frac{1}{4}\ket{0} + \frac{1}{4\sqrt{3}}\ket{1}}{\sqrt{\left(\frac{1}{4}\right)^2 + \left(\frac{1}{4\sqrt{3}}\right)^2}} = \frac{\sqrt{3}}{2}\ket{0} + \frac{1}{2}\ket{1} = \cos\frac{\pi}{6}\ket{0} + e^{i0}\sin\frac{\pi}{6}\ket{1}\\
+    & \implies \theta = \frac{\pi}{3}, \phi = 0\\
+    \ket{\psi_2} & = \frac{3\ket{0} - \sqrt{3}\ket{1}}{\sqrt{3^2 + (-\sqrt{3})^2}} = \frac{\sqrt{3}}{2}\ket{0} - \frac{1}{2}\ket{1} = \cos\frac{\pi}{6}\ket{0} + e^{i\pi}\sin\frac{\pi}{6}\ket{1}\\
+    & \implies \theta = \frac{\pi}{3}, \phi = \pi
+\end{align*}
+Dạng Bloch:
+\begin{align*}
+    \ket{\psi_1} & = \cos\frac{\pi}{6}\ket{0} + e^{i0}\sin\frac{\pi}{6}\ket{1} \implies \theta = \frac{\pi}{3}, \phi = 0 \\
+    \ket{\psi_2} & = \cos\frac{\pi}{6}\ket{0} + e^{i\pi}\sin\frac{\pi}{6}\ket{1} \implies \theta = \frac{\pi}{3}, \phi = \pi
+\end{align*}
+Hình vẽ:
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{img/5d1.png}
+        \caption{Trạng thái $\ket{\psi_1}$ trên mặt cầu Bloch}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{img/5d2.png}
+        \caption{Trạng thái $\ket{\psi_2}$ trên mặt cầu Bloch}
+    \end{minipage}
+\end{figure}
 
 \subsection{(d)}
 \textbf{Đề bài:} $\frac{1}{\sqrt{3}}|0\rangle|+\rangle+\sqrt{\frac{2}{3}}|1\rangle|-\rangle.$
 \textbf{Bài làm:}\\
-(Lời giải được lấy từ Bài 7(d) trong file \texttt{bailam.tex})
 \begin{align*}
-    |\phi_{4}\rangle & =\frac{1}{\sqrt{3}}|0+\rangle+\sqrt{\frac{2}{3}}|1-\rangle                                                     \\
+    |\phi_{3}\rangle & =\frac{1}{\sqrt{3}}|0+\rangle+\sqrt{\frac{2}{3}}|1-\rangle                                                     \\
                      & = \frac{1}{\sqrt{3}} \begin{bmatrix}
                                                 1 \\0
                                             \end{bmatrix} \otimes \begin{bmatrix}
@@ -434,7 +527,7 @@ Vậy $|\phi_{3}\rangle$ tách được.
           -\frac{1}{\sqrt{3}}
       \end{bmatrix}
 \end{align*}
-Giả sử $|\phi_{4}\rangle$ tách được, tức là tồn tại $|\psi_1\rangle=\begin{bmatrix}a\\b\end{bmatrix}$ và $|\psi_2\rangle=\begin{bmatrix}c\\d\end{bmatrix}$ sao cho $|\phi_{4}\rangle=|\psi_1\rangle \otimes |\psi_2\rangle$\\
+Giả sử $|\phi_{3}\rangle$ tách được, tức là tồn tại $|\psi_1\rangle=\begin{bmatrix}a\\b\end{bmatrix}$ và $|\psi_2\rangle=\begin{bmatrix}c\\d\end{bmatrix}$ sao cho $|\phi_{4}\rangle=|\psi_1\rangle \otimes |\psi_2\rangle$\\
 Ta có:
 \begin{align*}
     |\psi_1\rangle \otimes |\psi_2\rangle = \begin{bmatrix}
@@ -443,7 +536,7 @@ Ta có:
                                                 bc \\
                                                 bd
                                             \end{bmatrix} \\
-    |\phi_{4}\rangle=|\psi_1\rangle \otimes |\psi_2\rangle
+    |\phi_{3}\rangle=|\psi_1\rangle \otimes |\psi_2\rangle
     \implies \begin{bmatrix}
                  \frac{1}{\sqrt{6}} \\
                  \frac{1}{\sqrt{6}} \\
@@ -471,7 +564,7 @@ Từ đó ta có hệ phương trình:
     \end{cases}
     (\text{Mâu thuẫn})
 \end{align*}
-Vậy $|\phi_{4}\rangle$ không tách được.
+Vậy $|\phi_{3}\rangle$ không tách được.
 
 \section{Bài 6}
 \textbf{Đề bài:} Cho hệ 2 qubit với trạng thái $|\psi\rangle=\frac{1}{2}|00\rangle-\frac{i}{2}|10\rangle+\frac{1}{\sqrt{2}}|11\rangle$.

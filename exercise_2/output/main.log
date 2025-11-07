@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.12)  7 NOV 2025 19:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.12)  7 NOV 2025 21:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -778,7 +778,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 ...{\numberline {7.2}(b)}{13}{subsection.7.2}
+l.28 ...{\numberline {7.2}(b)}{16}{subsection.7.2}
                                                   % [1])
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -830,20 +830,53 @@ Package pdftex.def Info: img/circuit.png  used on input line 357.
 [9]
 
 [10 <./img/circuit.png>]
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 399.
+
+[11]
+<img/5b1.png, id=266, 375.0813pt x 387.3672pt>
+File: img/5b1.png Graphic file (type png)
+<use img/5b1.png>
+Package pdftex.def Info: img/5b1.png  used on input line 457.
+(pdftex.def)             Requested size: 182.11984pt x 188.08565pt.
+<img/5b2.png, id=267, 375.0813pt x 387.3672pt>
+File: img/5b2.png Graphic file (type png)
+<use img/5b2.png>
+Package pdftex.def Info: img/5b2.png  used on input line 463.
+(pdftex.def)             Requested size: 182.11984pt x 188.08565pt.
+
+
+[12]
+
+[13 <./img/5b1.png> <./img/5b2.png>]
+<img/5d1.png, id=280, 375.0813pt x 387.3672pt>
+File: img/5d1.png Graphic file (type png)
+<use img/5d1.png>
+Package pdftex.def Info: img/5d1.png  used on input line 497.
+(pdftex.def)             Requested size: 182.11984pt x 188.08565pt.
+<img/5d2.png, id=281, 375.0813pt x 387.3672pt>
+File: img/5d2.png Graphic file (type png)
+<use img/5d2.png>
+Package pdftex.def Info: img/5d2.png  used on input line 503.
+(pdftex.def)             Requested size: 182.11984pt x 188.08565pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--511
+
+ []
+
+
+
+[14 <./img/5d1.png> <./img/5d2.png>]
+
+[15]
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 614.
  (C:\Users\luuth\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 
-[11]
+[16]
 
-[12]
+[17])
 
-[13]
-
-[14])
-
-[15] (d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.aux)
+[18] (d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
@@ -852,17 +885,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A06A5057607EE5E54CCFCD1D13405082;2645.
  ) 
 Here is how much of TeX's memory you used:
- 23462 strings out of 468130
- 428188 string characters out of 5430632
+ 23497 strings out of 468130
+ 428741 string characters out of 5430632
  830437 words of memory out of 5000000
- 51626 multiletter control sequences out of 15000+600000
+ 51654 multiletter control sequences out of 15000+600000
  645595 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,20n,93p,431b,496s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.pdf (18 pages, 733137 bytes).
+Output written on d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.pdf (21 pages, 1115035 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 394 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 500000)
+ 330 words of extra memory for PDF output out of 10000 (max. 10000000)
 
