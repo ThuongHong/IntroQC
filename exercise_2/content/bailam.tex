@@ -350,20 +350,41 @@ Vậy $U$ tương ứng với phép quay quanh trục tạo bởi $\ket{u_1}, \k
 \textbf{Đề bài:} Từ trạng thái đầu vào $|0\rangle$,
 
 \subsection{(a)}
-\textbf{Đề bài:} Vẽ mạch mô tả tính toán HYTHX.
+\textbf{Đề bài:} Vẽ mạch mô tả tính toán HYTHX.\\
 \textbf{Bài làm:}
-% TODO
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/circuit.png}
+    \caption{Mạch tính toán HYTHX}
+\end{figure}
 
 \subsection{(b)}
-\textbf{Đề bài:} Tính đầu ra của Câu (a).
+\textbf{Đề bài:} Tính đầu ra của Câu (a).\\
 \textbf{Bài làm:}
-% TODO
+Ta có: 
+\begin{align*}
+    \ket{\psi} &= XHTYH\ket{0} \\
+               & = XHTY\left(\frac{1}{\sqrt{2}}\ket{0} + \frac{1}{\sqrt{2}}\ket{1}\right) \\
+               & = XHT\left(\frac{i}{\sqrt{2}}\ket{1} - \frac{i}{\sqrt{2}}\ket{0}\right) \\
+               & = XH\left(-\frac{i}{\sqrt{2}}\ket{0} + \frac{i}{\sqrt{2}}e^{i\frac{\pi}{4}}\ket{1}\right) \\
+               &= X\left(-\frac{i}{\sqrt{2}}\ket{+} + \frac{i}{\sqrt{2}}e^{i\frac{\pi}{4}}\ket{-}\right) \\
+               &= -\frac{i}{\sqrt{2}}\ket{+} - \frac{i}{\sqrt{2}}e^{i\frac{\pi}{4}}\ket{-}
+\end{align*}
 
 \subsection{(c)}
-\textbf{Đề bài:} Thêm phép đo $\tilde{\sigma}$ cuối mạch của Câu (a) và tính xác suất được 1.
+\textbf{Đề bài:} Thêm phép đo $\tilde{\sigma}$ cuối mạch của Câu (a) và tính xác suất được 1.\\
 \textbf{Bài làm:}
-% TODO
-
+Ta có:
+\begin{align*}
+    \ket{\psi} &= -\frac{i}{\sqrt{2}}\ket{+} - \frac{i}{\sqrt{2}}e^{i\frac{\pi}{4}}\ket{-} \\
+               & = \left(-\frac{i}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} - \frac{i}{\sqrt{2}}e^{i\frac{\pi}{4}} \cdot \frac{1}{\sqrt{2}}\right)\ket{0} + \left(-\frac{i}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} + \frac{i}{\sqrt{2}}e^{i\frac{\pi}{4}} \cdot \frac{1}{\sqrt{2}}\right)\ket{1} \\
+               & = \left(\frac{\sqrt{2}}{4} - \frac{2+\sqrt{2}}{4}i\right)\ket{0} + \left(-\frac{\sqrt{2}}{4} + \frac{-2+\sqrt{2}}{4}i\right)\ket{1}
+\end{align*}
+Xác suất được $\ket{1}$ là:
+$$
+\left|\left(-\frac{\sqrt{2}}{4} + \frac{-2+\sqrt{2}}{4}i\right)\right|^2 = \left(-\frac{\sqrt{2}}{4}\right)^2 + \left(\frac{-2+\sqrt{2}}{4}\right)^2 = \frac{2-\sqrt{2}}{4}
+$$
+ 
 \section{Bài 5}
 \textbf{Đề bài:} Cho biết các trạng thái sau là tách được hay vướng, nếu tách được thì biểu diễn trên mặt cầu Bloch.
 
