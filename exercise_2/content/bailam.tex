@@ -130,29 +130,221 @@ Hình vẽ:
 \end{figure}
 
 \section{Bài 3}
-\textbf{Đề bài:} Cho U là một toán tử tuyến tính trên $\mathbb{C}^{2}$, biết
+\textbf{Đề bài:} Cho $U$ là một toán tử tuyến tính trên $\mathbb{C}^{2}$, biết
 $U|0\rangle=\frac{\sqrt{2}-i}{2}|0\rangle-\frac{1}{2}|1\rangle$,
 $U|1\rangle=\frac{1}{2}|0\rangle+\frac{\sqrt{2}+i}{2}|1\rangle$.
+Ma trận biểu diễn của $U$ theo cơ sở tính toán là:
+\begin{align*}
+    U =\begin{bmatrix}
+        U\ket{0} & U\ket{1}
+    \end{bmatrix}
+    =\frac{1}{2}\begin{bmatrix}
+        \sqrt{2}-i & 1           \\
+        -1         & \sqrt{2}+i
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(a)}
-\textbf{Đề bài:} Chứng minh U là một cổng lượng tử.
+\textbf{Đề bài:} Chứng minh $U$ là một cổng lượng tử.\\
 \textbf{Bài làm:}
-% TODO
+Vì $U$ là toán tử tuyến tính trên $\mathbb{C}^{2}$ nên đã thoả điều kiện:
+\begin{align*}
+    U(\alpha\ket{\phi} + \beta\ket{\psi}) = \alpha U\ket{\phi} + \beta U\ket{\psi}, \quad \forall \alpha,\beta \in \mathbb{C}, \forall \ket{\phi},\ket{\psi} \in \mathbb{C}^{2}
+\end{align*}
+Ta cần chứng minh:
+\begin{align*}
+    &||U\ket{\phi}|| = ||\ket{\phi}||, \quad \forall \ket{\phi} \in \mathbb{C}^{2}\\
+    &\implies U \text{bảo toàn chuẩn, hay } U \text{ là ma trận unita}\\
+    &\implies U^{\dagger}U = I
+\end{align*}
+Ta có:
+\begin{align*}
+    U^{\dagger} &= \frac{1}{2}\begin{bmatrix}
+        \sqrt{2}+i & -1          \\
+        1          & \sqrt{2}-i
+    \end{bmatrix} \\
+    \implies U^{\dagger}U & = \frac{1}{4}\begin{bmatrix}
+        \sqrt{2}+i & -1          \\
+        1          & \sqrt{2}-i
+    \end{bmatrix} \begin{bmatrix}
+        \sqrt{2}-i & 1           \\
+        -1         & \sqrt{2}+i
+    \end{bmatrix} 
+    = \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix}
+    = I
+\end{align*}
+Vậy $U$ là ma trận unita, tức là $U$ là một cổng lượng tử.
 
 \subsection{(b)}
-\textbf{Đề bài:} Cho biết kết quả biến đổi U trên các trạng thái $|+\rangle,|-\rangle,|i\rangle,|-i\rangle.$
+\textbf{Đề bài:} Cho biết kết quả biến đổi $U$ trên các trạng thái $|+\rangle,|-\rangle,|i\rangle,|-i\rangle.$\\
 \textbf{Bài làm:}
-% TODO
+Ta có:
+\begin{align*}
+    U\ket{+} &= \frac{1}{2}\begin{bmatrix}
+        \sqrt{2} - i & 1           \\
+        -1          & \sqrt{2} + i
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 \\
+        1
+    \end{bmatrix}
+    = \frac{1}{2\sqrt{2}}\begin{bmatrix}
+        \sqrt{2} - i + 1 \\
+        \sqrt{2} + i -1
+    \end{bmatrix}\\
+    U\ket{-} &= \frac{1}{2}\begin{bmatrix}
+        \sqrt{2} - i & 1           \\
+        -1          & \sqrt{2} + i
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1  \\
+        -1
+    \end{bmatrix}
+    = \frac{1}{2\sqrt{2}}\begin{bmatrix}
+        \sqrt{2} - i - 1 \\
+        -\sqrt{2} - i -1
+    \end{bmatrix}\\
+    U\ket{i} &= \frac{1}{2}\begin{bmatrix}
+        \sqrt{2} - i & 1           \\
+        -1          & \sqrt{2} + i
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1  \\
+        i
+    \end{bmatrix}
+    = \frac{1}{2\sqrt{2}}\begin{bmatrix}
+        \sqrt{2} \\
+        -2 + i\sqrt{2}
+    \end{bmatrix}\\
+    U\ket{-i} &= \frac{1}{2}\begin{bmatrix}
+        \sqrt{2} - i & 1           \\
+        -1          & \sqrt{2} + i
+    \end{bmatrix}
+    \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1  \\
+        -i
+    \end{bmatrix}
+    = \frac{1}{2\sqrt{2}}\begin{bmatrix}
+        \sqrt{2} - 2i \\
+        -i\sqrt{2}
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(c)}
-\textbf{Đề bài:} Cho biết kết quả biến đổi U trên các trạng thái của Câu 1.
+\textbf{Đề bài:} Cho biết kết quả biến đổi $U$ trên các trạng thái của Câu 1.\\
 \textbf{Bài làm:}
-% TODO
+Ta có:
+\begin{align*}
+    U\ket{\psi_1} & = \frac{1}{2}\begin{bmatrix}
+        \sqrt{2} - i & 1           \\
+        -1          & \sqrt{2} + i
+    \end{bmatrix}
+    \begin{bmatrix}
+        \frac{\sqrt{3}}{2} \\
+        \frac{1}{2}
+    \end{bmatrix}
+    = \frac{1}{4}\begin{bmatrix}
+        1 + \sqrt{6} - i\sqrt{3} \\
+        -\sqrt{3} + \sqrt{2} + i
+    \end{bmatrix}\\
+    U\ket{\psi_2} & = \frac{1}{2}\begin{bmatrix}
+        \sqrt{2} - i & 1           \\
+        -1          & \sqrt{2} + i
+    \end{bmatrix}
+    \begin{bmatrix}
+        \frac{1}{\sqrt{2}} \\
+        \frac{1}{\sqrt{2}} e^{i\frac{\pi}{6}}
+    \end{bmatrix}
+    = \frac{1}{2\sqrt{2}}\begin{bmatrix}
+        \sqrt{2} - i + e^{i\frac{\pi}{6}} \\
+        -1 + (\sqrt{2} + i)e^{i\frac{\pi}{6}}
+    \end{bmatrix}\\
+    U\ket{\psi_3} & = \frac{1}{2}\begin{bmatrix}
+        \sqrt{2} - i & 1           \\
+        -1          & \sqrt{2} + i
+    \end{bmatrix}
+    \begin{bmatrix}
+        \frac{2}{3} \\
+        \frac{1-2i}{3}
+    \end{bmatrix}
+    = \frac{1}{6}\begin{bmatrix}
+        1 + 2\sqrt{2} -4i \\
+        \sqrt{2} + (1 - 2\sqrt{2})i
+    \end{bmatrix}
+\end{align*}
 
 \subsection{(d)}
-\textbf{Đề bài:} U tương ứng với phép quay quanh trục nào với góc bao nhiêu trên mặt cầu Bloch?
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} $U$ tương ứng với phép quay quanh trục nào với góc bao nhiêu trên mặt cầu Bloch?\\
+\textbf{Bài làm:}\\
+Vì $U$ unita nên luôn tìm được 2 vector riêng $\ket{u_1},\ket{u_2}$ lập thành một
+cơ sở trực chuẩn với các trị riêng tương ứng là $e^{i\theta_1},e^{i\theta_2}$, khi đó:
+\begin{align*}
+    U\ket{u_1} & = e^{i\theta_1}\ket{u_1} \equiv \ket{u_1} ,\quad U\ket{u_2} = e^{i\theta_2}\ket{u_2} \equiv \ket{u_2}
+\end{align*}
+Ta cần tìm 2 trị riêng và vector riêng của $U$.\\
+Ta có ma trận đặc trưng:
+\begin{align*}
+    U - \lambda I & = \frac{1}{2}\begin{bmatrix}
+        \sqrt{2} - i - 2\lambda & 1                     \\
+        -1                      & \sqrt{2} + i - 2\lambda
+    \end{bmatrix}\\
+    \det(U - \lambda I) & = \frac{1}{4}[(\sqrt{2} - i - 2\lambda)(\sqrt{2} + i - 2\lambda) + 1] \\
+                    & = \frac{1}{4}[4\lambda^2 - 4\sqrt{2}\lambda + 4] = 0\\
+    &\implies \begin{cases}
+        \lambda_1 = \frac{\sqrt{2} + \sqrt{2}i}{2} = e^{i\frac{\pi}{4}} \\
+        \lambda_2 = \frac{\sqrt{2} - \sqrt{2}i}{2} = e^{-i\frac{\pi}{4}}
+    \end{cases}                                                                             
+\end{align*}
+Tìm vector riêng tương ứng với trị riêng:
+\begin{align*}
+    \text{Với } \lambda_1 & : (U - \lambda_1 I)\ket{u_1} = 0 \\
+    & \implies \frac{1}{2}\begin{bmatrix}
+        -i(1 + \sqrt{2}) & 1                     \\
+        -1                  & i(1 - \sqrt{2})
+    \end{bmatrix}\begin{bmatrix}
+        a \\
+        b
+    \end{bmatrix} = 0\\
+    & \implies \begin{cases}
+        -i(1 + \sqrt{2})a + b = 0 \\
+        -a + i(1 - \sqrt{2})b = 0
+    \end{cases} 
+    \implies \begin{cases}
+        a = 1 \\
+        b = i(1 + \sqrt{2})
+    \end{cases}
+    \implies \ket{u_1} = \begin{bmatrix}
+        1 \\
+        i(1 + \sqrt{2})
+    \end{bmatrix}\\
+    \text{Với } \lambda_2 & : (U - \lambda_2 I)\ket{u_2} = 0 \\
+    & \implies \frac{1}{2}\begin{bmatrix}
+        -i(1 - \sqrt{2}) & 1                     \\
+        -1                  & i(1 + \sqrt{2})
+    \end{bmatrix}\begin{bmatrix}
+        c \\
+        d
+    \end{bmatrix} = 0\\
+    & \implies \begin{cases}
+        -i(1 - \sqrt{2})c + d = 0 \\
+        -c + i(1 + \sqrt{2})d = 0
+    \end{cases} 
+    \implies \begin{cases}
+        c = 1 \\
+        d = i(1 - \sqrt{2})
+    \end{cases}
+    \implies \ket{u_2} = \begin{bmatrix}
+        1 \\
+        i(1 - \sqrt{2})
+    \end{bmatrix}
+\end{align*}
+Vậy $U$ tương ứng với phép quay quanh trục tạo bởi $\ket{u_1}, \ket{u_2}$ với góc $\theta$ trên mặt cầu Bloch, trong đó:
+\begin{align*}
+    \theta & = \theta_2 - \theta_1 = -\frac{\pi}{4} - \frac{\pi}{4} = -\frac{\pi}{2}
+\end{align*}
 
 \section{Bài 4}
 \textbf{Đề bài:} Từ trạng thái đầu vào $|0\rangle$,
