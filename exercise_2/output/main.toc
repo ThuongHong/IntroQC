@@ -30,5 +30,5 @@
 \contentsline {subsection}{\numberline {7.4}(d)}{20}{subsection.7.4}%
 \contentsline {section}{\numberline {8}Bài 8}{20}{section.8}%
 \contentsline {subsection}{\numberline {8.1}(a)}{21}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}(b)}{21}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}(c)}{21}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.2}(b)}{22}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}(c)}{22}{subsection.8.3}%

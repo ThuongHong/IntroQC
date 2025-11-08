@@ -679,12 +679,12 @@ Từ Câu (a), ta có ma trận biểu diễn của $U$ là:
     U & = \begin{bmatrix}
               U\ket{00} & U\ket{01} & U\ket{10} & U\ket{11}
           \end{bmatrix}
-      = \frac{1}{\sqrt{2}}\begin{bmatrix}
-              0 & 1 & 0  & 1  \\
-              1 & 0 & 1  & 0  \\
-              0 & 1 & 0  & -1 \\
-              1 & 0 & -1 & 0
-          \end{bmatrix}
+    = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                            0 & 1 & 0  & 1  \\
+                            1 & 0 & 1  & 0  \\
+                            0 & 1 & 0  & -1 \\
+                            1 & 0 & -1 & 0
+                        \end{bmatrix}
 \end{align*}
 
 \subsection{(c)}
@@ -722,27 +722,91 @@ Từ Câu (a), ta có ma trận biểu diễn của $U$ là:
 \textbf{Đề bài:} Cho biết tác động của U lên trạng thái $|\psi\rangle=\frac{1}{4}|00\rangle+\frac{1}{2}|01\rangle+\frac{1}{\sqrt{2}}|10\rangle+\frac{\sqrt{3}}{4}|11\rangle$.\\
 \textbf{Bài làm:}
 \begin{align*}
-    U\ket{\psi} & = U\left(\frac{1}{4}\ket{00} + \frac{1}{2}\ket{01} + \frac{1}{\sqrt{2}}\ket{10} + \frac{\sqrt{3}}{4}\ket{11}\right)                                                                 \\
-               & = \frac{1}{4}U\ket{00} + \frac{1}{2}U\ket{01} + \frac{1}{\sqrt{2}}U\ket{10} + \frac{\sqrt{3}}{4}U\ket{11}                                                                                 \\
-               & = \frac{1}{4}\left(\frac{1}{\sqrt{2}}\ket{01} + \frac{1}{\sqrt{2}}\ket{11}\right) + \frac{1}{2}\left(\frac{1}{\sqrt{2}}\ket{00} + \frac{1}{\sqrt{2}}\ket{10}\right)                         \\
-               & \quad + \frac{1}{\sqrt{2}}\left(\frac{1}{\sqrt{2}}\ket{01} - \frac{1}{\sqrt{2}}\ket{11}\right) + \frac{\sqrt{3}}{4}\left(\frac{1}{\sqrt{2}}\ket{00} - \frac{1}{\sqrt{2}}\ket{10}\right) \\
-               & = \left(\frac{1}{2\sqrt{2}} + \frac{\sqrt{3}}{4\sqrt{2}}\right)\ket{00} + \left(\frac{1}{4\sqrt{2}} + \frac{1}{2}\right)\ket{01} + \left(\frac{1}{2\sqrt{2}} - \frac{\sqrt{3}}{4\sqrt{2}}\right)\ket{10} + \left(\frac{1}{4\sqrt{2}} - \frac{1}{2}\right)\ket{11}
+    U\ket{\psi} & = U\left(\frac{1}{4}\ket{00} + \frac{1}{2}\ket{01} + \frac{1}{\sqrt{2}}\ket{10} + \frac{\sqrt{3}}{4}\ket{11}\right)                                                                                                                                               \\
+                & = \frac{1}{4}U\ket{00} + \frac{1}{2}U\ket{01} + \frac{1}{\sqrt{2}}U\ket{10} + \frac{\sqrt{3}}{4}U\ket{11}                                                                                                                                                         \\
+                & = \frac{1}{4}\left(\frac{1}{\sqrt{2}}\ket{01} + \frac{1}{\sqrt{2}}\ket{11}\right) + \frac{1}{2}\left(\frac{1}{\sqrt{2}}\ket{00} + \frac{1}{\sqrt{2}}\ket{10}\right)                                                                                               \\
+                & \quad + \frac{1}{\sqrt{2}}\left(\frac{1}{\sqrt{2}}\ket{01} - \frac{1}{\sqrt{2}}\ket{11}\right) + \frac{\sqrt{3}}{4}\left(\frac{1}{\sqrt{2}}\ket{00} - \frac{1}{\sqrt{2}}\ket{10}\right)                                                                           \\
+                & = \left(\frac{1}{2\sqrt{2}} + \frac{\sqrt{3}}{4\sqrt{2}}\right)\ket{00} + \left(\frac{1}{4\sqrt{2}} + \frac{1}{2}\right)\ket{01} + \left(\frac{1}{2\sqrt{2}} - \frac{\sqrt{3}}{4\sqrt{2}}\right)\ket{10} + \left(\frac{1}{4\sqrt{2}} - \frac{1}{2}\right)\ket{11}
 \end{align*}
 
 \section{Bài 8}
 \textbf{Đề bài:} Xét trạng thái 3 qubit $|GHZ\rangle=\frac{1}{\sqrt{2}}|000\rangle+\frac{1}{\sqrt{2}}|111\rangle$.
 
 \subsection{(a)}
-\textbf{Đề bài:} Chứng minh $|GHZ\rangle$ là trạng thái vướng.
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} Chứng minh $|GHZ\rangle$ là trạng thái vướng.\\
+\textbf{Bài làm:}\\
+Giả sử $\ket{GHZ}$ tách được, tức là tồn tại $\ket{\psi_1}=\begin{bmatrix}a\\b\end{bmatrix}$, $\ket{\psi_2}=\begin{bmatrix}c\\d\end{bmatrix}$ và $\ket{\psi_3}=\begin{bmatrix}e\\f\end{bmatrix}$ sao cho $\ket{GHZ}=\ket{\psi_1} \otimes \ket{\psi_2} \otimes \ket{\psi_3}$\\
+Ta có:
+\begin{align*}
+    \ket{GHZ} & = \frac{1}{\sqrt{2}}\left(\ket{000} + \ket{111}\right) = \frac{1}{\sqrt{2}}\begin{bmatrix}
+                                                                                               1 \\0 \\0 \\0 \\0 \\0 \\0 \\1
+                                                                                           \end{bmatrix} = \begin{bmatrix}
+                                                                                                               \frac{1}{\sqrt{2}} \\0 \\0 \\0 \\0 \\0 \\0 \\ \frac{1}{\sqrt{2}}
+                                                                                                           \end{bmatrix}
+    = \begin{bmatrix}
+          ace \\
+          acf \\
+          ade \\
+          adf \\
+          bce \\
+          bcf \\
+          bde \\
+          bdf
+      \end{bmatrix}
+\end{align*}
+Từ đó ta có hệ phương trình:
+\begin{align*}
+    \begin{cases}
+        ace = \frac{1}{\sqrt{2}} \\
+        acf = 0                  \\
+        ade = 0                  \\
+        adf = 0                  \\
+        bce = 0                  \\
+        bcf = 0                  \\
+        bde = 0                  \\
+        bdf = \frac{1}{\sqrt{2}}
+    \end{cases}
+    \implies
+    \begin{cases}
+        ace bdf = 0 \\
+        ace bdf = \frac{1}{2}
+    \end{cases}
+    (\text{Mâu thuẫn})
+\end{align*}
+Vậy $\ket{GHZ}$ không tách được.
 
 \subsection{(b)}
-\textbf{Đề bài:} Khảo sát phép đo riêng qubit 0, qubit 1, qubit 2 và nhận xét.
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} Khảo sát phép đo riêng qubit 0, qubit 1, qubit 2 và nhận xét.\\
+\textbf{Bài làm:}\\
+Để đo riêng qubit 0 theo cơ sở tính toán, ta viết lại:
+\begin{align*}
+    \ket{GHZ} & = \frac{1}{\sqrt{2}}\ket{00}\otimes\ket{0} + \frac{1}{\sqrt{2}}\ket{11}\otimes\ket{1}
+\end{align*}
+Khi đó, qubit 0 được:
+\begin{itemize}
+    \item $\ket{0}$ với xác suất $\left|\frac{1}{\sqrt{2}}\ket{00}\right|^2 = \frac{1}{2}$.
+    \item $\ket{1}$ với xác suất $\left|\frac{1}{\sqrt{2}}\ket{11}\right|^2 = \frac{1}{2}$.
+\end{itemize}
+Tương tự, khi đo riêng qubit 1 và qubit 2 theo cơ sở tính toán, ta cũng thu được kết quả:
+\begin{itemize}
+    \item Được $\ket{0}$ với xác suất $\frac{1}{2}$.
+    \item Được $\ket{1}$ với xác suất $\frac{1}{2}$.
+\end{itemize}
+Nhận xét: Khi đo riêng lẻ, mỗi qubit đều có xác suất $50\%$ để thu được trạng thái $\ket{0}$ hoặc $\ket{1}$, cho dù toàn bộ hệ thống ở trong trạng thái rối lượng tử $\ket{GHZ}$. Ngoài ra, vì $\ket{GHZ}$ là trạng thái vướng, nên khi đo riêng 1 qubit sẽ làm sụp đổ toàn bộ trạng thái của hệ về $\ket{000}$ hoặc $\ket{111}$, khi đó các qubit còn lại sẽ có xác suất $100\%$ để thu được trạng thái tương ứng.
 
 \subsection{(c)}
-\textbf{Đề bài:} Thiết kế mạch 3 qubit để tạo trạng thái $|GHZ\rangle$.
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} Thiết kế mạch 3 qubit để tạo trạng thái $|GHZ\rangle$.\\
+\textbf{Bài làm:}\\
+Để tạo trạng thái $|GHZ\rangle$, ta có thể sử dụng mạch lượng tử gồm các cổng Hadamard (H) và cổng CNOT như sau:
+\begin{align*}
+    \ket{000} & \xrightarrow{H \text{ trên qubit 0}} \frac{1}{\sqrt{2}}(\ket{000} + \ket{001})                                \\
+              & \xrightarrow{CNOT \text{ (qubit 0 điều khiển qubit 1)}} \frac{1}{\sqrt{2}}(\ket{000} + \ket{011})             \\
+              & \xrightarrow{CNOT \text{ (qubit 0 điều khiển qubit 2)}} \frac{1}{\sqrt{2}}(\ket{000} + \ket{111}) = \ket{GHZ}
+\end{align*}
+
+Hình vẽ:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/ghz.png}
+    \caption{Mạch lượng tử tạo trạng thái $|GHZ\rangle$}
+\end{figure}

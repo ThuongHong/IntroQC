@@ -381,6 +381,13 @@ INPUT .\img\5d2.png
 INPUT .\img\5d2.png
 INPUT .\img\5d2.png
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT .\img\ghz.png
+INPUT .\img\ghz.png
+INPUT .\img\ghz.png
+INPUT .\img\ghz.png
+INPUT .\img\ghz.png
+INPUT .\img\ghz.png
+INPUT .\img\ghz.png
 INPUT d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.aux
 INPUT d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.out
 INPUT d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.out
@@ -416,5 +423,7 @@ INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vncsc10
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vncsc10.pfb
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb
+INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr8.pfb
+INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr8.pfb
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti12.pfb
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti12.pfb

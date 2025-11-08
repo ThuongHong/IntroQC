@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1762584440.95882 "d:/school/25_26_Semester_1/IntroQC/exercise_2/main.tex" "output/main.pdf" "main" 1762584442.45072 0
+["pdflatex"] 1762585862.24974 "d:/school/25_26_Semester_1/IntroQC/exercise_2/main.tex" "output/main.pdf" "main" 1762585863.78054 0
   "C:/Users/luuth/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1762517626 89222 166b740fe160b6f98eb78d58064d1514 ""
   "C:/Users/luuth/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1760244433 14064 face016f08d417d146a0c3a76b85aee4 ""
   "C:/Users/luuth/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760246158 13286967 640f272f94cb5c2f069cf620a7810623 ""
@@ -42,6 +42,7 @@
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb" 1644004041 41089 cd085a6112214f1ec9535fe0d1ee127f ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb" 1644004041 41115 0656009cce5da93b639dc9d869f1af5e ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb" 1644004041 40319 02110ade360715fbba33c66db50ef607 ""
+  "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb" 1644004041 41310 310d863e4c8e005265dc9ba6af1579a2 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb" 1644004041 45761 648ecdc1078fdfee480e9a81aed1d127 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -175,7 +176,7 @@
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vietnam.sty" 1368738347 2477 91784aa2c9213f74609391e3cae65a13 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vncaps.tex" 1368738347 3273 a55ebdb07413d2fea580f210e3c0b252 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "content/bailam.tex" 1762584438 43706 4df81d46d096fed376a3ecc7973685a5 ""
+  "content/bailam.tex" 1762585861 47808 ea765133fe7192441ffd7a668de7821a ""
   "content/title.tex" 1760768446 891 4bcb74c4577b906459eafcb266eb4d0b ""
   "d:/school/25_26_Semester_1/IntroQC/exercise_2/main.tex" 1762010804 1497 3bd40115c4f0f7167f364e6c51bbf540 ""
   "hcmus-report-template.sty" 1762354706 4548 70e85aa201905ee70dbc171560b889ac ""
@@ -184,14 +185,15 @@
   "img/5d1.png" 1762525123 95497 b6a82ebac24d1167bda24e48a07da40b ""
   "img/5d2.png" 1762525146 97290 ce88ac1454607af6af2a906bb0bdd9d0 ""
   "img/circuit.png" 1762517814 2485 9c3cda40c74265f89dbdb6d1ffb0dd00 ""
+  "img/ghz.png" 1762585707 7971 49e5ce9502112e5cd604550d03100cf2 ""
   "img/hcmus-logo.png" 1760241167 258629 122747e63e393f11b7f15571540c7d20 ""
   "img/psi_1.png" 1762357506 96256 669d3317c8edc0e73508d52c1d0217af ""
   "img/psi_2.png" 1762357983 95773 05561b6ba7186aadaf068236370c7fe5 ""
   "img/psi_3.png" 1762359189 98462 4ea8eef582a4156191f20bb146ef077d ""
   "main.tex" 1762010804 1497 3bd40115c4f0f7167f364e6c51bbf540 ""
-  "output/main.aux" 1762584442 5271 8d700a5f372ba9f0b97cc13be2376ed0 "pdflatex"
-  "output/main.out" 1762584442 2645 a06a5057607ee5e54ccfcd1d13405082 "pdflatex"
-  "output/main.toc" 1762584442 2312 e3b68e7d2869d5f67e2eb4ce65bd41a2 "pdflatex"
+  "output/main.aux" 1762585863 5438 e14d58e349ee3cfb4cab88422b63158f "pdflatex"
+  "output/main.out" 1762585863 2645 a06a5057607ee5e54ccfcd1d13405082 "pdflatex"
+  "output/main.toc" 1762585863 2312 2fc8275b223b669d80789eeef4b68149 "pdflatex"
   (generated)
   "output/main.aux"
   "output/main.log"
