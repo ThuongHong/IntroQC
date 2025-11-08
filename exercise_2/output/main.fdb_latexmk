@@ -1,7 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1762525170.82406 "d:/school/25_26_Semester_1/IntroQC/exercise_2/main.tex" "output/main.pdf" "main" 1762525172.26154 0
+["pdflatex"] 1762583305.88666 "d:/school/25_26_Semester_1/IntroQC/exercise_2/main.tex" "output/main.pdf" "main" 1762583307.35517 0
   "C:/Users/luuth/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1762517626 89222 166b740fe160b6f98eb78d58064d1514 ""
+  "C:/Users/luuth/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1760244433 14064 face016f08d417d146a0c3a76b85aee4 ""
   "C:/Users/luuth/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760246158 13286967 640f272f94cb5c2f069cf620a7810623 ""
+  "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993062508 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -176,7 +178,7 @@
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vietnam.sty" 1368738347 2477 91784aa2c9213f74609391e3cae65a13 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vncaps.tex" 1368738347 3273 a55ebdb07413d2fea580f210e3c0b252 ""
   "C:/Users/luuth/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "content/bailam.tex" 1762525168 32772 e4cf3fb34f5f6a9aad8d299cf2acf76f ""
+  "content/bailam.tex" 1762583305 37600 41731e8859c726a0e1a032cf1929fa65 ""
   "content/title.tex" 1760768446 891 4bcb74c4577b906459eafcb266eb4d0b ""
   "d:/school/25_26_Semester_1/IntroQC/exercise_2/main.tex" 1762010804 1497 3bd40115c4f0f7167f364e6c51bbf540 ""
   "hcmus-report-template.sty" 1762354706 4548 70e85aa201905ee70dbc171560b889ac ""
@@ -190,9 +192,9 @@
   "img/psi_2.png" 1762357983 95773 05561b6ba7186aadaf068236370c7fe5 ""
   "img/psi_3.png" 1762359189 98462 4ea8eef582a4156191f20bb146ef077d ""
   "main.tex" 1762010804 1497 3bd40115c4f0f7167f364e6c51bbf540 ""
-  "output/main.aux" 1762525172 5271 4f90bdbb5f4c9fdff8b804475c65e278 "pdflatex"
-  "output/main.out" 1762525172 2645 a06a5057607ee5e54ccfcd1d13405082 "pdflatex"
-  "output/main.toc" 1762525172 2312 f0161db2ccaec777819f50386e1df3a0 "pdflatex"
+  "output/main.aux" 1762583307 5271 825ae83fc84a59422fe3b140bce401c8 "pdflatex"
+  "output/main.out" 1762583307 2645 a06a5057607ee5e54ccfcd1d13405082 "pdflatex"
+  "output/main.toc" 1762583307 2312 2922ffbc42fc2ac637e0a4ca126c8833 "pdflatex"
   (generated)
   "output/main.aux"
   "output/main.log"

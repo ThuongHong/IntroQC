@@ -571,29 +571,92 @@ Vậy $|\phi_{3}\rangle$ không tách được.
 Khảo sát các phép đo sau.
 
 \subsection{(a)}
-\textbf{Đề bài:} Đo đồng thời 2 qubit.
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} Đo đồng thời 2 qubit.\\
+\textbf{Bài làm:}\\
+Khi đo đồng thời 2 qubit theo cơ sở tính toán, ta có các kết quả và xác suất tương ứng như sau:
+\begin{itemize}
+    \item Được $\ket{00}$ với xác suất $P_{00} = \left|\frac{1}{2}\right|^2 = \frac{1}{4}$
+    \item Được $\ket{10}$ với xác suất $P_{10} = \left|-\frac{i}{2}\right|^2 = \frac{1}{4}$
+    \item Được $\ket{11}$ với xác suất $P_{11} = \left|\frac{1}{\sqrt{2}}\right|^2 = \frac{1}{2}$
+\end{itemize}
 
 \subsection{(b)}
-\textbf{Đề bài:} Đo qubit 0.
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} Đo qubit 0.\\
+\textbf{Bài làm:}\\
+Để đo riêng qubit 0 theo cơ sở tính toán, ta viết lại:
+\begin{align*}
+    \ket{\psi} & = \frac{1}{2}\ket{0}\otimes\ket{0} - \frac{i}{2}\ket{1}\otimes\ket{0} + \frac{1}{\sqrt{2}}\ket{1}\otimes\ket{1} \\
+                & = \left(\frac{1}{2}\ket{0} - \frac{i}{2}\ket{1}\right) \otimes \ket{0} + \frac{1}{\sqrt{2}}\ket{1}\otimes\ket{1}
+\end{align*}
+Khi đó, qubit 0 được:
+\begin{itemize}
+    \item $\ket{0}$ với xác suất $\left|\frac{1}{2}\ket{0} - \frac{i}{2}\ket{1}\right|^2 = \frac{1}{2}$.
+    \item $\ket{1}$ với xác suất $\left|\frac{1}{\sqrt{2}}\ket{1}\right|^2 = \frac{1}{2}$.
+\end{itemize}
 
 \subsection{(c)}
-\textbf{Đề bài:} Đo qubit 1.
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} Đo qubit 1.\\
+\textbf{Bài làm:}\\
+Để đo riêng qubit 1 theo cơ sở tính toán, ta viết lại:
+\begin{align*}
+    \ket{\psi} & = \frac{1}{2}\ket{0}\otimes\ket{0} - \frac{i}{2}\ket{1}\otimes\ket{0} + \frac{1}{\sqrt{2}}\ket{1}\otimes\ket{1} \\
+                & = \ket{0} \otimes \frac{1}{2}\ket{0} + \ket{1}\otimes\left(-\frac{i}{2}\ket{0} + \frac{1}{\sqrt{2}}\ket{1}\right)
+\end{align*}
+Khi đó, qubit 1 được:
+\begin{itemize}
+    \item $\ket{0}$ với xác suất $\left|\frac{1}{2}\ket{0}\right|^2 = \frac{1}{4}$.
+    \item $\ket{1}$ với xác suất $\left|-\frac{i}{2}\ket{0} + \frac{1}{\sqrt{2}}\ket{1}\right|^2 = \frac{3}{4}$.
+\end{itemize}
 
 \subsection{(d)}
-\textbf{Đề bài:} Đo qubit 0 rồi đo qubit 1 và so kết quả với Câu (a).
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} Đo qubit 0 rồi đo qubit 1 và so kết quả với Câu (a).\\
+\textbf{Bài làm:}\\
+Khi đo qubit 0, ta có 2 trường hợp:
+\begin{itemize}
+    \item Qubit 0 được $\ket{0}$ với xác suất $\frac{1}{2}$ và hệ sụp đổ thành:
+          $$
+          \ket{\psi_0} = \frac{\frac{1}{2}\ket{0} - \frac{i}{2}\ket{1}}{\left|\frac{1}{2}\ket{0} - \frac{i}{2}\ket{1}\right|} \otimes \ket{0} = \left(\frac{1}{\sqrt{2}}\ket{0} - \frac{i}{\sqrt{2}}\ket{1}\right) \otimes \ket{0}
+          $$
+            Tiếp tục đo qubit 1, ta được $\ket{00}$ với xác suất $\frac{1}{2}$, được $\ket{10}$ với xác suất $\frac{1}{2}$.
+    \item Qubit 0 được $\ket{1}$ với xác suất $\frac{1}{2}$ và hệ sụp đổ thành:
+          $$
+          \ket{\psi_0} = \frac{\frac{1}{\sqrt{2}}\ket{1}}{\left|\frac{1}{\sqrt{2}}\ket{1}\right|} \otimes \ket{1} = \ket{1} \otimes \ket{1}
+          $$
+            Tiếp tục đo qubit 1, ta được $\ket{11}$ với xác suất $1$.
+\end{itemize}
+Tổng hợp lại, ta có các kết quả và xác suất tương ứng như sau:
+\begin{itemize}
+    \item Được $\ket{00}$ với xác suất $P_{00} = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}$
+    \item Được $\ket{10}$ với xác suất $P_{10} = \frac{1}{2} \cdot \frac{1}{2}= \frac{1}{4}$
+    \item Được $\ket{11}$ với xác suất $P_{11} = \frac{1}{2} \cdot 1 = \frac{1}{2}$
+\end{itemize}
+So sánh với Câu (a), ta thấy kết quả giống hệt nhau. Vậy việc đo qubit 0 trước không làm thay đổi xác suất thu được các trạng thái khi đo đồng thời 2 qubit.
+
+
 
 \subsection{(e)}
-\textbf{Đề bài:} Đo qubit 1 rồi đo qubit 0 và so kết quả với Câu (a).
-\textbf{Bài làm:}
-% TODO
+\textbf{Đề bài:} Đo qubit 1 rồi đo qubit 0 và so kết quả với Câu (a).\\
+\textbf{Bài làm:}\\
+Khi đo qubit 1, ta có 2 trường hợp:
+\begin{itemize}
+    \item Qubit 1 được $\ket{0}$ với xác suất $\frac{1}{4}$ và hệ sụp đổ thành:
+          $$
+          \ket{\psi_1} = \frac{\frac{1}{2}\ket{0}}{\left|\frac{1}{2}\ket{0}\right|} \otimes \ket{0} = \ket{0} \otimes \ket{0}
+          $$
+            Tiếp tục đo qubit 0, ta được $\ket{00}$ với xác suất $1$.
+    \item Qubit 1 được $\ket{1}$ với xác suất $\frac{3}{4}$ và hệ sụp đổ thành:
+          $$
+          \ket{\psi_1} = \frac{-\frac{i}{2}\ket{1} + \frac{1}{\sqrt{2}}\ket{1}}{\left|-\frac{i}{2}\ket{1} + \frac{1}{\sqrt{2}}\ket{1}\right|} \otimes \ket{1} = \left(-\frac{i}{\sqrt{3}}\ket{0} + \sqrt{\frac{2}{3}}\ket{1}\right) \otimes \ket{1}
+          $$
+            Tiếp tục đo qubit 0, ta được $\ket{10}$ với xác suất $\frac{1}{3}$, được $\ket{11}$ với xác suất $\frac{2}{3}$.
+\end{itemize}
+Tổng hợp lại, ta có các kết quả và xác suất tương ứng như sau:
+\begin{itemize}
+    \item Được $\ket{00}$ với xác suất $P_{00} = \frac{1}{4} \cdot 1 = \frac{1}{4}$
+    \item Được $\ket{10}$ với xác suất $P_{10} = \frac{3}{4} \cdot \frac{1}{3} = \frac{1}{4}$
+    \item Được $\ket{11}$ với xác suất $P_{11} = \frac{3}{4} \cdot \frac{2}{3} = \frac{1}{2}$
+\end{itemize}
+So sánh với Câu (a), ta thấy kết quả giống hệt nhau. Vậy việc đo qubit 1 trước không làm thay đổi xác suất thu được các trạng thái khi đo đồng thời 2 qubit.
 
 \section{Bài 7}
 \textbf{Đề bài:} Khảo sát phép toán 2 qubit $U=H\otimes X$.

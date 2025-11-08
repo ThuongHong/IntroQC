@@ -380,6 +380,7 @@ INPUT .\img\5d2.png
 INPUT .\img\5d2.png
 INPUT .\img\5d2.png
 INPUT .\img\5d2.png
+INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
@@ -387,6 +388,8 @@ INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vntt12.tf
 INPUT d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.aux
 INPUT d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.out
 INPUT d:\school\25_26_Semester_1\IntroQC\exercise_2\output\main.out
+INPUT C:\Users\luuth\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\luuth\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\luuth\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
