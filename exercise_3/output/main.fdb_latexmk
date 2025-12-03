@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1764750771.82545 "/home/lesliu/Documents/school/25_26_Semester_1/intro_qc/exercise_3/main.tex" "output/main.pdf" "main" 1764750772.93013 0
+["pdflatex"] 1764755632.4958 "/home/lesliu/Documents/school/25_26_Semester_1/intro_qc/exercise_3/main.tex" "output/main.pdf" "main" 1764755633.61412 0
   "/home/lesliu/Documents/school/25_26_Semester_1/intro_qc/exercise_3/main.tex" 1764682523.20496 1541 184599644baedcfe6df87e072879ca7b ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1755987285 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1755987285 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -37,9 +37,11 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1755987285 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1755987285 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1755987285 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1755987285 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1755987285 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1755987285 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1755987285 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1755987285 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1755987285 136101 f533469f523533d38317ab5729d00c8a ""
   "/usr/share/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb" 1755987285 41089 cd085a6112214f1ec9535fe0d1ee127f ""
   "/usr/share/texmf-dist/fonts/type1/vntex/vnr/vncsc10.pfb" 1755987285 41115 0656009cce5da93b639dc9d869f1af5e ""
@@ -214,7 +216,8 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1764689177 2686921 e4b31a34918ce227bac367096f882545 ""
   "code/cau1.py" 1764729383.20458 542 f14085d6f0c943c0d8619ba0e2cddde1 ""
   "code/cau2.py" 1764731648.8546 661 8d2118a4239532b6d02a1fd0fb9cd098 ""
-  "content/bailam.tex" 1764750771.60119 13450 47e51240bd7fd7ab1bf37b8392206166 ""
+  "code/cau5.py" 1764755615.34537 421 11f1fa26fc191f30d313565b41e7adbe ""
+  "content/bailam.tex" 1764755631.09747 17890 838f9209ee62ea812c383147482ec4ad ""
   "content/title.tex" 1764495895.79311 891 4bcb74c4577b906459eafcb266eb4d0b ""
   "hcmus-report-template.sty" 1764689965.14282 4142 a7e652264fd0552cdaf95f0f6d23b8e4 ""
   "img/cau1.png" 1764730334.77419 3791 3ec792b082403582779e5988896f966e ""
@@ -222,9 +225,9 @@
   "img/cau3.png" 1764735975.70177 7472 9cc91aea05be5ff1c60915b085d61686 ""
   "img/hcmus-logo.png" 1764495895.79718 258629 5b1ca4d1e50ebb745d59a14c962a8fac ""
   "main.tex" 1764682523.20496 1541 184599644baedcfe6df87e072879ca7b ""
-  "output/main.aux" 1764750772.86955 2633 de97521b3679398bed55723160f3dcbc "pdflatex"
-  "output/main.out" 1764750772.86955 900 2cc3b5e3262c354107613640d906b71e "pdflatex"
-  "output/main.toc" 1764750772.87036 742 03f78bfac88737db841fba921782268c "pdflatex"
+  "output/main.aux" 1764755633.55231 3356 87903c0e87ffb70f6b7dec1c811c138a "pdflatex"
+  "output/main.out" 1764755633.55231 1459 26a94851cd58c2714d089b5fcfb53ccb "pdflatex"
+  "output/main.toc" 1764755633.55355 1120 8340130f824e9c777352554519c43208 "pdflatex"
   (generated)
   "output/main.aux"
   "output/main.log"

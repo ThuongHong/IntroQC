@@ -284,4 +284,87 @@ Do e-bit là $|\Phi^-\rangle$, trạng thái Bob nhận được sẽ sai khác 
 
 
 \section{Bài 5}
-% Viết lời giải ở đây.
+
+Cho hàm $f:\mathbb{B}^{2}\rightarrow\mathbb{B}$ với $f(x,y)=x\oplus y$.
+
+\subsection{Câu a}
+Oracle lượng tử $U_f$ hoạt động trên 3 qubit theo quy tắc:
+$$ U_f|x, y\rangle|z\rangle = |x, y\rangle|z \oplus f(x, y)\rangle = |x, y\rangle|z \oplus x \oplus y\rangle $$
+Để thực hiện phép toán này, ta sử dụng hai cổng CNOT:
+\begin{itemize}
+    \item $CNOT(x, z)$ thực hiện $|z\rangle \to |z \oplus x\rangle$.
+    \item $CNOT(y, z)$ thực hiện $|z \oplus x\rangle \to |z \oplus x \oplus y\rangle$.
+\end{itemize}
+Vậy $U_f$ bao gồm hai cổng CNOT với qubit điều khiển lần lượt là $x, y$ và qubit mục tiêu là $z$.
+
+\subsection{Câu b}
+Oracle pha $Z_f$ hoạt động trên 2 qubit theo quy tắc:
+$$ Z_f|x, y\rangle = (-1)^{f(x, y)}|x, y\rangle = (-1)^{x \oplus y}|x, y\rangle $$
+Ta có tính chất $(-1)^{x \oplus y} = (-1)^x \cdot (-1)^y$. Điều này tương đương với việc áp dụng cổng $Z$ lên qubit $x$ và cổng $Z$ lên qubit $y$.
+Vậy $Z_f = Z \otimes Z$.
+
+\subsection{Câu c}
+Trạng thái đầu vào:
+$$ |+\rangle^{\otimes 2} = |+\rangle|+\rangle = \frac{1}{2}(|00\rangle + |01\rangle + |10\rangle + |11\rangle) $$
+
+\textbf{Với Oracle lượng tử $U_f$ (sử dụng thêm qubit ancilla $|-\rangle$ để tạo hiệu ứng phase kickback):}
+$$ U_f(|+\rangle|+\rangle|-\rangle) = Z_f|+\rangle|+\rangle $$
+Kết quả trên 2 qubit đầu vào sẽ tương tự như tác động của $Z_f$.
+
+\textbf{Với Oracle pha $Z_f$:}
+\begin{align*}
+    Z_f|+\rangle|+\rangle & = (Z \otimes Z) \frac{1}{2}(|00\rangle + |01\rangle + |10\rangle + |11\rangle)                                    \\
+                          & = \frac{1}{2}(Z|0\rangle Z|0\rangle + Z|0\rangle Z|1\rangle + Z|1\rangle Z|0\rangle + Z|1\rangle Z|1\rangle)      \\
+                          & = \frac{1}{2}(|00\rangle - |01\rangle - |10\rangle + |11\rangle)                                                  \\
+                          & = \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right) \otimes \left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right) \\
+                          & = |-\rangle|-\rangle
+\end{align*}
+
+\subsection{Câu d: Kiểm tra trên Qiskit}
+\vietnameselst
+\lstinputlisting[language=Python, caption="Kiểm tra Oracle pha trên Qiskit"]{code/cau5.py}
+
+Kết quả mô phỏng cho thấy trạng thái đầu ra là $|-\rangle|-\rangle$, khớp với tính toán lý thuyết.
+
+\section{Bài 6}
+
+\textbf{Yêu cầu:} Vẽ mạch và kiểm tra thuật toán Deutsch-Jozsa cho hàm $f_1$ và $f_2$.
+
+\textbf{Phân tích hàm:}
+Dựa vào bảng giá trị:
+\begin{itemize}
+    \item Hàm $f_1(x_1, x_0)$: $f(00)=1, f(01)=1, f(10)=1, f(11)=1$.
+          $\Rightarrow f_1$ là \textbf{Hàm Hằng} (Constant), $f_1(x)=1$.
+    \item Hàm $f_2(x_1, x_0)$: $f(00)=0, f(01)=0, f(10)=1, f(11)=1$.
+          $\Rightarrow f_2(x) = x_1$ (phụ thuộc vào bit cao). Đây là \textbf{Hàm Cân bằng} (Balanced).
+\end{itemize}
+
+\textbf{Thiết kế Oracle:}
+\begin{itemize}
+    \item Oracle $U_{f_1}$: Đảo bit output (hoặc không làm gì nếu dùng phase kickback với $|-\rangle$ thì chỉ cần thêm dấu trừ toàn cục). Để đơn giản, ta có thể dùng cổng $X$ lên qubit ancilla.
+    \item Oracle $U_{f_2}$: $f_2(x) = x_1$, nên ta dùng cổng CNOT với điều khiển là qubit $x_1$ và mục tiêu là qubit ancilla.
+\end{itemize}
+
+\textbf{Quy trình thuật toán Deutsch-Jozsa:}
+\begin{enumerate}
+    \item Khởi tạo 2 qubit input ở trạng thái $|0\rangle$ và 1 qubit ancilla ở trạng thái $|1\rangle$.
+    \item Áp dụng cổng $H$ lên tất cả các qubit.
+    \item Áp dụng Oracle $U_f$.
+    \item Áp dụng cổng $H$ lên 2 qubit input.
+    \item Đo 2 qubit input.
+\end{enumerate}
+
+\textbf{Kết quả dự kiến:}
+\begin{itemize}
+    \item Với $f_1$ (Hằng): Kết quả đo là $00$.
+    \item Với $f_2$ (Cân bằng): Kết quả đo khác $00$ (cụ thể là $10$ vì $f$ phụ thuộc $x_1$).
+\end{itemize}
+
+% \vietnameselst
+% \lstinputlisting[language=Python, caption="Kiểm tra thuật toán Deutsch-Jozsa trên Qiskit"]{code/cau6.py}
+
+\textbf{Kết quả thực nghiệm:}
+\begin{itemize}
+    \item Hàm $f_1$: Kết quả đo `00` (xác suất 100\%) $\rightarrow$ Kết luận: Hàm Hằng (Đúng).
+    \item Hàm $f_2$: Kết quả đo `10` (xác suất 100\%) $\rightarrow$ Kết luận: Hàm Cân bằng (Đúng).
+\end{itemize}

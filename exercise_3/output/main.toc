@@ -9,3 +9,8 @@
 \contentsline {subsection}{\numberline {4.1}Câu a}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Câu b}{8}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Bài 5}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Câu a}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Câu b}{9}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Câu c}{10}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Câu d: Kiểm tra trên Qiskit}{10}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Bài 6}{11}{section.6}%
