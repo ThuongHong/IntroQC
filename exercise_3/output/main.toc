@@ -6,4 +6,6 @@
 \contentsline {subsection}{\numberline {2.4}Câu d}{5}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Bài 3}{6}{section.3}%
 \contentsline {section}{\numberline {4}Bài 4}{8}{section.4}%
-\contentsline {section}{\numberline {5}Bài 5}{8}{section.5}%
+\contentsline {subsection}{\numberline {4.1}Câu a}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Câu b}{8}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Bài 5}{9}{section.5}%

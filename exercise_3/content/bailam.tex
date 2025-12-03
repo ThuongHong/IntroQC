@@ -208,7 +208,80 @@ $$ \ket{\Psi} = \frac{1}{2}(\ket{0000} + \ket{0011} + \ket{1100} + \ket{1111}) $
 Như vậy, ta đã tạo thành công bản sao của trạng thái $|\Phi^{+}\rangle$.
 
 \section{Bài 4}
-% Viết lời giải ở đây.
+
+Giả sử Alice và Bob chia sẻ cặp qubit vướng víu ở trạng thái:
+\begin{equation}
+    |\Phi^{-}\rangle_{AB} = \frac{1}{\sqrt{2}}(|00\rangle - |11\rangle)
+\end{equation}
+
+\subsection{Câu a}
+\textbf{Giao thức Mã đậm đặc}
+
+\textbf{Mục tiêu:} Alice gửi 2 bit cổ điển $b_1b_0$ cho Bob bằng cách tác động cổng lượng tử lên qubit $A$ và gửi nó cho Bob.
+
+\textbf{Quy trình:}
+\begin{enumerate}
+    \item Alice áp dụng cổng $U$ lên qubit $A$ dựa trên 2 bit cần gửi.
+    \item Alice gửi qubit $A$ cho Bob.
+    \item Bob thực hiện phép đo trong cơ sở Bell trên hệ 2 qubit.
+\end{enumerate}
+
+\textbf{Bảng quy ước mã hóa và giải mã:}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Tin nhắn} & \textbf{Cổng Alice ($U_A$)} & \textbf{Trạng thái hệ ($|\psi\rangle_{AB}$)} & \textbf{Kết quả đo của Bob} \\
+        $(b_1b_0)$        &                             & $(U_A \otimes I)|\Phi^-\rangle$              & (Trạng thái Bell)           \\
+        \hline
+        $00$              & $I$                         & $|\Phi^-\rangle$                             & $|\Phi^-\rangle$            \\
+        \hline
+        $01$              & $X$                         & $-|\Psi^-\rangle$                            & $|\Psi^-\rangle$            \\
+        \hline
+        $10$              & $Z$                         & $|\Phi^+\rangle$                             & $|\Phi^+\rangle$            \\
+        \hline
+        $11$              & $ZX$                        & $|\Psi^+\rangle$                             & $|\Psi^+\rangle$            \\
+        \hline
+    \end{tabular}
+    \caption{Giao thức Mã đậm đặc với e-bit $|\Phi^-\rangle$}
+\end{table}
+
+\subsection{Câu b}
+\textbf{Dịch chuyển lượng tử}
+
+\textbf{Mục tiêu:} Alice muốn chuyển trạng thái $|\psi\rangle_Q = \alpha|0\rangle + \beta|1\rangle$ cho Bob.
+
+\textbf{Quy trình:}
+\begin{enumerate}
+    \item Alice thực hiện cổng $CNOT$ lên cặp $(Q, A)$ (với $Q$ là điều khiển) và cổng $Hadamard$ lên $Q$.
+    \item Alice đo hệ $(Q,A)$ trong cơ sở tính toán, nhận được 2 bit cổ điển $z, x$.
+    \item Alice gửi 2 bit này cho Bob.
+    \item Bob áp dụng cổng khôi phục lên qubit $B$ để thu được $|\psi\rangle$.
+\end{enumerate}
+
+\textbf{Bảng quy ước khôi phục trạng thái:}
+Do e-bit là $|\Phi^-\rangle$, trạng thái Bob nhận được sẽ sai khác so với giao thức chuẩn. Bob cần áp dụng các cổng sau để đưa qubit về đúng trạng thái $|\psi\rangle$:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Kết quả đo của Alice} & \textbf{Trạng thái tại Bob} & \textbf{Cổng Bob cần thực hiện} \\
+        $(z, x)$                      & (Trước khi khôi phục)       & ($U_{Bob}$)                     \\
+        \hline
+        $00$                          & $Z|\psi\rangle$             & $\mathbf{Z}$                    \\
+        \hline
+        $01$                          & $XZ|\psi\rangle$            & $\mathbf{XZ}$                   \\
+        \hline
+        $10$                          & $|\psi\rangle$              & $\mathbf{I}$                    \\
+        \hline
+        $11$                          & $-X|\psi\rangle$            & $\mathbf{X}$                    \\
+        \hline
+    \end{tabular}
+    \caption{Bảng khôi phục cho Dịch chuyển lượng tử với e-bit $|\Phi^-\rangle$}
+\end{table}
+
 
 \section{Bài 5}
 % Viết lời giải ở đây.
