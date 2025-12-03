@@ -1,0 +1,186 @@
+\section{Bài 1}
+\textit{Bài làm trong Jupyter Notebook}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/cau1.png}
+    \caption{Mạch lượng tử tạo trạng thái Bell từ trạng thái cơ sở tính toán}
+\end{figure}
+
+\vietnameselst
+\lstinputlisting[language=Python, caption="Cài đặt mạch lượng tử tạo trạng thái Bell trên Qiskit"]{code/cau1.py}
+
+Kết quả:
+% |00>      | (0.707+0j)|00>   (0.707+0j)|11>
+% |01>      | (0.707+0j)|01>   (0.707+0j)|10>
+% |10>      | (0.707+0j)|00>   (-0.707+0j)|11>
+% |11>      | (0.707+0j)|01>   (-0.707+0j)|10>
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Input      & Output                                     \\\hline
+        $\ket{00}$ & $(0.707+0j)\ket{00} + (0.707+0j)\ket{11}$  \\\hline
+        $\ket{01}$ & $(0.707+0j)\ket{01} + (0.707+0j)\ket{10}$  \\\hline
+        $\ket{10}$ & $(0.707+0j)\ket{00} + (-0.707+0j)\ket{11}$ \\\hline
+        $\ket{11}$ & $(0.707+0j)\ket{01} + (-0.707+0j)\ket{10}$ \\\hline
+    \end{tabular}
+\end{table}
+Mạch lượng tử này chuyển đổi trạng thái cơ sở tính toán sang trạng thái Bell, tức là tạo ra sự vướng víu giữa hai qubit đầu vào.
+
+
+\section{Bài 2}
+\subsection{Câu a}
+Một hàm logic là khả nghịch nếu nó là một song ánh.
+
+Quan sát bảng ta thấy không có hàng nào trùng output, do đó hàm này là một song ánh và khả nghịch.
+
+\subsection{Câu b}
+Ta tìm hàm Boolean cho $D, E, F$ theo $A, B, C$.
+
+\begin{itemize}
+    \item $F$ bằng 1 tại $(0,0,1), (0,1,1), (1,0,1), (1,1,0)$. Ta có biểu thức:
+          \begin{align*}
+              F & = \overline{A} \overline{B} C + \overline{A} B C + A \overline{B} C + A B \overline{C} \\
+                & = \overline{A} C + \overline{B} C + AB\overline{C}                                     \\
+                & = AB \oplus C
+          \end{align*}
+    \item $E$ bằng 1 tại $(0,1,0), (0,1,1), (1,0,0), (1,1,0)$. Ta có biểu thức:
+          \begin{align*}
+              E & = \overline{A} B  \overline{C} + \overline{A} B C + A \overline{B} \overline{C} + A B \overline{C} \\
+                & = \overline{A}B + A\overline{C}
+          \end{align*}
+    \item $D$ bằng 1 tại $(0,0,0), (0,0,1), (0,1,0), (0,1,1)$. Ta có biểu thức:
+          \begin{align*}
+              D & = \overline{A} \overline{B} \overline{C} + \overline{A} \overline{B} C + \overline{A} B \overline{C} + \overline{A} B C \\
+                & = \overline{A}
+          \end{align*}
+\end{itemize}
+
+Ta có mạch logic:
+\begin{center}
+    \begin{circuitikz}[american, scale=0.9, transform shape]
+        % Inputs
+        \node (A) at (0,0) {$A$};
+        \node (B) at (0,-2) {$B$};
+        \node (C) at (0,-4) {$C$};
+
+        % NOT gates
+        \node[not port, scale=0.6] (notA) at (2,-0.5) {};
+        \node[not port, scale=0.6] (notB) at (2,-2.5) {};
+        \node[not port, scale=0.6] (notC) at (2,-4.5) {};
+
+        % Connect inputs to NOTs with dots
+        \draw (A) -- (1,0) node[circ]{} |- (notA.in);
+        \draw (B) -- (1,-2) node[circ]{} |- (notB.in);
+        \draw (C) -- (1,-4) node[circ]{} |- (notC.in);
+
+        % NOT outputs with dots
+        \draw (notA.out) -- (3.5,-0.5) node[circ]{};
+        \draw (notB.out) -- (3.5,-2.5) node[circ]{};
+        \draw (notC.out) -- (3.5,-4.5) node[circ]{};
+
+        % D = NOT(A)
+        \draw (3.5,-0.5) -- ++(9,0) node[right] {$D$};
+
+        % E = NOT(A)B + A*NOT(C)
+        \node[and port, scale=0.6] (andE1) at (6,-6) {};
+        \draw (3.5,-0.5) |- (andE1.in 1);
+        \draw (1,-2) |- (andE1.in 2);
+
+        \node[and port, scale=0.6] (andE2) at (6,-7.5) {};
+        \draw (1,0) |- (andE2.in 1);
+        \draw (3.5,-4.5) |- (andE2.in 2);
+
+        \node[or port, scale=0.6] (orE) at (9,-6.75) {};
+        \draw (andE1.out) |- (orE.in 1);
+        \draw (andE2.out) |- (orE.in 2);
+        \draw (orE.out) -- ++(1,0) node[right] {$E$};
+
+        % F = AB XOR C
+        \node[and port, scale=0.6] (andAB) at (6,-9) {};
+        \draw (1,0) |- (andAB.in 1);
+        \draw (1,-2) |- (andAB.in 2);
+
+        \node[xor port, scale=0.6] (xorF) at (9,-9.5) {};
+        \draw (andAB.out) |- (xorF.in 1);
+        \draw (1,-4) |- (xorF.in 2);
+        \draw (xorF.out) -- ++(1,0) node[right] {$F$};
+    \end{circuitikz}
+\end{center}
+
+\subsection{Câu c}
+Dựa trên các hàm Boolean đã rút gọn ở câu b:
+\begin{itemize}
+    \item $D = \overline{A}$
+    \item $E = \overline{A}B + A\overline{C}$
+    \item $F = AB \oplus C$
+\end{itemize}
+
+Ta thiết kế mạch lượng tử sử dụng 3 qubit đầu vào $\ket{A}, \ket{B}, \ket{C}$ (ký hiệu $q_0, q_1, q_2$) và 3 qubit đầu ra $\ket{D}, \ket{E}, \ket{F}$ (ký hiệu $q_3, q_4, q_5$) được khởi tạo ở trạng thái $\ket{0}$.
+
+Quy trình thực hiện trên mạch (sử dụng các cổng X, CNOT, Toffoli):
+\begin{enumerate}
+    \item \textbf{Tính F:} Sử dụng cổng Toffoli với điều khiển $q_0, q_1$ lên $q_5$ (tạo $AB$), sau đó dùng CNOT từ $q_2$ lên $q_5$ (tạo $AB \oplus C$).
+    \item \textbf{Tính E:}
+          \begin{itemize}
+              \item Tính $\overline{A}B$: Áp dụng $X(q_0)$, sau đó $Toffoli(q_0, q_1, q_4)$. Sau đó áp dụng $X(q_0)$ để trả lại trạng thái $A$.
+              \item Tính $A\overline{C}$: Áp dụng $X(q_2)$, sau đó $Toffoli(q_0, q_2, q_4)$. Sau đó áp dụng $X(q_2)$ để trả lại trạng thái $C$.
+          \end{itemize}
+    \item \textbf{Tính D:} Áp dụng $X(q_0)$, sau đó $CNOT(q_0, q_3)$. Cuối cùng áp dụng $X(q_0)$ để trả lại trạng thái $A$ ban đầu.
+\end{enumerate}
+
+\vietnameselst
+\lstinputlisting[language=Python, caption="Cài đặt mạch lượng tử cho hàm f trên Qiskit"]{code/cau2.py}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/cau2.png}
+    \caption{Mạch lượng tử thực hiện hàm $f(A,B,C) = (D,E,F)$}
+\end{figure}
+
+\subsection{Câu d}
+Trạng thái đầu vào là:
+$$ \ket{\psi}_{in} = \frac{1}{\sqrt{3}}(\ket{000} + \ket{100} + \ket{111}) $$
+Ta xác định đầu ra cho từng thành phần cơ sở dựa trên hàm $f$:
+\begin{itemize}
+    \item Với $\ket{000}$ ($A=0, B=0, C=0$):
+          \begin{itemize}
+              \item $D = \overline{0} = 1$
+              \item $E = \overline{0}\cdot 0 + 0\cdot \overline{0} = 0$
+              \item $F = 0\cdot 0 \oplus 0 = 0$
+              \item Kết quả: $\ket{100}$
+          \end{itemize}
+
+    \item Với $\ket{100}$ ($A=1, B=0, C=0$):
+          \begin{itemize}
+              \item $D = \overline{1} = 0$
+              \item $E = \overline{1}\cdot 0 + 1\cdot \overline{0} = 1$
+              \item $F = 1\cdot 0 \oplus 0 = 0$
+              \item Kết quả: $\ket{010}$
+          \end{itemize}
+
+    \item Với $\ket{111}$ ($A=1, B=1, C=1$):
+          \begin{itemize}
+              \item $D = \overline{1} = 0$
+              \item $E = \overline{1}\cdot 1 + 1\cdot \overline{1} = 0$
+              \item $F = 1\cdot 1 \oplus 1 = 0$
+              \item Kết quả: $\ket{000}$
+          \end{itemize}
+\end{itemize}
+
+Vậy trạng thái đầu ra của hệ 3 qubit chứa giá trị (D, E, F) là:
+$$ \ket{\psi}_{out} = \frac{1}{\sqrt{3}}(\ket{100} + \ket{010} + \ket{000}) $$
+
+Kiểm tra lại bằng mạch lượng tử trên Qiskit đã cho kết quả đúng như trên (xem trong notebook).
+
+
+\section{Bài 3}
+% Viết lời giải ở đây.
+
+\section{Bài 4}
+% Viết lời giải ở đây.
+
+\section{Bài 5}
+% Viết lời giải ở đây.
