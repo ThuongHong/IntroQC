@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1764733782.68103 "/home/lesliu/Documents/school/25_26_Semester_1/intro_qc/exercise_3/main.tex" "output/main.pdf" "main" 1764733783.77175 0
+["pdflatex"] 1764736088.65512 "/home/lesliu/Documents/school/25_26_Semester_1/intro_qc/exercise_3/main.tex" "output/main.pdf" "main" 1764736089.77934 0
   "/home/lesliu/Documents/school/25_26_Semester_1/intro_qc/exercise_3/main.tex" 1764682523.20496 1541 184599644baedcfe6df87e072879ca7b ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1755987285 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1755987285 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -29,6 +29,7 @@
   "/usr/share/texmf-dist/fonts/tfm/vntex/vnr/vnti12.tfm" 1755987285 3380 18cd826d09b074a189366fe693e1263c ""
   "/usr/share/texmf-dist/fonts/tfm/vntex/vnr/vntt10.tfm" 1755987285 1340 1f050e88f9cfabe402b16c8ea7930ea1 ""
   "/usr/share/texmf-dist/fonts/tfm/vntex/vnr/vntt12.tfm" 1755987285 1340 06553ed104adbb36180126e32f8c640c ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1755987285 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1755987285 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1755987285 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1755987285 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -208,16 +209,17 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1764689177 2686921 e4b31a34918ce227bac367096f882545 ""
   "code/cau1.py" 1764729383.20458 542 f14085d6f0c943c0d8619ba0e2cddde1 ""
   "code/cau2.py" 1764731648.8546 661 8d2118a4239532b6d02a1fd0fb9cd098 ""
-  "content/bailam.tex" 1764733782.45563 7599 68742cf6fdd874a492db32427e8d74b7 ""
+  "content/bailam.tex" 1764736088.43751 9874 e58f0b7598138fc7dbaaab126254f4c0 ""
   "content/title.tex" 1764495895.79311 891 4bcb74c4577b906459eafcb266eb4d0b ""
   "hcmus-report-template.sty" 1764689965.14282 4142 a7e652264fd0552cdaf95f0f6d23b8e4 ""
   "img/cau1.png" 1764730334.77419 3791 3ec792b082403582779e5988896f966e ""
   "img/cau2.png" 1764731624.35654 16856 51784a56ccbfdc092035642e32279ae3 ""
+  "img/cau3.png" 1764735975.70177 7472 9cc91aea05be5ff1c60915b085d61686 ""
   "img/hcmus-logo.png" 1764495895.79718 258629 5b1ca4d1e50ebb745d59a14c962a8fac ""
   "main.tex" 1764682523.20496 1541 184599644baedcfe6df87e072879ca7b ""
-  "output/main.aux" 1764733783.71168 1832 c05af954c23d058cc8754f8f767f375d "pdflatex"
-  "output/main.out" 1764733783.71268 722 8542ce74879b346d8d1cee02cd54ac52 "pdflatex"
-  "output/main.toc" 1764733783.71268 598 b511b169123f067d1ed224e84d9874fc "pdflatex"
+  "output/main.aux" 1764736089.71968 2045 7d0146575eb0aac48c01cb55c6bc6b75 "pdflatex"
+  "output/main.out" 1764736089.71968 722 8542ce74879b346d8d1cee02cd54ac52 "pdflatex"
+  "output/main.toc" 1764736089.72121 598 311e6ffa1e1f43b0e33d1433e5006cd5 "pdflatex"
   (generated)
   "output/main.aux"
   "output/main.log"

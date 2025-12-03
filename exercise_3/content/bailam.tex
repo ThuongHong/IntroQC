@@ -177,7 +177,35 @@ Kiểm tra lại bằng mạch lượng tử trên Qiskit đã cho kết quả �
 
 
 \section{Bài 3}
-% Viết lời giải ở đây.
+Theo \textbf{Định lý không nhân bản (No-Cloning Theorem)}, ta không thể sao chép một trạng thái lượng tử \textit{bất kỳ chưa biết}. Tuy nhiên, $|\Phi^{+}\rangle$ là một trạng thái \textit{đã biết} (trạng thái Bell). Do đó, việc "sao chép" ở đây được hiểu là chuẩn bị (prepare) một trạng thái giống hệt như vậy trên một cặp qubit khác độc lập.
+
+Trạng thái Bell $\ket{\Phi^{+}}$ được định nghĩa là:
+$$ \ket{\Phi^{+}} = \frac{1}{\sqrt{2}}(\ket{00} + \ket{11}) $$
+
+Mạch tạo trạng thái này bao gồm một cổng Hadamard ($H$) tác động lên qubit điều khiển và một cổng CNOT tác động lên qubit mục tiêu. Để tạo ra hai bản sao, ta thực hiện quy trình này trên hai cặp qubit riêng biệt (ví dụ: cặp $q_0, q_1$ và cặp $q_2, q_3$).
+
+Trạng thái kỳ vọng của hệ 4 qubit là tích tensor của hai trạng thái Bell:
+\begin{align*}
+    \ket{\Psi} & = \ket{\Phi^{+}}_{23} \otimes \ket{\Phi^{+}}_{01}                                                                       \\
+               & = \left[ \frac{1}{\sqrt{2}}(\ket{00} + \ket{11}) \right] \otimes \left[ \frac{1}{\sqrt{2}}(\ket{00} + \ket{11}) \right] \\
+               & = \frac{1}{2} \left( \ket{0000} + \ket{0011} + \ket{1100} + \ket{1111} \right)
+\end{align*}
+
+Mạch lượng tử:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{img/cau3.png}
+    \caption{Mạch lượng tử tạo hai bản sao của trạng thái Bell $\ket{\Phi^{+}}$}
+\end{figure}
+
+Kiểm tra kết quả trên Qiskit cho thấy trạng thái đầu ra đúng như kỳ vọng:
+$$ \ket{\Psi} = \frac{1}{2}(\ket{0000} + \ket{0011} + \ket{1100} + \ket{1111}) $$
+\begin{itemize}
+    \item Cặp bit thấp ($q_1 q_0$) nhận giá trị $00$ hoặc $11$, tương ứng với trạng thái $|\Phi^{+}\rangle$.
+    \item Cặp bit cao ($q_3 q_2$) nhận giá trị $00$ hoặc $11$, cũng tương ứng với trạng thái $|\Phi^{+}\rangle$.
+    \item Sự xuất hiện của các tổ hợp chéo (ví dụ $|00\rangle_{23}|11\rangle_{01}$) cho thấy hai cặp này độc lập với nhau.
+\end{itemize}
+Như vậy, ta đã tạo thành công bản sao của trạng thái $|\Phi^{+}\rangle$.
 
 \section{Bài 4}
 % Viết lời giải ở đây.
