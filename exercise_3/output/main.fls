@@ -401,6 +401,16 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT ./code/cau5.py
 INPUT ./code/cau5.py
 INPUT code/cau5.py
+INPUT ./img/cau6_1.png
+INPUT ./img/cau6_1.png
+INPUT ./img/cau6_1.png
+INPUT ./img/cau6_1.png
+INPUT ./img/cau6_1.png
+INPUT ./img/cau6_2.png
+INPUT ./img/cau6_2.png
+INPUT ./img/cau6_2.png
+INPUT ./img/cau6_2.png
+INPUT ./img/cau6_2.png
 INPUT output/main.aux
 INPUT output/main.out
 INPUT output/main.out

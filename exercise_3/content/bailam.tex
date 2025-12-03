@@ -354,16 +354,26 @@ Dựa vào bảng giá trị:
     \item Đo 2 qubit input.
 \end{enumerate}
 
-\textbf{Kết quả dự kiến:}
-\begin{itemize}
-    \item Với $f_1$ (Hằng): Kết quả đo là $00$.
-    \item Với $f_2$ (Cân bằng): Kết quả đo khác $00$ (cụ thể là $10$ vì $f$ phụ thuộc $x_1$).
-\end{itemize}
+\textbf{Vẽ mạch cho cả hai hàm:}
+\begin{figure}[H]
+    \centering
 
-% \vietnameselst
-% \lstinputlisting[language=Python, caption="Kiểm tra thuật toán Deutsch-Jozsa trên Qiskit"]{code/cau6.py}
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/cau6_1.png}
+        \caption{Mạch Deutsch-Jozsa cho $f_1$}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/cau6_2.png}
+        \caption{Mạch Deutsch-Jozsa cho $f_2$}
+    \end{minipage}
 
-\textbf{Kết quả thực nghiệm:}
+\end{figure}
+
+
+\textbf{Kết quả thực nghiệm:} (\textit{kết quả trong notebook})
 \begin{itemize}
     \item Hàm $f_1$: Kết quả đo `00` (xác suất 100\%) $\rightarrow$ Kết luận: Hàm Hằng (Đúng).
     \item Hàm $f_2$: Kết quả đo `10` (xác suất 100\%) $\rightarrow$ Kết luận: Hàm Cân bằng (Đúng).
