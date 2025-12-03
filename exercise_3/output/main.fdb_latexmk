@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1764758817.35742 "/home/lesliu/Documents/school/25_26_Semester_1/intro_qc/exercise_3/main.tex" "output/main.pdf" "main" 1764758818.4945 0
+["pdflatex"] 1764776998.60213 "/home/lesliu/Documents/school/25_26_Semester_1/intro_qc/exercise_3/main.tex" "output/main.pdf" "main" 1764776999.77066 0
   "/home/lesliu/Documents/school/25_26_Semester_1/intro_qc/exercise_3/main.tex" 1764682523.20496 1541 184599644baedcfe6df87e072879ca7b ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1755987285 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1755987285 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -217,7 +217,7 @@
   "code/cau1.py" 1764729383.20458 542 f14085d6f0c943c0d8619ba0e2cddde1 ""
   "code/cau2.py" 1764731648.8546 661 8d2118a4239532b6d02a1fd0fb9cd098 ""
   "code/cau5.py" 1764755615.34537 421 11f1fa26fc191f30d313565b41e7adbe ""
-  "content/bailam.tex" 1764758817.12532 18026 4233e5c98d64d5e34edcfb32278f7fba ""
+  "content/bailam.tex" 1764776997.14772 18001 dc9ea04f36b64a8c562faae3b8b4f071 ""
   "content/title.tex" 1764495895.79311 891 4bcb74c4577b906459eafcb266eb4d0b ""
   "hcmus-report-template.sty" 1764689965.14282 4142 a7e652264fd0552cdaf95f0f6d23b8e4 ""
   "img/cau1.png" 1764730334.77419 3791 3ec792b082403582779e5988896f966e ""
@@ -227,9 +227,9 @@
   "img/cau6_2.png" 1764758458.20612 8463 857a47f3455a76ca79bd470cf2a75ede ""
   "img/hcmus-logo.png" 1764495895.79718 258629 5b1ca4d1e50ebb745d59a14c962a8fac ""
   "main.tex" 1764682523.20496 1541 184599644baedcfe6df87e072879ca7b ""
-  "output/main.aux" 1764758818.43248 3640 d0d33e7155fe7f9c3550a8e9847e09d5 "pdflatex"
-  "output/main.out" 1764758818.43248 1459 26a94851cd58c2714d089b5fcfb53ccb "pdflatex"
-  "output/main.toc" 1764758818.43322 1120 8340130f824e9c777352554519c43208 "pdflatex"
+  "output/main.aux" 1764776999.70384 3615 531e6d7a564f34ea6878fc8452aa8dc2 "pdflatex"
+  "output/main.out" 1764776999.70422 1331 4bfee516af2174af8f63a434ec29b4ce "pdflatex"
+  "output/main.toc" 1764776999.70422 1095 be69fad3316679047756cf66fe4f0f35 "pdflatex"
   (generated)
   "output/main.aux"
   "output/main.log"
