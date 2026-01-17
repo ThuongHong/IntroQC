@@ -1,0 +1,145 @@
+\section{Câu 1}
+\textbf{Đề bài:} Thiết kế mạch 3 qubit để cài đặt $R_{u}$, phép toán phản xạ quanh trục $\ket{u}$, với:
+
+\subsection*{(a) $\ket{u} = \ket{111}$}
+Trường hợp này tương đương với cổng Controlled-Controlled-Z (CCZ).
+
+\begin{center}
+    \begin{quantikz}
+        \lstick{$q_0$} & \ctrl{1} & \qw \\
+        \lstick{$q_1$} & \ctrl{1} & \qw \\
+        \lstick{$q_2$} & \gate{Z} & \qw
+    \end{quantikz}
+\end{center}
+
+Kiểm tra lại với code:
+\begin{lstlisting}[language=Python]
+qc = QuantumCircuit(3)
+
+# 1. Chuẩn bị |111>
+qc.x([0, 1, 2])
+
+# 2. Mạch phản xạ (CCZ)
+qc.ccz(0, 1, 2)
+
+# 3. Check
+print("State (a):", Statevector(qc))
+\end{lstlisting}
+
+Kết quả thu được:
+\begin{lstlisting}
+Statevector([ 0.+0.j,  0.+0.j,  0.+0.j,  0.+0.j,  0.+0.j,  0.+0.j,  0.+0.j,
+             -1.+0.j],
+            dims=(2, 2, 2))
+\end{lstlisting}
+Đúng với mong đợi.
+
+
+\subsection*{(b) $\ket{u} = \ket{000}$}
+Ta dùng cổng $X$ để chuyển $\ket{000} \to \ket{111}$, thực hiện phản xạ, rồi trả về lại.
+
+\begin{center}
+    \begin{quantikz}
+        \lstick{$q_0$} & \gate{X} & \ctrl{1} & \gate{X} & \qw \\
+        \lstick{$q_1$} & \gate{X} & \ctrl{1} & \gate{X} & \qw \\
+        \lstick{$q_2$} & \gate{X} & \gate{Z} & \gate{X} & \qw
+    \end{quantikz}
+\end{center}
+
+Kiểm tra lại với code:
+\begin{lstlisting}[language=Python]
+qc = QuantumCircuit(3)
+
+# 1. Chuẩn bị |000>
+
+# 2. Mạch phản xạ: X -> CCZ -> X
+qc.x([0, 1, 2])
+qc.ccz(0, 1, 2)
+qc.x([0, 1, 2])
+
+# 3. Check
+print("State (b):", Statevector(qc))
+\end{lstlisting}
+
+Kết quả thu được:
+\begin{lstlisting}
+Statevector([-1.+0.j,  0.+0.j,  0.+0.j,  0.+0.j,  0.+0.j,  0.+0.j,  0.+0.j,
+              0.+0.j],
+            dims=(2, 2, 2))
+\end{lstlisting}
+Đúng với mong đợi.
+
+\subsection*{(c) $\ket{u} = \ket{+}^{\otimes 3}$}
+Vì $\ket{+} \xrightarrow{H} \ket{0} \xrightarrow{X} \ket{1}$, ta cần kẹp giữa bởi chuỗi $H$ và $X$.
+
+\begin{center}
+    \begin{quantikz}
+        \lstick{$q_0$} & \gate{H} & \gate{X} & \ctrl{1} & \gate{X} & \gate{H} & \qw \\
+        \lstick{$q_1$} & \gate{H} & \gate{X} & \ctrl{1} & \gate{X} & \gate{H} & \qw \\
+        \lstick{$q_2$} & \gate{H} & \gate{X} & \gate{Z} & \gate{X} & \gate{H} & \qw
+    \end{quantikz}
+\end{center}
+
+Kiểm tra lại với code:
+\begin{lstlisting}[language=Python]
+qc = QuantumCircuit(3)
+
+# 1. Chuẩn bị |+++>
+qc.h([0, 1, 2])
+
+# 2. Mạch phản xạ: H -> X -> CCZ -> X -> H
+qc.h([0, 1, 2])
+qc.x([0, 1, 2])
+qc.ccz(0, 1, 2)
+qc.x([0, 1, 2])
+qc.h([0, 1, 2])
+
+# 3. Check
+print("State (c):", Statevector(qc))
+\end{lstlisting}
+
+Kết quả thu được:
+\begin{lstlisting}
+Statevector([-0.35355339+0.j, -0.35355339+0.j, -0.35355339+0.j,
+             -0.35355339+0.j, -0.35355339+0.j, -0.35355339+0.j,
+             -0.35355339+0.j, -0.35355339+0.j],
+            dims=(2, 2, 2))
+\end{lstlisting}
+Đúng với mong đợi.
+
+\subsection*{(d) $\ket{u} = \ket{-}^{\otimes 3}$}
+Vì $\ket{-} \xrightarrow{H} \ket{1}$, ta chỉ cần kẹp giữa bởi cổng $H$.
+
+\begin{center}
+    \begin{quantikz}
+        \lstick{$q_0$} & \gate{H} & \ctrl{1} & \gate{H} & \qw \\
+        \lstick{$q_1$} & \gate{H} & \ctrl{1} & \gate{H} & \qw \\
+        \lstick{$q_2$} & \gate{H} & \gate{Z} & \gate{H} & \qw
+    \end{quantikz}
+\end{center}
+
+Kiểm tra lại với code:
+\begin{lstlisting}[language=Python]
+qc = QuantumCircuit(3)
+
+# 1. Chuẩn bị |---> (X rồi H)
+qc.x([0, 1, 2])
+qc.h([0, 1, 2])
+
+# 2. Mạch phản xạ: H -> CCZ -> H
+qc.h([0, 1, 2])
+qc.ccz(0, 1, 2)
+qc.h([0, 1, 2])
+
+# 3. Check
+print("State (d):", Statevector(qc))
+\end{lstlisting}
+
+Kết quả thu được:
+\begin{lstlisting}
+Statevector([-0.35355339+0.j,  0.35355339+0.j,  0.35355339+0.j,
+             -0.35355339+0.j,  0.35355339+0.j, -0.35355339+0.j,
+             -0.35355339+0.j,  0.35355339+0.j],
+            dims=(2, 2, 2))
+\end{lstlisting}
+Đúng với mong đợi.

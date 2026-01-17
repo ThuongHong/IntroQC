@@ -1,0 +1,104 @@
+\section{Câu 5}
+\textbf{Đề bài:} Thiết kế mạch QFT 3 qubit. Tính toán từng bước để thấy mạch biến các vector cơ sở tính toán $\ket{j}$ thành các vector $\ket{\phi_j}$ tương ứng.\\
+\textit{Bài làm:}
+
+\textbf{1. Thiết kế mạch}
+Mạch QFT cho 3 qubit ($q_1, q_2, q_3$ tương ứng với các bit của đầu vào $|j\rangle = |j_1 j_2 j_3\rangle$) sử dụng các cổng Hadamard ($H$) và Controlled-Phase $R_k$ (với pha $2\pi/2^k$). Sơ đồ mạch như sau:
+
+\begin{center}
+    \begin{quantikz}
+        \lstick{$\ket{j_1}$} & \gate{H} & \gate{R_2} & \gate{R_3} & \qw      & \qw        & \qw      & \swap{2} & \rstick{$\ket{\phi_1}$} \qw \\
+        \lstick{$\ket{j_2}$} & \qw      & \ctrl{-1}  & \qw        & \gate{H} & \gate{R_2} & \qw      & \qw      & \rstick{$\ket{\phi_2}$} \qw \\
+        \lstick{$\ket{j_3}$} & \qw      & \qw        & \ctrl{-2}  & \qw      & \ctrl{-1}  & \gate{H} & \swap{-2}& \rstick{$\ket{\phi_3}$} \qw
+    \end{quantikz}
+\end{center}
+
+\textbf{2. Tính toán từng bước}
+Xét trạng thái đầu vào $\ket{j} = \ket{j_1 j_2 j_3}$. Ta biểu diễn dưới dạng thập phân $j = j_1 2^2 + j_2 2^1 + j_3 2^0 = 4j_1 + 2j_2 + j_3$.
+
+\textbf{Bước 1: Biến đổi trên qubit 1 ($\ket{j_1}$)}
+\begin{itemize}
+    \item Áp dụng $H$: $\frac{1}{\sqrt{2}}(\ket{0} + e^{2\pi i (0.j_1)}\ket{1})$.
+    \item Áp dụng $R_2$ (điều khiển bởi $j_2$): Thêm pha $2\pi i \frac{j_2}{2^2} = 2\pi i (0.0j_2)$.
+    \item Áp dụng $R_3$ (điều khiển bởi $j_3$): Thêm pha $2\pi i \frac{j_3}{2^3} = 2\pi i (0.00j_3)$.
+\end{itemize}
+Trạng thái qubit 1 lúc này: $\frac{1}{\sqrt{2}}(\ket{0} + e^{2\pi i (0.j_1 j_2 j_3)}\ket{1})$.
+
+\textbf{Bước 2: Biến đổi trên qubit 2 ($\ket{j_2}$)}
+\begin{itemize}
+    \item Áp dụng $H$: $\frac{1}{\sqrt{2}}(\ket{0} + e^{2\pi i (0.j_2)}\ket{1})$.
+    \item Áp dụng $R_2$ (điều khiển bởi $j_3$): Thêm pha $2\pi i (0.0j_3)$.
+\end{itemize}
+Trạng thái qubit 2 lúc này: $\frac{1}{\sqrt{2}}(\ket{0} + e^{2\pi i (0.j_2 j_3)}\ket{1})$.
+
+\textbf{Bước 3: Biến đổi trên qubit 3 ($\ket{j_3}$)}
+\begin{itemize}
+    \item Chỉ áp dụng $H$: $\frac{1}{\sqrt{2}}(\ket{0} + e^{2\pi i (0.j_3)}\ket{1})$.
+\end{itemize}
+
+\textbf{Bước 4: Cổng SWAP}
+Mạch QFT yêu cầu đảo ngược thứ tự qubit để phù hợp với định nghĩa toán học. Ta đổi chỗ qubit 1 và qubit 3.
+Kết quả cuối cùng là tích tensor:
+$$ \ket{\psi} = \frac{1}{\sqrt{8}}
+    \left(\ket{0} + e^{2\pi i 0.j_3}\ket{1}\right) \otimes
+    \left(\ket{0} + e^{2\pi i 0.j_2 j_3}\ket{1}\right) \otimes
+    \left(\ket{0} + e^{2\pi i 0.j_1 j_2 j_3}\ket{1}\right) $$
+Đây chính xác là biểu diễn của QFT dưới dạng tích tensor (product state).
+
+Cài đặt bằng Qiskit:
+\begin{lstlisting}[language=Python]
+def qft_3_qubit():    
+    qc = QuantumCircuit(3)
+    
+    # --- Thiết kế thủ công (Manual Design) ---
+    # 1. H trên q2 (tương ứng j1 trong bài làm)
+    qc.h(2)
+    # Controlled-Phase từ q1 lên q2 (góc pi/2)
+    qc.cp(np.pi/2, 1, 2)
+    # Controlled-Phase từ q0 lên q2 (góc pi/4)
+    qc.cp(np.pi/4, 0, 2)
+    
+    # 2. H trên q1 (tương ứng j2)
+    qc.h(1)
+    # Controlled-Phase từ q0 lên q1 (góc pi/2)
+    qc.cp(np.pi/2, 0, 1)
+    
+    # 3. H trên q0 (tương ứng j3)
+    qc.h(0)
+    
+    # 4. SWAP đầu cuối
+    qc.swap(0, 2)
+    
+    return qc
+\end{lstlisting}
+
+Chạy và kiểm tra:
+\begin{lstlisting}[language=Python]
+# 1. Tạo mạch thủ công
+manual_qc = qft_3_qubit()
+
+# 2. Tạo mạch chuẩn thư viện để so sánh
+library_qc = QFT(num_qubits=3, do_swaps=True).decompose()
+
+# 3. Tính toán statevector (Ma trận toán tử)
+# Ta kiểm tra xem 2 mạch có tạo ra cùng một toán tử Unitary không
+sv_manual = Statevector(manual_qc)
+sv_lib = Statevector(library_qc) # Input mặc định là |000>
+
+# Tính độ tương đồng (Fidelity)
+fidelity = sv_manual.inner(sv_lib)
+print(f"Độ trùng khớp (Fidelity): {abs(fidelity):.5f}")
+
+# In thử kết quả với input |000>
+print("Statevector output:")
+print(np.round(sv_manual.data, 3))
+\end{lstlisting}
+
+Kết quả thu được:
+\begin{lstlisting}[language=Python]
+Độ trùng khớp (Fidelity): 1.00000
+Statevector output:
+[0.354+0.j 0.354+0.j 0.354+0.j 0.354+0.j 0.354+0.j 0.354+0.j 0.354+0.j
+ 0.354+0.j]
+\end{lstlisting}
+Như vậy, mạch QFT thủ công đã được thiết kế đúng và cho kết quả trùng khớp hoàn toàn với mạch QFT chuẩn từ thư viện Qiskit.

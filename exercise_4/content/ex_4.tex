@@ -1,0 +1,120 @@
+\section{Câu 4}
+\textbf{Đề bài:} Cài đặt hoàn chỉnh thuật toán Grover và thực hiện các tính toán cho trường hợp $n=4$ với lời giải là $0^{n}$.
+
+\textit{Bài làm:}\\
+\textbf{1. Phân tích tham số}
+\begin{itemize}
+    \item Số qubit: $n = 4$. Không gian tìm kiếm $N = 2^4 = 16$.
+    \item Trạng thái cần tìm: $\ket{w} = \ket{0000}$.
+    \item Số lần lặp tối ưu (Grover iterations): $k \approx \frac{\pi}{4}\sqrt{N} \approx 3.14 \Rightarrow$ chọn $\mathbf{k=3}$.
+\end{itemize}
+
+\textbf{2. Thiết kế mạch}
+Mạch bao gồm khởi tạo trạng thái chồng chập $\ket{s} = H^{\otimes 4}\ket{0}^{\otimes 4}$, theo sau là 3 lần lặp của toán tử Grover $G = U_s U_w$.
+
+\textbf{a) Oracle ($U_w$):}
+Đảo dấu pha của trạng thái $\ket{0000}$. Ta dùng cổng Multi-controlled Z (MCZ). Vì MCZ chuẩn tác động lên $\ket{1111}$, ta cần bọc nó bởi các cổng $X$ (NOT).
+$$ U_w = X^{\otimes 4} \cdot \text{MCZ} \cdot X^{\otimes 4} $$
+
+\textbf{b) Diffuser ($U_s$):}
+Phản xạ qua trạng thái trung bình $\ket{s}$. Công thức là $H^{\otimes 4}(2\ket{0}\bra{0} - I)H^{\otimes 4}$. Phần lõi $(2\ket{0}\bra{0} - I)$ chính là mạch phản xạ quanh $\ket{0000}$ tương tự như Oracle.
+
+\vspace{0.5cm}
+\textbf{Sơ đồ mạch (Minh họa 1 vòng lặp):}
+\begin{center}
+    \begin{quantikz}
+        \lstick{$\ket{0}$} & \gate{H} & \gate{X} & \ctrl{3} & \gate{X} & \gate{H} & \gate{X} & \ctrl{3} & \gate{X} & \gate{H} & \qw \\
+        \lstick{$\ket{0}$} & \gate{H} & \gate{X} & \ctrl{2} & \gate{X} & \gate{H} & \gate{X} & \ctrl{2} & \gate{X} & \gate{H} & \qw \\
+        \lstick{$\ket{0}$} & \gate{H} & \gate{X} & \ctrl{1} & \gate{X} & \gate{H} & \gate{X} & \ctrl{1} & \gate{X} & \gate{H} & \qw \\
+        \lstick{$\ket{0}$} & \gate{H} & \gate{X} & \gate{Z} & \gate{X} & \gate{H} & \gate{X} & \gate{Z} & \gate{X} & \gate{H} & \qw
+    \end{quantikz}
+\end{center}
+
+Cài đặt trong Qiskit như sau:
+\begin{lstlisting}[language=Python]
+def grover():
+    n = 4
+    qc = QuantumCircuit(n)
+
+    # 1. Khởi tạo |s>
+    qc.h(range(n))
+    
+    # Số lần lặp tối ưu cho N=16 là 3
+    for _ in range(3):
+        # --- ORACLE: Mark |0000> ---
+        # (X -> MCZ -> X)
+        qc.x(range(n))
+        qc.mcp(np.pi, list(range(n-1)), n-1)
+        qc.x(range(n))
+        
+        # --- DIFFUSER: Reflect |s> ---
+        # (H -> X -> MCZ -> X -> H)
+        qc.h(range(n))
+        qc.x(range(n))
+        qc.mcp(np.pi, list(range(n-1)), n-1)
+        qc.x(range(n))
+        qc.h(range(n))
+
+    return qc
+\end{lstlisting}
+
+Chạy thuật toán và kiểm tra kết quả:
+\begin{lstlisting}[language=Python]
+# 1. Tạo mạch
+qc = grover()
+
+# 2. Tính toán Statevector
+final_state = Statevector(qc)
+
+# 3. Lấy mẫu kết quả
+counts = final_state.sample_counts(shots=1000)
+
+# 4. In kết quả
+print("Kết quả")
+sorted_counts = sorted(counts.items(), key=lambda x: x[1], reverse=True)
+
+for state, count in sorted_counts:
+    prob = (count / 1000) * 100
+    print(f"Trạng thái |{state}>: {count} lần ({prob:.1f}%)")
+
+# Lấy biên độ chính xác của |0000>
+amp_0000 = final_state.data[0]
+prob_theoretical = np.abs(amp_0000)**2 * 100
+print("-" * 30)
+print(f"Xác suất lý thuyết của |0000>: {prob_theoretical:.2f}%")
+\end{lstlisting}
+
+Kết quả thuật toán được trình bày trong Bảng \ref{tab:grover_results}.
+\begin{table}[H]
+    \centering
+    \caption{Kết quả thực nghiệm thuật toán Grover ($n=4$, 1000 shots)}
+    \vspace{0.2cm}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Trạng thái}                                         & \textbf{Số lần đo (Counts)} & \textbf{Tần suất (\%)} \\
+        \hline
+        $|0000\rangle$                                              & \textbf{959}                & \textbf{95.9\%}        \\
+        \hline
+        $|0111\rangle$                                              & 6                           & 0.6\%                  \\
+        $|1011\rangle$                                              & 5                           & 0.5\%                  \\
+        $|0010\rangle$                                              & 4                           & 0.4\%                  \\
+        $|1001\rangle$                                              & 4                           & 0.4\%                  \\
+        $|1010\rangle$                                              & 4                           & 0.4\%                  \\
+        $|0001\rangle$                                              & 3                           & 0.3\%                  \\
+        $|1111\rangle$                                              & 3                           & 0.3\%                  \\
+        $|0011\rangle$                                              & 2                           & 0.2\%                  \\
+        $|0100\rangle$                                              & 2                           & 0.2\%                  \\
+        $|0110\rangle$                                              & 2                           & 0.2\%                  \\
+        $|1000\rangle$                                              & 2                           & 0.2\%                  \\
+        $|1100\rangle$                                              & 2                           & 0.2\%                  \\
+        $|0101\rangle$                                              & 1                           & 0.1\%                  \\
+        $|1110\rangle$                                              & 1                           & 0.1\%                  \\
+        \hline
+        \multicolumn{3}{|c|}{\textbf{So sánh lý thuyết}}                                                                   \\
+        \hline
+        \multicolumn{2}{|l|}{Xác suất lý thuyết của $|0000\rangle$} & 96.13\%                                              \\
+        \hline
+    \end{tabular}
+    \label{tab:grover_results}
+\end{table}
+

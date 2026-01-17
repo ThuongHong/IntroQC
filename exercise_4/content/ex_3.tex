@@ -1,0 +1,98 @@
+\section{Câu 3}
+\textbf{Đề bài:} Ta thấy rằng $R_0$, thao tác phản xạ qua $|0^n\rangle$, có thể cài đặt như oracle pha $U_f$ với $f : \{0, 1\}^n \to \{0, 1\}$ được định nghĩa cho $x \in \{0, 1\}^n$ là
+\[
+    f(x) = \begin{cases}
+        0 & x = 0^n    \\
+        1 & x \neq 0^n
+    \end{cases}.
+\]
+Quan sát kỹ hơn, ta thấy $f$ chính là phép OR bit
+\[
+    \text{OR}(x_{n-1}...x_1x_0) = \sum_{i=0}^{n-1} x_i \pmod 2.
+\]
+Như vậy bằng cách dùng các phiên bản lượng tử cho các cổng logic trong mạch logic cài đặt phép OR bit ta có thể cài đặt $R_0$. Cài đặt cụ thể $R_0$ theo cách này trong trường hợp $n = 3$. Kiểm tra kết quả trên thư viện Qiskit.
+
+\textit{Bài làm:}\\
+Hàm $f: \{0,1\}^3 \to \{0,1\}$ được định nghĩa:
+$$ f(x) = \begin{cases} 0 & x = 000 \\ 1 & x \neq 000 \end{cases} $$
+Đây là hàm OR của 3 bit. Để cài đặt Oracle pha $U_f$ sao cho $U_f\ket{x} = (-1)^{f(x)}\ket{x}$, ta sử dụng kỹ thuật \textit{Phase Kickback} với một qubit hỗ trợ (ancilla) ở trạng thái $\ket{-}$.
+
+Theo định luật De Morgan:
+$$ x_0 \lor x_1 \lor x_2 \iff \neg (\neg x_0 \land \neg x_1 \land \neg x_2) $$
+Do đó, mạch OR có thể được xây dựng bằng cách đảo ngược đầu vào (cổng $X$), thực hiện phép AND (cổng Multi-controlled Toffoli), và đảo ngược lại.
+
+\textbf{Thiết kế mạch}\\
+Mạch dưới đây thực hiện phép toán $-R_0$ (tương đương về mặt vật lý với $R_0$). Nó sẽ đảo dấu pha của trạng thái $\ket{000}$ và giữ nguyên các trạng thái khác.
+
+\begin{center}
+    \begin{quantikz}
+        \lstick{$q_0$} & \gate{X} & \ctrl{3} & \gate{X} & \qw \\
+        \lstick{$q_1$} & \gate{X} & \ctrl{2} & \gate{X} & \qw \\
+        \lstick{$q_2$} & \gate{X} & \ctrl{1} & \gate{X} & \qw \\
+        \lstick{Ancilla $\ket{-}$} & \gate{H} & \targ{} & \qw & \qw
+    \end{quantikz}
+\end{center}
+
+
+\textit{Giải thích:}
+\begin{itemize}
+    \item Nếu đầu vào là $\ket{000}$, các cổng $X$ chuyển nó thành $\ket{111}$. Cổng Toffoli (MCX) được kích hoạt, tác động lên qubit Ancilla ($\ket{-}$), gây ra hiệu ứng \textit{phase kickback}, làm toàn bộ hệ thống nhân với $-1$. Sau đó các cổng $X$ trả lại trạng thái $\ket{000}$. Kết quả: $-\ket{000}$.
+    \item Nếu đầu vào khác $\ket{000}$ (ví dụ $\ket{001}$), sau cổng $X$ sẽ là $\ket{110}$. Cổng Toffoli không kích hoạt. Pha giữ nguyên.
+\end{itemize}
+
+\textbf{Cài đặt trong Qiskit:}\\
+Cài đặt mạch $R_0$:
+\begin{lstlisting}[language=Python]
+def build_r0_circuit():
+    # 3 qubit dữ liệu + 1 qubit ancilla (index 3)
+    qc = QuantumCircuit(4)
+
+    # 1. Chuẩn bị Ancilla về trạng thái |->
+    qc.x(3)
+    qc.h(3)
+
+    # 2. Cài đặt mạch Logic (De Morgan OR)
+    # Bước A: Đảo bit (X) để phát hiện trạng thái 000
+    qc.x([0, 1, 2])
+
+    # Bước B: Multi-controlled X (Kickback phase)
+    # Kích hoạt khi q0=q1=q2=1 (tức là input gốc là 000)
+    qc.mcx([0, 1, 2], 3)
+
+    # Bước C: Đảo bit lại
+    qc.x([0, 1, 2])
+
+    # 3. Trả Ancilla về |0>
+    qc.h(3)
+    qc.x(3)
+
+    return qc
+\end{lstlisting}
+
+Kiểm tra kết quả:
+\begin{lstlisting}[language=Python]
+# Lấy toán tử của mạch
+circuit = build_r0_circuit()
+state = Statevector(circuit)
+
+print("Kiểm tra pha của các trạng thái:")
+
+# 1. Kiểm tra trạng thái |000> (Index 0)
+amp_000 = state.data[0] 
+print(f"Input |000>: {amp_000.real:.2f} (Mong đợi: -1.0)")
+
+# 2. Kiểm tra trạng thái |001> (Index 1)
+qc_test = QuantumCircuit(4)
+qc_test.x(0) # Tạo input 001
+qc_test.append(circuit, [0,1,2,3])
+amp_001 = Statevector(qc_test).data[1] # Lấy biên độ tại index 1
+print(f"Input |001>: {amp_001.real:.2f}  (Mong đợi:  1.0)")
+\end{lstlisting}
+
+Kết quả thu được:
+\begin{lstlisting}[language=Python]
+Kiểm tra pha của các trạng thái:
+Input |000>: -1.00
+Input |001>: 1.00
+\end{lstlisting}
+Đúng với mong đợi.

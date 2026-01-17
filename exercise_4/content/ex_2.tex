@@ -1,0 +1,12 @@
+\section{Câu 2}
+\textbf{Đề bài:} Cần sửa đổi giao thức E91 như thế nào nếu các cặp qubit ở trạng thái vướng víu là $\ket{\Psi^+} = \frac{1}{\sqrt{2}}(\ket{01} + \ket{10})$ thay vì $\ket{\Phi^+}$.
+
+\textit{Bài làm:}
+Trạng thái $\ket{\Psi^+}$ có tính chất tương quan khác biệt so với $\ket{\Phi^+}$ khi đo đạc:
+\begin{itemize}
+    \item \textbf{Trong cơ sở $Z$ ($\{\ket{0}, \ket{1}\}$):} Kết quả đo luôn \textbf{ngược nhau} (Alice ra 0 thì Bob ra 1 và ngược lại) do cấu trúc $\ket{01} + \ket{10}$.
+    \item \textbf{Trong cơ sở $X$ ($\{\ket{+}, \ket{-}\}$):} Ta có $\ket{\Psi^+} = \frac{1}{\sqrt{2}}(\ket{++} - \ket{--})$, nên kết quả đo luôn \textbf{giống nhau}.
+\end{itemize}
+
+\textbf{Cách sửa đổi:}
+Trong giai đoạn sàng lọc khóa (sifting phase), khi cả hai người cùng đo trên cơ sở $Z$, một trong hai bên (ví dụ Bob) cần thực hiện phép \textbf{đảo bit} (bit-flip: $0 \to 1, 1 \to 0$) đối với các kết quả đo của mình. Với các cơ sở khác mà kết quả tương quan dương (như cơ sở $X$), ta giữ nguyên kết quả.
